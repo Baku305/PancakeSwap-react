@@ -1,0 +1,246 @@
+#bettingSection {
+    background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
+    @include flexCenter;
+    padding: 48px 0px;
+    
+}
+
+.bettingSectionContainer {
+    @include flexCenter;
+    background-color: $ligthTransp;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 72px;
+    border: 1px solid #e7e3eb;
+    padding: 40px;
+
+
+
+    h2{
+        color:$violetBrand1;
+    }
+
+    span{
+        color: $violetBrand;
+    }
+
+    p{
+        color: $subTitleViolet;
+    }
+}
+
+.bettingSectionContainerDescription{
+    p{
+        text-align: center;
+    }
+}
+
+    h2 {
+        font-size: 40px;
+        &.first-child{
+            color: $darkBlue; 
+        }
+       
+
+        &.last-child{
+
+            background: linear-gradient(#ffd800 0%, #fdab32 100%);            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;    
+        }
+    }
+
+    span {
+        color: $darkBlue;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 16px;
+        &.first-child{
+
+        color: $lightViolet2;
+        }
+
+        &.last-child{
+        color:$whiteBrand;
+        }
+
+    }
+
+
+
+
+.bettingSectionDoubleCard {
+    @include flexCenter;
+    
+
+
+
+    .bettingSectionCardWrapper {
+        @extend %card-wrapper;
+        
+        max-width: 275px;
+
+
+        &.first-child {
+            transform: rotate(-2.36deg);
+            background-color: $ocra;
+            display: flex;
+            flex: 1 1 0%;
+            margin-right: 24px;
+        
+
+            .CardContainer {
+
+                background: linear-gradient($ocra 0%, $ocra2 51.17%, $ocra3 100%);
+
+            }
+        }
+
+        &.last-child {
+            transform: rotate(1.43deg);
+            background-color: $darkBlue2;
+            display: flex;
+            flex: 1 1 0%;
+        
+
+
+            
+        .CardContainer {
+            background: linear-gradient($violetBrand 0%, $violetBrand3 100%);
+
+        }
+
+        }
+
+
+        .CardContainer {
+            @extend %card-wrapper-container;
+
+            .CardContent {
+                @extend %card-wrapper-container-content;
+                
+            }
+        }
+
+        .CardImg {
+            @extend %card-wrapper-container-content-image;
+        }
+
+
+
+        .CardP {
+            p {
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 16px;
+                margin-bottom: 40px;
+                &.first-child{
+                    color: $darkBlue;
+                }
+                &.last-child{
+                    color: $whiteBrand;
+                }
+                
+
+
+
+
+
+            }
+
+            span {
+                font-weight: 400;
+                line-height: 1.5;
+                font-size: 16px;
+
+                &.first-child{
+                    color: $darkBlue;
+                }
+
+                &.last-child{
+                    color: $whiteBrand;
+                }
+            }
+
+        }
+
+        .cardButton {
+            margin-top: 40px;
+           
+
+            a {
+                @include flex(row, center, normal);
+                width: 100%;
+                button {
+                    @include b-selector(default);
+                    width: 100%
+    
+                }
+            }
+
+
+        }
+    }
+
+    .bettingSectionSecondCard {
+        background: $darkBlue2;
+
+        .secondCardRotate {
+            transform: rotate(2.36deg);
+        }
+    }
+}
+
+.icon {
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: white;
+
+
+    &.arrow-right{
+        -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    &.ticket{
+        -webkit-mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+    }
+    &.magic-sphere{
+        -webkit-mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+    }
+    &.left-divider{
+        -webkit-mask: url("assets/asset 53.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 53.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+    }
+    &.switch{
+        -webkit-mask: url("assets/asset 54.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 54.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+    }
+
+    &.world{
+        -webkit-mask: url("assets/asset 44.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 44.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #b8add2;
+    }
+}

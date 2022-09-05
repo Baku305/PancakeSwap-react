@@ -1,0 +1,46 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'Kanit', sans-serif;
+}
+
+html {
+ font-size: 10px;
+}
+
+
+
+/* VARIABLES */
+@import "./sass/variables";
+
+/* MIXIN */
+@import "./sass/general-mixin";
+
+/* FONT */
+@import "./sass/font";
+
+/*DESiGN SYSTEM*/
+
+@import "./sass/typography.scss";
+@import "./sass/button";
+@import "./sass/verticalMenu.scss";
+@import "./sass/verticalTab.scss";
+@import "./sass/form.scss";
+@import "./sass/switch.scss";
+@import "./sass/card.scss";
+@import "./sass/general-sections-dimensions";
+
+/*PATH*/ 
+@import "./path/header";
+@import "./path/nabvar";
+@import "./path/theMoonSection";
+@import "./path/feedbackSection";
+@import "./path/tradeSection";
+@import "./path/earnSection";
+@import "./path/bettingSection";
+@import "./path/buyCakeSection";
+@import "./path/loginSection";
+@import "./path/footer";
+
+

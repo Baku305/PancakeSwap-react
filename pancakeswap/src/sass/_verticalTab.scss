@@ -1,0 +1,92 @@
+/*Vertical Tabs*/
+
+/*set vertical tab*/
+%verticalTab {
+  @include flexStart;
+  flex-direction: column;
+  width: 13rem;
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+
+/*set vertical tab hover*/
+  &:hover{
+    %tabHeader{
+      border-radius: 0.8rem 0.8rem 0rem 0rem;
+    }
+  }
+
+/*set all childs of verticalTab*/
+  * {
+    @include flexSpaceBetween;
+    width: 100%;
+    height: max-content;
+    line-height: 3rem;
+
+/*set child of verticalTab with bookmark %tabContent */
+    &%tabContent {
+      @include flex(column, left, center);
+      display: none;
+      position: absolute;
+      border-bottom-left-radius: 0.8rem;
+      border-bottom-right-radius: 0.8rem;
+      border: 0.1rem solid #262130;
+      background-color: #372f47;
+      color: #f4eeff;
+      font-size: 1.6rem;
+      width: 100%;
+      top: 100%;
+      
+/*set tabContent last child*/
+      :last-child {
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+      }
+/*set tabContent hover*/
+      &:hover {
+        display: block;
+      }
+/*set tabContent's childs hover*/
+      :hover {
+        background-color: $borderBlack;
+      }
+    }
+
+/*set child of verticalTab with bookmark %tabHeader */
+    &%tabHeader {
+      @include flex(row, left, center);
+      border-radius: 0.8rem;
+      border: 0.1rem solid $borderBlack;
+      background-color: $tabBlue;
+      color: $lightViolet;
+      font-size: 1.6rem;
+/*set tabHeader hover*/
+      &:hover {
+        background-color: $borderBlack;
+        border-radius: 0.8rem 0.8rem 0rem 0rem;
+/*set tabContent effect in tabHeader hover */
+        + %tabContent {
+          display: block;
+        }
+      }
+    }
+
+/*set all childs of childs */
+    * {
+      padding-left: 0.5rem;
+    }
+
+/*set child 'with bookmark %triangle' of childs of verticalTab */
+    %triangle {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+      padding-left: 0px;
+      margin-right: 10px;
+    }
+  }
+
+}

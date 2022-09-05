@@ -1,0 +1,276 @@
+// .earnSectionContainer {
+
+//     position: relative;
+//     flex-direction: column;
+//     -moz-box-align: center;
+//     align-items: center;
+//     z-index: 1;
+//     padding: 48px 0px;
+//     background: rgba(0, 0, 0, 0) linear-gradient(111.68deg, rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%) repeat scroll 0% 0%;
+
+//     .flex {
+//         display: flex;
+//     }
+
+//     .divider {
+//         z-index: -1;
+//         overflow: hidden;
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         right: 0px;
+//         top: 0px;
+//     }
+
+
+//     .inner-divider {
+//         position: absolute;
+//         display: flex;
+//         width: 100%;
+//         top: 0px;
+//     }
+
+// }
+
+.earnSection{
+    @include flexCenter;
+    
+    flex-direction: column;
+    background-color: $greyMouse;
+    padding-bottom: 60px;
+
+    &-content{
+        @include flexSpaceBetween;
+        flex-direction: row-reverse;
+        justify-content: normal;
+        width: 92rem;
+        height: 43rem;
+        
+
+        &-title{
+            @include flexCenter;
+            flex-direction: column;
+            height: 23.2rem;
+            width: 42.8rem;
+            
+            h2{
+                font-size: 4rem;
+                color:$darkBlue;
+                margin-bottom: 2.4rem;
+
+                span{
+                    color: $violetBrand;
+                }
+
+            }
+            
+            &-subtitle{
+
+                .subTitle {
+                    @extend %subTitle; 
+                    margin-bottom: 2.4rem;
+                }
+            }
+
+            .earnSection-button-container{
+                @include flexStart;
+                width: 100%;
+            
+
+                &-default{
+                    @include b-selector(default);
+                    margin-right: 1.6rem;
+                    width: 12.9rem;
+                }
+
+                &-link{
+                    color: rgb(31, 199, 212);
+                    font-weight: 600;
+                    line-height: 1.5;
+                    font-size: 16px;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+            
+            }
+
+            
+        }
+        
+        &-images{
+        @include flex(unset, end, center);
+         position: relative;
+         width: fit-content;
+         height: 42.8rem;
+
+            img{
+            @include bouncing;
+            position: absolute;
+            height: 42.8rem;
+            width: 42.8rem;
+            }
+
+            .img1{
+                animation-delay: 1.5s;
+            }
+
+            .img2{
+                animation-delay: 3s;
+            }
+        }
+    }
+
+
+
+}
+.earnTopContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    z-index: 3;
+    width: 92rem;
+
+    .earnTopTitle {
+        display: flex;
+        margin-bottom: 24px;
+
+
+        h2 {
+            color: rgb(40, 13, 95);
+            font-size: 20px;
+        }
+
+        span {
+            color: rgb(118, 69, 217);
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        button {
+            box-shadow: none;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
+
+    .earnTopContent {
+        height: 80px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .earnFirstContent,
+        .earnSecondContent {
+            display: grid;
+            gap: 32x;
+            grid-template-columns: repeat(5, auto);
+            position: absolute;
+            opacity: 1;
+            margin-top: 0px;
+            transition: opacity 0s ease 0s, margin-top 0s ease 0s, all 0.4s ease-out 0s;
+            width: 100%;
+
+            &.hideEarn {
+                opacity: 0;
+                margin-top: 68px;
+            }
+
+            .earnCard {
+                display: flex;
+                width: 100%;
+
+                .earnCardColumn {
+                    display: flex;
+                    flex-direction: column;
+
+                    .earnCardTitle {
+                        display: flex;
+                        color: rgb(118, 69, 217);
+                        font-weight: 600;
+                        line-height: 1.5;
+                        margin-bottom: 8px;
+                        font-size: 12px;
+                        width: 100%;
+                    }
+
+                    .earnCardNumbers {
+                        display: flex;
+                        gap: 5px;
+                        span {
+                            display: flex;
+                            color: rgb(40, 13, 95);
+                            font-weight: 600;
+                            line-height: 1.1;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .earnCardApy {
+                        display: flex;
+                        color: rgb(122, 110, 170);
+                        font-weight: 400;
+                        line-height: 1.5;
+                        font-size: 16px;
+                    }
+                }
+
+                .secondCardE,
+                .thirdCardE,
+                .fourthCardE,
+                .fifthCardE {
+                    display: flex;
+                    height: 80px;
+                    top: 0px;
+                    padding-left: 16px;
+                    border-left: 1px solid rgb(215, 202, 236);
+                    
+
+                }
+            }
+        }
+    }
+
+}
+
+//ANIMATION
+@mixin floatAnimation ($animationName, $xDir, $yDir, $speed, $delay){
+    animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+    -webkit-animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+
+    @keyframes #{$animationName} {
+        0% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate($xDir, $yDir);
+            -webkit-transform: translate($xDir, $yDir);
+            -moz-transform: translate($xDir, $yDir);
+            -ms-transform: translate($xDir, $yDir);
+            -o-transform: translate($xDir, $yDir);
+        }
+        100% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+    }
+}
+
+
+

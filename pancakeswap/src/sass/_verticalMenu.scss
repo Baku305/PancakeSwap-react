@@ -1,0 +1,30 @@
+
+
+/*Vertical Menù*/
+
+%verticalMenu{
+    @include flexStart;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    border: 0px $borderGray;
+    background-color: #27262c;
+    width: 28rem;
+    color: $lightViolet2;
+    overflow: hidden;
+    font-size: 1.6rem;
+  /*set childs style*/
+      *{
+        list-style-type: none;
+        width: 100%;
+        
+  /*set childs of childs style*/
+        *{
+          padding: 6px 0px 6px 8px;
+          cursor: pointer;
+  /*set childs of childs hover*/
+          &:hover{
+            background-color: $hoverMenu;
+          }
+        }
+    }
+  }

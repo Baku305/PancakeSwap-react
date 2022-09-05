@@ -1,0 +1,83 @@
+/* Font style*/
+
+h1{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: normal
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: normal
+}
+
+h4{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.p{
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: normal
+}
+
+.subP{
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: normal
+}
+
+
+/*LINK*/
+
+a{
+  @include flex(unset, unset, center);
+  text-decoration: none;
+  width: fit-content;
+  color: inherit;
+}
+
+/*OTHERS*/
+
+%subTitle {
+color: $subTitleViolet;
+font-weight: 400;
+line-height: 1.5;
+font-size: 16px;
+
+&-highlighted{
+  @extend %subTitle;
+  font-weight: 600;
+}
+}
+
+/*MARGINS*/
+
+%largeMargin {
+  margin-bottom: 3.2rem;
+}
+
+%smallMargin {
+  margin-bottom: 2rem;
+}
+
+%mediumMargin {
+  margin-bottom: 2.4rem;
+}
+
+
+
+
+

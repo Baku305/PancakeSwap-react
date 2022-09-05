@@ -1,0 +1,93 @@
+
+/*Buttons*/
+
+/*BOOKMARK BUTTON STYLE*/
+%button {
+  @include flexCenter;
+  height: 4.8rem;
+  width: 16.5rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  border-radius: 1.6rem;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 0.48px;
+  padding-inline: 2frem;
+  cursor: pointer;
+
+/*SET DEFOULT STYLE*/
+  &-default {
+    @extend %button;
+    color: #fff;
+    background-color: $tiffanyBrand;
+    border: 0px #fff;
+/*SET DEFOULT STYLE HOVER*/
+    &:hover {
+      background-color: rgba(31, 200, 212, 0.637);
+      transition: 400ms;
+    }
+  }
+/*SET ALT STYLE*/
+  &-alternative {
+    @extend %button;
+    color: $tiffanyBrand;
+    border: 2px solid $tiffanyBrand;
+    background-color: $trasparency;
+/*SET ALT STYLE HOVER*/
+    &:hover {
+      background-color: rgba(8, 6, 11, 0.65);
+      transition: 400ms;
+    }
+  }
+/*SET INFO STYLE*/
+  &-info {
+    @extend %button;
+    height: 4.8rem;
+    max-width: 4.1rem;
+    min-width: 4rem;
+    padding: 0px 0px;
+    line-height: 2.4rem;
+    letter-spacing: normal;
+    color: $tiffanyBrand;
+    border: 0px $tiffanyBrand;
+    background-color: #08060b00;
+/*SET INFO STYLE HOVER*/
+    &:hover {
+      background-color: rgba(8, 6, 11, 0.65);
+      transition: 400ms;
+    }
+  }
+/*SET CONNECT STYLE*/
+  &-connect {
+    @extend %button;
+    height: 3.2rem;
+    max-width: 10.7rem;
+    min-width: 12rem;
+    padding: 0px 16px 0px 16px;
+    line-height: 1.6rem;
+    letter-spacing: normal;
+    color: #fff;
+    background-color: $tiffanyBrand;
+/*SET CONNECT STYLE HOVER*/
+    &:hover {
+      background-color: rgba(31, 200, 212, 0.637);
+      transition: 400ms;
+    }
+  }
+}
+
+/*MIXIN BUTTONS SELECTOR*/
+
+@mixin b-selector($selector) {
+  @if $selector == alternative {
+    @extend %button-alternative;
+  } @else if $selector == info {
+    @extend %button-info;
+  } @else if $selector == default {
+    @extend %button-default;
+  } @else if $selector == connect {
+    @extend %button-connect;
+  } @else {
+    @extend %button-default;
+  }
+}

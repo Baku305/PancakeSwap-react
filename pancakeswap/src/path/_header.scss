@@ -1,0 +1,68 @@
+header{
+
+    /*CONTENITORE BOTTONI DEL SITO*/
+    .container-button{
+        @include flexSpaceBetween;
+        gap: 20px;
+        width: 100%;
+        height: max-content;
+        padding: 50px;
+        background-color: white;
+        border-radius: 16px;
+        background-color: rgba(0, 0, 0, 0.589);
+        
+
+    .button1{
+        @include b-selector(defoult);
+    }
+
+    .button2{
+        @include b-selector(alternative);
+    }
+
+    .button3{
+        @include b-selector(info);
+    }
+
+    .button4{
+        @include b-selector(connect);
+    }
+    }
+    /*MENU VERTICALE*/
+    .menu{
+        @extend %verticalMenu;
+    }
+
+    /*TAB VERTICALE*/
+    .tab{
+        @extend %verticalTab;
+        .tabHeader{
+            @extend %tabHeader;
+        }
+        .tabContent{
+            @extend %tabContent;
+        }
+        .triangolo{
+        @extend %triangle;
+        }
+    }
+
+    /*FORM */
+    .checkbox{
+        @extend %checkbox;
+    }
+}
+
+/* SWITCH*/
+
+.switch{
+    @extend %switch;
+    .switchInput{
+        @extend %switchInput;
+    }
+    .slider{
+        @extend %slider;
+    }
+}
+
+

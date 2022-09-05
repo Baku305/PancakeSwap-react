@@ -1,0 +1,75 @@
+/*Text input*/
+
+input[type="text"]{
+    background-color: $tabBlue;
+    border-radius: 16px;
+    line-height: 3.5rem;
+    text-align: left;
+    font-weight: 500;
+    padding: 0px 16px;
+    color: $lightViolet;
+    outline: none;
+    border: none;
+    margin-block: 1rem;
+    font-size: 1.6rem;
+
+    &:focus{
+        box-shadow: #7645d9 0px 0px 0px 2.5px ;
+        outline: none;
+    }
+}
+
+/*checkbox input*/
+
+%checkbox{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.8rem;
+    box-shadow: rgba(74,74,104,0.1) 0px 2px 2px -1px inset;
+    background-color: #eeeaf4;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0px 6px;
+
+
+    &:checked{
+        background-color: $greenBrand;
+        &::before{
+            content:"\2713";
+            position: absolute;
+            font-weight: bolder;
+            font-size: 1.6rem;
+            color: #eeeaf4;
+        }
+    }
+}
+
+/*Radio Input*/
+
+input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    box-shadow: rgba(74,74,104,0.1) 0px 2px 2px -1px inset;
+    background-color: $tabBlue;
+    border-radius: 50%;
+
+
+    &:checked{
+        box-shadow: $greenBrand 0px 0px 0px 4px inset;
+        border: 2px solid $greenBrand;
+    }
+
+    &:focus{
+        border: 2px solid #7645d9;
+    }
+}
+
+/*Label*/
+
+label{
+    color: $lightViolet;
+    font-size: 1.6rem;
+    font-weight: 400;
+}

@@ -1,0 +1,74 @@
+
+/* FLEX MIXINS*/
+
+@mixin flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin flexStart {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  @mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin flex($dir,$jc,$ai){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
+  }
+
+  /*animations*/
+
+  @mixin ghost{
+    animation: ghost 5s ease-in-out 0.66s infinite normal none running ;
+    @keyframes ghost {
+      0%{opacity: 0.9;};
+      50%{opacity: 0.1;};
+      100%{opacity: 0.9;};
+    }  
+  }
+
+
+  @mixin noGravity{
+    animation: noGravity 3.5s ease-in-out 0s infinite normal none running ;
+
+    @keyframes noGravity {
+      0%{transform: translate(0px)};
+      50%{transform: translate(-5px, -5px)};
+      100%{transform: translate(0px)};
+    }
+  }
+
+  @mixin bouncing{
+
+
+      animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+
+      @keyframes bouncing {
+        0% {transform: translate(0px)};
+        50% {transform: translate(5px, 10px)};
+        100% {transform: translate(0px)};
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
