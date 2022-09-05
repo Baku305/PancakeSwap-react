@@ -1,22 +1,4 @@
-  /* VARIABLES */
-  @import "./sass/variables";
-  
-  /* MIXIN */
-  @import "./sass/general-mixin";
-  
-  /* FONT */
-  @import "./sass/font";
-
-  /*DESiGN SYSTEM*/
-
-  @import "./sass/typography.scss";
-  @import "./sass/button.scss";
-  @import "./sass/verticalMenu.scss";
-  @import "./sass/verticalTab.scss";
-  @import "./sass/form.scss";
-  @import "./sass/switch.scss";
-  @import "./sass/card.scss";
-  @import "./sass/general-sections-dimensions";
+  @import "./style.scss";
   
 
 .button{

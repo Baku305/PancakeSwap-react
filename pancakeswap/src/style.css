@@ -1480,41 +1480,41 @@ p.last-child {
   background-color: white;
 }
 .icon.arrow-right {
-  -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 46.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 46.svg") no-repeat 50% 50%;
   width: 20px;
   height: 20px;
 }
 .icon.ticket {
-  -webkit-mask: url("assets/asset 57.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 57.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 57.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
 }
 .icon.magic-sphere {
-  -webkit-mask: url("assets/asset 55.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 55.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 55.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: black;
 }
 .icon.left-divider {
-  -webkit-mask: url("assets/asset 53.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 53.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 53.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 53.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: black;
 }
 .icon.switch {
-  -webkit-mask: url("assets/asset 54.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 54.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 54.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 54.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: black;
 }
 .icon.world {
-  -webkit-mask: url("assets/asset 44.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 44.svg") no-repeat 50% 50%;
+  -webkit-mask: url("../assets/asset 44.svg") no-repeat 50% 50%;
+  mask: url("../assets/asset 44.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: #b8add2;
