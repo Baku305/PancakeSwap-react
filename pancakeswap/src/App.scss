@@ -1,8 +1,5 @@
-  @import "./style.scss";
-  
+@import "./style.scss";
 
-.button{
-  @include b-selector(default)
-  
+h1{
+  color: $tiffanyBrand;
 }
-
