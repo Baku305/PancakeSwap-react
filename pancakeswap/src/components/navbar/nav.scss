@@ -1,0 +1,36 @@
+@import "../../style.scss";
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.nav_wrapper{
+ width: 100%;
+ height: 50px;
+ background-color: cadetblue;
+ @include flex(row,space-between,center)
+}
+
+.menu_wrapper{
+ @include flex(row,center,center)
+}
+
+.menu_el_wrapper{
+ padding: 4px 8px;
+ @include flex(row,center,center)
+}
+
+
+.nav_left_wrapper{
+ @include flex(row,center,center)
+}
+
+.nav_right_wrapper{
+ @include flex(row,center,center)
+}
+
+.eye{
+ transition: 200ms;
+}
