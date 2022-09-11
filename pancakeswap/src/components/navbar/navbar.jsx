@@ -1,4 +1,4 @@
-import "./nav.scss";
+import "./_nav.scss";
 import { Button } from "../Button";
 import { useState } from "react";
 
@@ -28,7 +28,6 @@ export const Navbar = ({ menu }) => {
           <svg
             onMouseEnter= {handleEyesClose}
             viewBox="0 0 198 199"
-            class="sc-5a69fd5e-0 fIBjTm mobile-icon"
             color="text"
             width="20px"
             xmlns="http://www.w3.org/2000/svg"

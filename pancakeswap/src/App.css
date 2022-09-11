@@ -2099,4 +2099,8 @@ button svg {
 .buy:hover {
   text-decoration: none;
   opacity: 0.65;
-}/*# sourceMappingURL=style.css.map */
+}
+
+h1 {
+  color: #1fc7d4;
+}/*# sourceMappingURL=App.css.map */
