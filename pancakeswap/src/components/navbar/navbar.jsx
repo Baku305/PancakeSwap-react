@@ -25,9 +25,8 @@ export const Navbar = ({ menu }) => {
     <>
       <div className="nav_wrapper">
         <div className="nav_left_wrapper">
-          <div className="logo_wrapper">
+          <div className="logo_wrapper" onMouseEnter={handleEyesClose}>
             <svg
-            onMouseEnter={handleEyesClose}
             viewBox="0 0 198 199"
             color="text"
             width="20px"
