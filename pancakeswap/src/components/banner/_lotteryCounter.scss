@@ -5,23 +5,22 @@
   width: max-content;
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:contain;
   margin-bottom: 10px;
+  padding: 10px 1px;
+  @include flex(space-around,center,center);
 
-  &:nth-last-child(n){
-    padding-right: 15px;
-  }
-
-  &:nth-child(1){
-    padding-left:5px
+  :last-child{
+    h3{
+      padding-right: 15px;
+    }
   }
 }
-
 .lottery-counter h2 {
   background: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat
     scroll 0% 0% padding-box text;
   -webkit-text-fill-color: transparent;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.1;
 }
@@ -36,6 +35,6 @@
   width: fit-content;
 
   h3{
-    padding-left:3px
+    padding-inline:3px
   }
 }

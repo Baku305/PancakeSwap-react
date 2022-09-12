@@ -14,7 +14,7 @@ export function LotteryCounter() {
 
   return (
     <>
-      <div className="lottery-counter" style={{ display: "flex", gap: "10px" }}>
+      <div className="lottery-counter">
         <div className="lottery-content-wrapper">
           <h2>{hours}</h2>
           <h3>h</h3>
