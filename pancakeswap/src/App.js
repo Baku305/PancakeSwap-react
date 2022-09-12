@@ -1,8 +1,9 @@
 import './App.scss';
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
-import { Button } from './components/Button';
+import { Button } from './components/shared/button/Button';
 import { color } from './components/Color'
 import { Navbar } from './components/navbar/navbar';
+import { Tabs } from './components/banner/tabs';
 function App() {
   const Navigate = useNavigate(); 
 
@@ -14,6 +15,9 @@ function App() {
     <h1  color = "pinkBrand">The moon is made of pancakes.</h1>
     <h1  className = "violetBrand">The moon is made of pancakes.</h1>
     <Navbar menu = {menu}/>
+    <div>
+    <Tabs/>
+    </div>
       <Routes>
         <Route path='/' element={<Button color="violetBrand" onClick={()=>Navigate("/2")} buttonStyle={"btn--default"}>ciao</Button>} />
         <Route path = "/1" element = {<Button buttonStyle={"btn--default"}/>}/>

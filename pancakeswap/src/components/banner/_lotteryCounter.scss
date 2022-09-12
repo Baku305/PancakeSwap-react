@@ -1,0 +1,17 @@
+.lottery-counter {
+  background-image: url("../../assets/asset\ 37.png");
+  width: fit-content;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px;
+}
+
+.lottery-counter h2 {
+  background: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat
+    scroll 0% 0% padding-box text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.1;
+}

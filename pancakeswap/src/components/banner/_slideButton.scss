@@ -1,0 +1,28 @@
+.slideButton-container {
+  position: absolute;
+  /*bottom: 10px;*/
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+  overflow: hidden;
+}
+
+.slideButton-container .slideButton {
+  height: 8px;
+  width: 54px;
+}
+
+#prevSlideBt {
+  border-radius: 4px 0px 0px 4px;
+}
+
+#nextSlideBt {
+  border-radius: 0px 4px 4px 0px;
+}

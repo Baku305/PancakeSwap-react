@@ -1,43 +1,86 @@
 @import "../../style.scss";
 
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav_wrapper{
- width: 100%;
- height: 50px;
- background-color: cadetblue;
- @include flex(row,space-between,center)
-}
+.nav_wrapper {
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  @include flex(row, space-between, center);
+  border-bottom: 1px solid #e7e3eb;
+  transform: translate3d(0px, 0px, 0px);
+  padding-inline: 16px;
+  .nav_left_wrapper {
+    @include flex(row, center, center);
+    height: 100%;
 
-.menu_wrapper{
- @include flex(row,center,center)
-}
+    .menu_wrapper {
+      @include flex(row, center, center);
+    }
 
-.menu_el_wrapper{
- padding: 0px 8px;
- @include flex(row,center,center)
-}
+    .menu_el_wrapper {
+      padding: 0px 16px;
+      @include flex(row, center, center);
+      color: $subTitleViolet;
+    }
 
+    .logo_wrapper {
+      @include flexCenter;
+      height: 100%;
+      width: 160px;
+      margin-right: 16px;
 
-.nav_left_wrapper{
- @include flex(row,center,center);
- height: 100%;
-}
+      .logo_title {
+        width: 110%;
+        margin-top: 5px;
+      }
 
-.nav_left_wrapper svg {
- height: 100%;
- width: 40px;
- padding-left: 5px;
-}
+      svg {
+        .eye {
+          transition: 200ms;
+        }
 
-.nav_right_wrapper{
- @include flex(row,center,center)
-}
+        height: 100%;
+        width: 45px;
+        padding-inline: 5px;
+      }
+    }
+  }
 
-.eye{
- transition: 200ms;
+  .nav_right_wrapper {
+    @include flex(row, center, center);
+
+    .settings_button {
+      fill: $subTitleViolet;
+      margin: 0 8px;
+    }
+
+    .language_button {
+      fill: $subTitleViolet;
+      margin: 0 8px;
+    }
+
+    .pancake_asset_value_wrapper {
+      @include flex(row, center, center);
+      padding-inline: 4px;
+
+      h4 {
+        color: $subTitleViolet;
+        font-weight: 600;
+      }
+
+      img {
+        padding-inline: 4px;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: 500ms;
+        }
+      }
+    }
+  }
 }

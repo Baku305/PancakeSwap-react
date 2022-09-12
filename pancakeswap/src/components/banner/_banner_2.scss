@@ -1,0 +1,47 @@
+@import "../../style.scss";
+
+.tradeBanner-container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: unset;
+ width: 100%;
+ height: 230px;
+ background: rgba(0, 0, 0, 0) -webkit-linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) repeat
+   scroll 0% 0%;
+ position: relative;
+ border-radius: 32px;
+}
+
+.tradeBanner-content{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: unset;
+ width: 100%;
+ height: 100%;
+ padding-left: 3rem;
+ z-index: 2;
+ @include onLoadTransition;
+}
+
+.tradeBanner-container .tradeBanner-content .tradeBanner-title {
+
+}
+
+.tradeBanner-container .tradeBanner-image-container{
+  @include onLoadTransition;
+}
+
+.tradeBanner-container .tradeBanner-image-container .tradeBanner-image-container-image{
+ height: 115%;
+ position: absolute;
+ z-index: 1;
+ bottom: 3px;
+ right:0px
+}
+
+.hidden {
+  display: none;
+}
+
