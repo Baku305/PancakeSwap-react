@@ -4,6 +4,8 @@ import { Button } from './components/shared/button/Button';
 import { color } from './components/Color'
 import { Navbar } from './components/navbar/navbar';
 import { Tabs } from './components/banner/tabs';
+import { Footer } from './components/footer/Footer';
+
 function App() {
   const Navigate = useNavigate(); 
 
@@ -23,6 +25,7 @@ function App() {
         <Route path = "/1" element = {<Button buttonStyle={"btn--default"}/>}/>
         <Route path="/2" element= {<Button  buttonSize={"btn--full"} type="button" as={Link} to="/">Esempio</Button>}/>
       </Routes>
+    <Footer />
     </>
   );
 }
