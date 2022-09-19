@@ -2,6 +2,8 @@ import './App.scss';
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import { Button } from './components/Button';
 import { color } from './components/Color'
+import { MoonSection } from './components/the-moon-section';
+
 function App() {
   const Navigate = useNavigate(); 
 
@@ -9,6 +11,7 @@ function App() {
 
   return (
     <>
+    <MoonSection/>
     <h1  className = "tiffanyBrand">The moon is made of pancakes.</h1>
     <h1  color = "pinkBrand">The moon is made of pancakes.</h1>
     <h1  className = "violetBrand">The moon is made of pancakes.</h1>
