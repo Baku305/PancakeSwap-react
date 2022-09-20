@@ -5,7 +5,7 @@
 %button {
   @include flexCenter;
   height: 4.8rem;
-  width: 16.5rem;
+  width: auto;
   
   border-radius: 1.6rem;
   line-height: 1.6rem;
@@ -34,6 +34,7 @@
     color: $tiffanyBrand;
     border: 2px solid $tiffanyBrand;
     background-color: $trasparency;
+    
     
 /*SET ALT STYLE HOVER*/
     &:hover {
