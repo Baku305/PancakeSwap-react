@@ -6,7 +6,7 @@
   @include flexCenter;
   height: 4.8rem;
   width: 16.5rem;
-  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
@@ -21,6 +21,7 @@
     color: #fff;
     background-color: $tiffanyBrand;
     border: 0px #fff;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 /*SET DEFOULT STYLE HOVER*/
     &:hover {
       background-color: rgba(31, 200, 212, 0.637);
@@ -33,10 +34,11 @@
     color: $tiffanyBrand;
     border: 2px solid $tiffanyBrand;
     background-color: $trasparency;
+    
 /*SET ALT STYLE HOVER*/
     &:hover {
-      background-color: rgba(8, 6, 11, 0.65);
-      transition: 400ms;
+      opacity: 0.65;
+    
     }
   }
 /*SET INFO STYLE*/
@@ -53,8 +55,8 @@
     background-color: #08060b00;
 /*SET INFO STYLE HOVER*/
     &:hover {
-      background-color: rgba(8, 6, 11, 0.65);
-      transition: 400ms;
+      opacity: 0.65;
+   
     }
   }
 /*SET CONNECT STYLE*/
@@ -68,6 +70,7 @@
     letter-spacing: normal;
     color: #fff;
     background-color: $tiffanyBrand;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 /*SET CONNECT STYLE HOVER*/
     &:hover {
       background-color: rgba(31, 200, 212, 0.637);
@@ -92,4 +95,28 @@
   } @else {
     @extend %button-default;
   }
+}
+
+
+
+
+
+.btn--default{
+  @include b-selector(default); 
+  user-select: none;
+}
+
+.btn--alternative{
+  @include b-selector(alternative);  
+}
+.btn--connect{
+  @include b-selector(connect); 
+}
+
+.btn--full{
+ width: 100%;
+}
+
+h1{
+ color: $lightBlack
 }

@@ -1,5 +1,6 @@
 
-import "./_slideButton.scss";
+import "../../style.scss";
+
 
 
 export function SlideButton(props) {

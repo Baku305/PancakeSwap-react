@@ -1,4 +1,4 @@
-import "./_button.scss";
+import "../../../style.scss";
 
 const STYLES = [
     "btn--default",

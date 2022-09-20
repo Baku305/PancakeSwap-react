@@ -1,4 +1,4 @@
-import "./_banner_2.scss";
+import "../../style.scss";
 import imgTrade from "../../assets/perpetual.webp";
 import { Button } from "../shared/button/Button";
 

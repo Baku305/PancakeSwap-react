@@ -28,6 +28,53 @@ html {
   fill: #7645d9 !important;
 }
 
+body.dark, body[data-theme=dark] {
+  --colors-white: white;
+  --colors-failure: #ED4B9E;
+  --colors-failure33: #ED4B9E33;
+  --colors-primary: #1FC7D4;
+  --colors-primary0f: #1FC7D40f;
+  --colors-primary3D: #1FC7D43D;
+  --colors-primaryBright: #53DEE9;
+  --colors-primaryDark: #0098A1;
+  --colors-success: #31D0AA;
+  --colors-success19: #31D0AA19;
+  --colors-warning: #FFB237;
+  --colors-warning2D: #ED4B9E2D;
+  --colors-warning33: #ED4B9E33;
+  --colors-binance: #F0B90B;
+  --colors-overlay: #452a7a;
+  --colors-gold: #FFC700;
+  --colors-silver: #B2B2B2;
+  --colors-bronze: #E7974D;
+  --colors-secondary: #9A6AFF;
+  --colors-secondary80: #9A6AFF80;
+  --colors-background: #08060B;
+  --colors-backgroundDisabled: #3c3742;
+  --colors-backgroundAlt: #27262c;
+  --colors-backgroundAlt2: rgba(39, 38, 44, 0.7);
+  --colors-cardBorder: #383241;
+  --colors-contrast: #FFFFFF;
+  --colors-dropdown: #1E1D20;
+  --colors-dropdownDeep: #100C18;
+  --colors-invertedContrast: #191326;
+  --colors-input: #372F47;
+  --colors-inputSecondary: #262130;
+  --colors-tertiary: #353547;
+  --colors-text: #F4EEFF;
+  --colors-text99: #F4EEFF99;
+  --colors-textDisabled: #666171;
+  --colors-textSubtle: #B8ADD2;
+  --colors-disabled: #524B63;
+  --colors-gradientBubblegum: linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%);
+  --colors-gradientInverseBubblegum: linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%);
+  --colors-gradientCardHeader: linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%);
+  --colors-gradientBlue: linear-gradient(180deg, #00707F 0%, #19778C 100%);
+  --colors-gradientViolet: linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%);
+  --colors-gradientVioletAlt: linear-gradient(180deg, #434575 0%, #66578D 100%);
+  --colors-gradientGold: linear-gradient(180deg, #FFD800 0%, #FDAB32 100%);
+}
+
 /* MIXIN */
 /* FLEX MIXINS*/
 /*animations*/
@@ -108,13 +155,12 @@ a {
 
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+header .container-button .button4, .btn--connect, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .btn--alternative, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1, .btn--default {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 4.8rem;
   width: 16.5rem;
-  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
@@ -127,25 +173,25 @@ header .container-button .button4, header .container-button .button3, .theMoonSe
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1, .btn--default {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   /*SET DEFOULT STYLE HOVER*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button:hover, .earnSection-content-title .earnSection-button-container-default:hover, .tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button:hover, .earnSection-content-title .earnSection-button-container-default:hover, .tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover, .btn--default:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
-.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2 {
+.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .btn--alternative {
   color: #1fc7d4;
   border: 2px solid #1fc7d4;
   background-color: rgba(0, 0, 0, 0);
   /*SET ALT STYLE HOVER*/
 }
-.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2:hover, header .container-button .button2:hover {
-  background-color: rgba(8, 6, 11, 0.65);
-  transition: 400ms;
+.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2:hover, header .container-button .button2:hover, .btn--alternative:hover {
+  opacity: 0.65;
 }
 header .container-button .button3 {
   height: 4.8rem;
@@ -160,10 +206,9 @@ header .container-button .button3 {
   /*SET INFO STYLE HOVER*/
 }
 header .container-button .button3:hover {
-  background-color: rgba(8, 6, 11, 0.65);
-  transition: 400ms;
+  opacity: 0.65;
 }
-header .container-button .button4 {
+header .container-button .button4, .btn--connect {
   height: 3.2rem;
   max-width: 10.7rem;
   min-width: 12rem;
@@ -172,14 +217,30 @@ header .container-button .button4 {
   letter-spacing: normal;
   color: #fff;
   background-color: #1fc7d4;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   /*SET CONNECT STYLE HOVER*/
 }
-header .container-button .button4:hover {
+header .container-button .button4:hover, .btn--connect:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
 
 /*MIXIN BUTTONS SELECTOR*/
+.btn--default {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+h1 {
+  color: #222222;
+}
+
 /*Vertical Menù*/
 header .menu {
   display: flex;
@@ -851,7 +912,9 @@ header .container-button {
   font-size: 6.4rem;
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container h3 {
+  color: #280d5f;
   padding-block: 3rem;
+  font-weight: 600;
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container {
   display: flex;
@@ -2099,4 +2162,372 @@ button svg {
 .buy:hover {
   text-decoration: none;
   opacity: 0.65;
+}
+
+/*jsx*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav_wrapper {
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e7e3eb;
+  transform: translate3d(0px, 0px, 0px);
+  padding-inline: 16px;
+}
+.nav_wrapper .nav_left_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.nav_wrapper .nav_left_wrapper .menu_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #7a6eaa;
+}
+.nav_wrapper .nav_left_wrapper .logo_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-right: 16px;
+}
+.nav_wrapper .nav_left_wrapper .logo_wrapper .logo_title {
+  width: 160px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 860px) {
+  .nav_wrapper .nav_left_wrapper .logo_wrapper .logo_title {
+    display: none;
+  }
+}
+.nav_wrapper .nav_left_wrapper .logo_wrapper svg {
+  height: 100%;
+  width: 45px;
+  padding-inline: 5px;
+}
+.nav_wrapper .nav_left_wrapper .logo_wrapper svg .eye {
+  transition: 200ms;
+}
+.nav_wrapper .nav_right_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav_wrapper .nav_right_wrapper .settings_button {
+  fill: #7a6eaa;
+  margin: 0 8px;
+}
+.nav_wrapper .nav_right_wrapper .language_button {
+  fill: #7a6eaa;
+  margin: 0 8px;
+}
+.nav_wrapper .nav_right_wrapper .pancake_asset_value_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 4px;
+}
+.nav_wrapper .nav_right_wrapper .pancake_asset_value_wrapper h4 {
+  color: #7a6eaa;
+  font-weight: 600;
+}
+.nav_wrapper .nav_right_wrapper .pancake_asset_value_wrapper img {
+  padding-inline: 4px;
+}
+.nav_wrapper .nav_right_wrapper .pancake_asset_value_wrapper img:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+.lottery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: 100%;
+  height: 192px;
+  background: rgba(0, 0, 0, 0) -webkit-linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) repeat scroll 0% 0%;
+  border-radius: 32px;
+  position: realtive;
+}
+
+.lottery-banner {
+  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
+          animation: onLoadTransition 1s ease-out 0s 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  z-index: 2;
+  padding: 0px 20px;
+  position: absolute;
+  margin-left: 5px;
+}
+@-webkit-keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.lottery-image-container {
+  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
+          animation: onLoadTransition 1s ease-out 0s 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+}
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.lottery-image-container .lottery-image-container-image {
+  z-index: 1;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+
+.lottery-image-container .lottery-image-container-image-mobile {
+  z-index: 0;
+  max-width: 100%;
+  max-height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .lottery-image-container .lottery-image-container-image-mobile {
+    display: block;
+  }
+  .lottery-image-container .lottery-image-container-image {
+    display: none;
+  }
+}
+.lottery-container .lottery-banner .lottery-title {
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.button_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  fill: white;
+}
+
+.button_wrapper {
+  width: 150px;
+}
+
+.tradeBanner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: 100%;
+  height: 192px;
+  background: rgba(0, 0, 0, 0) -webkit-linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) repeat scroll 0% 0%;
+  position: relative;
+  border-radius: 32px;
+}
+
+.tradeBanner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: 100%;
+  height: 100%;
+  padding-left: 3rem;
+  z-index: 2;
+  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
+          animation: onLoadTransition 1s ease-out 0s 1;
+}
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.tradeBanner-container .tradeBanner-image-container {
+  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
+          animation: onLoadTransition 1s ease-out 0s 1;
+}
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.tradeBanner-container .tradeBanner-image-container .tradeBanner-image-container-image {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 3px;
+  right: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.lottery-counter {
+  background-image: url("../../assets/asset 37.png");
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 10px;
+  padding: 10px 1px;
+  display: flex;
+  flex-direction: space-around;
+  justify-content: center;
+  align-items: center;
+}
+.lottery-counter :last-child h3 {
+  padding-right: 15px;
+}
+
+.lottery-content-wrapper {
+  margin: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: baseline;
+  background: rgba(0, 0, 0, 0);
+  background: linear-gradient(0deg, rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.lottery-content-wrapper h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.lottery-content-wrapper h3 {
+  padding-inline: 3px;
+}
+
+.slideButton-container {
+  position: absolute;
+  /*bottom: 10px;*/
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+  overflow: hidden;
+}
+
+.slideButton-container .slideButton {
+  height: 8px;
+  width: 54px;
+}
+
+#prevSlideBt {
+  border-radius: 4px 0px 0px 4px;
+}
+
+#nextSlideBt {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabs-container {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.tabs-content {
+  max-height: 192px;
+}
+
+.bg-actived-button {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

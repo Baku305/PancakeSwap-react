@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import "./_lotteryCounter.scss";
+import "../../style.scss";
 import { useCountdown } from "../../custom hooks/useCountDownMaker";
 
 export function LotteryCounter() {
