@@ -160,7 +160,7 @@ header .container-button .button4, .btn--connect, header .container-button .butt
   justify-content: center;
   align-items: center;
   height: 4.8rem;
-  width: 16.5rem;
+  width: auto;
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
@@ -903,9 +903,6 @@ header .container-button {
   min-width: 115rem;
   height: 58rem;
   z-index: 1;
-}
-.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container {
-  padding-inline: 2rem;
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container h1 {
   color: #7645d9;
