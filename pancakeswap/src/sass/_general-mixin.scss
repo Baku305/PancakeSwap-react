@@ -75,7 +75,23 @@
     
   }
 
+  @mixin topHidden{
+    animation: topHidden 0.2s ease 0s;
+  
+    @keyframes topHidden {
+      0%{top: 0};
+      100%{top: -126px ; z-index: -1;};
+    }
+  }
 
+  @mixin topViewed{
+    animation: topViewed 0.2s ease 0s;
+  
+    @keyframes topViewed {
+      0%{top: -126px};
+      100%{top: 0;};
+    }
+  }
 
 
 
