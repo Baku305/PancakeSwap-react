@@ -1,0 +1,149 @@
+@import "../../style.scss";
+
+// section-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 62.2rem;
+//   flex-direction: column;
+// }
+
+// section-content {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 92rem;
+//   height: 43rem;
+// }
+
+// section-content-title {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   height: 23.2rem;
+//   width: 42.8rem;
+// }
+// section-content-title h2 {
+//   font-size: 4rem;
+//   color: darkBlue;
+//   margin-bottom: 2.4rem;
+// }
+
+.tradeSection {
+  @include flexCenter;
+  height: 62.2rem;
+  flex-direction: column;
+
+  &-content {
+    @include flexSpaceBetween;
+    width: 92rem;
+    height: 43rem;
+
+    &-title {
+      @include flexCenter;
+      flex-direction: column;
+      height: 23.2rem;
+      width: 42.8rem;
+
+      h2 {
+        font-size: 4rem;
+        color: $darkBlue;
+        margin-bottom: 2.4rem;
+
+        span {
+          color: $violetBrand;
+        }
+      }
+
+      &-subtitle {
+        .subTitle {
+          @extend %subTitle;
+          margin-bottom: 2.4rem;
+        }
+      }
+
+      .tradeSection-button-container {
+        @include flexStart;
+        width: 100%;
+
+        &-default {
+          @include b-selector(default);
+          margin-right: 1.6rem;
+          width: 12.9rem;
+        }
+
+        &-link {
+          color: rgb(31, 199, 212);
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 16px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &-images {
+      @include flex(unset, end, center);
+      position: relative;
+      width: fit-content;
+      height: 42.8rem;
+
+      img {
+        @include bouncing;
+        position: absolute;
+        height: 42.8rem;
+        width: 42.8rem;
+      }
+
+      .img1 {
+        animation-delay: 1.5s;
+      }
+
+      .img2 {
+        animation-delay: 3s;
+      }
+
+      .img3 {
+        z-index: -1;
+      }
+    }
+  }
+}
+
+//MINI CARD
+
+.MiniCard {
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+  gap: 32px;
+  grid-template-columns: repeat(3, auto);
+  margin-bottom: 80px;
+
+  .MiniCardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    border-left: 1px solid rgb(215, 202, 236);
+    margin-right: 60px;
+
+    p {
+      color: rgb(122, 110, 170);
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    h4 {
+      color: rgb(40, 13, 95);
+      font-weight: 600;
+      line-height: 1.1;
+      font-size: 24px;
+    }
+  }
+}

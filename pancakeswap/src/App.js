@@ -4,7 +4,13 @@ import { Button } from "./components/shared/button/Button";
 import { color } from "./components/Color";
 import { Navbar } from "./components/navbar/navbar";
 import { Tabs } from "./components/banner/tabs";
-import { Paragraph } from "./components/shared/paragraph/Paragraph";
+import { Paragraph } from "./components/tradeSection/Paragraph.jsx";
+import bnbCoin from "../src/assets/asset 12.png";
+import btcCoin from "../src/assets/asset 13.png";
+import pancakeCoin from "../src/assets/asset 14.png";
+import pieChart from "../src/assets/asset 15.png";
+import arrowChart from "../src/assets/asset 16.png";
+import coinFolder from "../src/assets/asset 17.png";
 function App() {
   const Navigate = useNavigate();
 
@@ -26,7 +32,26 @@ function App() {
         <Tabs />
       </div> */}
       <div>
-        <Paragraph />
+        <Paragraph
+          title="Trade everything. No registration, no hassle"
+          subTitle="Trade any token on BNB Smart Chain in seconds, just by connecting your wallet."
+          learn="Learn"
+          text="Trade now"
+          image1={bnbCoin}
+          image2={btcCoin}
+          image3={pancakeCoin}
+        />
+
+        <Paragraph
+          title="Earn passive income with crypto."
+          subTitle="PancakeSwap makes it easy to make your crypto work for you."
+          learn="Learn"
+          text="Explore"
+          image1={pieChart}
+          image2={arrowChart}
+          image3={coinFolder}
+          style={{ paddingBottom: "60px", backgroundColor: `red` }}
+        />
       </div>
       {/* <Routes>
         <Route
