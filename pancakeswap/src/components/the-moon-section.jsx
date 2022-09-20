@@ -1,7 +1,6 @@
 import "../style.scss";
 
 import { Button } from './Button';
-import { color } from './Color'
 
 export function MoonSection() {
 
@@ -23,11 +22,10 @@ export function MoonSection() {
                             </div>
                         </div>
                         <div className="theMoonSection-floatingimgs-container">
-                            <img className="theMoonSection-star1" src="assets/asset 11.png" alt="" />
-                            <img className="theMoonSection-star2" src="assets/asset 10.png" alt="" />
-                            <img className="theMoonSection-star3" src="assets/asset 9.png" alt="" />
-                            <img className="theMoonSection-rabbit1" src="assets/asset 8.png" alt="coniglio maledetto" />
-                        </div>
+                            <img className="theMoonSection-star1" src="../../src/assets/asset 0.png" alt="" />
+                            <img className="theMoonSection-star2" src="../../src/assets/asset 10.png" alt="" />
+                            <img className="theMoonSection-star3" src="../../src/assets/asset 9.png" alt="" />
+                            <img className="theMoonSection-rabbit1" src="../../src/assets/asset 8.png" alt="coniglio maledetto" />                        </div>
                     </div>
                 </section>
                 <svg className="svgMoonSectionSeparator" viewBox="0 0 1660 339" width="100%" fill="url('#paint0_linear_light')"
