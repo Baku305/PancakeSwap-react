@@ -15,10 +15,10 @@ export function Banner(props) {
 
     const interval = () => {
       setInterval(() => setLottery(lottery + (lottery * Math.random()) / 100), 2000); };
-    clearInterval(interval)
+      clearInterval(interval)
     
     return interval
-  }, [lottery]);
+  }, []);
 
   return (
     <>
