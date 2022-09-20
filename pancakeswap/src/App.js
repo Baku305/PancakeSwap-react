@@ -12,9 +12,7 @@ function App() {
   return (
     <>
     <MoonSection/>
-    <h1  className = "tiffanyBrand">The moon is made of pancakes.</h1>
-    <h1  color = "pinkBrand">The moon is made of pancakes.</h1>
-    <h1  className = "violetBrand">The moon is made of pancakes.</h1>
+
       <Routes>
         <Route path='/' element={<Button color="violetBrand" onClick={()=>Navigate("/2")} buttonStyle={"btn--default"}>ciao</Button>} />
         <Route path = "/1" element = {<Button buttonStyle={"btn--default"}/>}/>

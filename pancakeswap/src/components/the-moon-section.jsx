@@ -1,5 +1,8 @@
 import "../style.scss";
-
+import Image1 from "../../src/assets/asset 11.png"
+import Star2 from "../../src/assets/asset 10.png"
+import Star3 from "../../src/assets/asset 9.png"
+import Rabbit1 from "../../src/assets/asset 8.png"
 import { Button } from './Button';
 
 export function MoonSection() {
@@ -19,13 +22,14 @@ export function MoonSection() {
                             <div className="theMoonSection-buttons-container">
                                 <Button buttonStyle={"btn--default"}>Connect wallet</Button>
                                 <Button buttonStyle={"btn--alternative"}>Trade Now</Button>
+                                
                             </div>
                         </div>
                         <div className="theMoonSection-floatingimgs-container">
-                            <img className="theMoonSection-star1" src="../../src/assets/asset 0.png" alt="" />
-                            <img className="theMoonSection-star2" src="../../src/assets/asset 10.png" alt="" />
-                            <img className="theMoonSection-star3" src="../../src/assets/asset 9.png" alt="" />
-                            <img className="theMoonSection-rabbit1" src="../../src/assets/asset 8.png" alt="coniglio maledetto" />                        </div>
+                            <img className="theMoonSection-star1" src={Image1} alt="" />
+                            <img className="theMoonSection-star2" src={Star2} alt="" />
+                            <img className="theMoonSection-star3" src={Star3} alt="" />
+                            <img className="theMoonSection-rabbit1" src={Rabbit1} alt="coniglio maledetto" />                        </div>
                     </div>
                 </section>
                 <svg className="svgMoonSectionSeparator" viewBox="0 0 1660 339" width="100%" fill="url('#paint0_linear_light')"
