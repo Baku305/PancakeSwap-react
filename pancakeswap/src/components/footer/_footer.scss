@@ -1,8 +1,24 @@
 @import "../../style.scss";
 
-.test{
+.footer {
     width: 100%;
     height: 49.9rem;
     background-color: $darkGray;
+
+    &-lists-container{
+        width: 119.2rem;
+        height: 2.4rem;
+        padding: 5.6rem;
+        display: flex;
+        justify-content:space-around;
+        justify-self: center;
+    }
+
+    span{
+        color:$violetBrand2;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
     
+
 }
