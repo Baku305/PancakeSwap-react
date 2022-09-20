@@ -24,36 +24,40 @@ function App() {
 
   return (
     <>
-      {/* <h1  className = "tiffanyBrand">The moon is made of pancakes.</h1>
-    <h1  color = "pinkBrand">The moon is made of pancakes.</h1>
-    <h1  className = "violetBrand">The moon is made of pancakes.</h1>
-    <Navbar menu = {menu}/> */}
-      {/* <div>
+      <h1 className="tiffanyBrand">The moon is made of pancakes.</h1>
+      <h1 color="pinkBrand">The moon is made of pancakes.</h1>
+      <h1 className="violetBrand">The moon is made of pancakes.</h1>
+      <Navbar menu={menu} />
+      <div>
         <Tabs />
-      </div> */}
+      </div>
+
       <div>
         <Paragraph
           title="Trade everything. No registration, no hassle"
           subTitle="Trade any token on BNB Smart Chain in seconds, just by connecting your wallet."
           learn="Learn"
-          text="Trade now"
+          button="Trade now"
           image1={bnbCoin}
           image2={btcCoin}
           image3={pancakeCoin}
+          background={"tradeSection"}
+          ltr={true}
         />
 
         <Paragraph
           title="Earn passive income with crypto."
           subTitle="PancakeSwap makes it easy to make your crypto work for you."
           learn="Learn"
-          text="Explore"
+          button="Explore"
           image1={pieChart}
           image2={arrowChart}
           image3={coinFolder}
-          style={{ paddingBottom: "60px", backgroundColor: `red` }}
+          background={"earnSection"}
+          ltr={false}
         />
       </div>
-      {/* <Routes>
+      <Routes>
         <Route
           path="/"
           element={
@@ -75,7 +79,7 @@ function App() {
             </Button>
           }
         />
-      </Routes> */}
+      </Routes>
     </>
   );
 }

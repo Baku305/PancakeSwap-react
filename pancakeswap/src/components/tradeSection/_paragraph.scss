@@ -1,35 +1,5 @@
 @import "../../style.scss";
 
-// section-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 62.2rem;
-//   flex-direction: column;
-// }
-
-// section-content {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: 92rem;
-//   height: 43rem;
-// }
-
-// section-content-title {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   height: 23.2rem;
-//   width: 42.8rem;
-// }
-// section-content-title h2 {
-//   font-size: 4rem;
-//   color: darkBlue;
-//   margin-bottom: 2.4rem;
-// }
-
 .tradeSection {
   @include flexCenter;
   height: 62.2rem;
@@ -63,7 +33,7 @@
         }
       }
 
-      .tradeSection-button-container {
+      .section-button-container {
         @include flexStart;
         width: 100%;
 
@@ -116,34 +86,34 @@
 
 //MINI CARD
 
-.MiniCard {
-  display: grid;
-  grid-template-areas:
-    "a b c"
-    "d e f";
-  gap: 32px;
-  grid-template-columns: repeat(3, auto);
-  margin-bottom: 80px;
+// .MiniCard {
+//   display: grid;
+//   grid-template-areas:
+//     "a b c"
+//     "d e f";
+//   gap: 32px;
+//   grid-template-columns: repeat(3, auto);
+//   margin-bottom: 80px;
 
-  .MiniCardContent {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 16px;
-    border-left: 1px solid rgb(215, 202, 236);
-    margin-right: 60px;
+//   .MiniCardContent {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 0px 16px;
+//     border-left: 1px solid rgb(215, 202, 236);
+//     margin-right: 60px;
 
-    p {
-      color: rgb(122, 110, 170);
-      font-weight: 400;
-      line-height: 1.5;
-      font-size: 16px;
-    }
+//     p {
+//       color: rgb(122, 110, 170);
+//       font-weight: 400;
+//       line-height: 1.5;
+//       font-size: 16px;
+//     }
 
-    h4 {
-      color: rgb(40, 13, 95);
-      font-weight: 600;
-      line-height: 1.1;
-      font-size: 24px;
-    }
-  }
-}
+//     h4 {
+//       color: rgb(40, 13, 95);
+//       font-weight: 600;
+//       line-height: 1.1;
+//       font-size: 24px;
+//     }
+//   }
+// }

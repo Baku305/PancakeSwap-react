@@ -2,50 +2,36 @@ import React from "react";
 import { Button } from "../shared/button/Button";
 import "./_paragraph.scss";
 import "../shared/button/_button.scss";
-import bnbCoin from "../../assets/asset 12.png";
-import btcCoin from "../../assets/asset 13.png";
-import pancakeCoin from "../../assets/asset 14.png";
-
-// interface Props {
-//   display: string;
-//   justifyContent: string;
-//   alignItems: string;
-//   flexDirection?: string;
-//   width?: string;
-//   height?: string;
-// }
-
-// const Paragraph: React.FC<Props> = ({
-//   display, justifyContent, alignItems, flexDirection, width, height
-// }) => {
-//   return(
-//     <div> </div>
-
-//   )
-// }
 
 // se ltr è true immagine a dx e testo a sx
 
 export const Paragraph = ({
   title,
   subTitle,
-  text,
+  button,
   learn,
   image1,
   image2,
   image3,
-  style,
-  images,
-  background = false,
+  background = "",
   ltr = true,
 }) => {
   const backgroundStyle = {
-    backgroundColor: `$greyMouse`,
-  };
+    earnSection: { backgroundColor: "#e9f2f6" },
+    tradeSection: { backgroundColor: "white" },
+  }[background];
+
   return (
     <>
-      <section className="tradeSection">
-        <div className="tradeSection-content">
+      <section className="tradeSection" style={backgroundStyle}>
+        <div
+          className="tradeSection-content"
+          style={{
+            flexDirection: ltr === false ? "row-reverse" : "row",
+            justifyContent: ltr === false ? "normal" : "space-between",
+            paddingBottom: ltr === false ? "60px" : "",
+          }}
+        >
           <div className="tradeSection-content-title">
             <h2>
               <span> {title.slice(0, 5)} </span>
@@ -56,14 +42,22 @@ export const Paragraph = ({
             </div>
             <div className="tradeSection-button-container">
               <div className="tradeSection-button-container-default">
-                <Button buttonStyle={"btn--default"}>{text}</Button>
+                <Button buttonStyle={"btn--default"}>{button}</Button>
               </div>
-              <a className="tradeSection-button-container-link" href="">
+              <a
+                className="tradeSection-button-container-link"
+                href="https://docs.pancakeswap.finance"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {learn}
               </a>
             </div>
           </div>
-          <div className="tradeSection-content-images">
+          <div
+            className="tradeSection-content-images"
+            style={{ marginRight: ltr === false ? "50px" : "" }}
+          >
             <img className="img1" src={image1} alt="bnbCoin || pieChart" />
             <img src={image2} alt="btcCoin || arrowChart" />
             <img
@@ -71,34 +65,6 @@ export const Paragraph = ({
               src={image3}
               alt="pancakeCoin || coinFolder"
             />
-          </div>
-        </div>
-      </section>
-
-      <section class="earnSection">
-        <div class="earnSection-content">
-          <div class="earnSection-content-title">
-            <h2>
-              {title}
-              {/* <span>Earn</span> passive income with crypto. */}
-            </h2>
-            <div class="earnSection-content-title-subtitle">
-              <p class="subTitle">
-                {/* PancakeSwap makes it easy to make your crypto work for you. */}
-                {subTitle}
-              </p>
-            </div>
-            <div class="earnSection-button-container">
-              {/* <div class="earnSection-button-container-default">Trade now</div> */}
-              <a class="earnSection-button-container-link" href="">
-                Learn
-              </a>
-            </div>
-          </div>
-          <div className="earnSection-content-images">
-            <img className="img1" src="assets/asset 15.png" alt="" />
-            <img src="assets/asset 16.png" alt="" />
-            <img className="img2" src="assets/asset 17.png" alt="" />
           </div>
         </div>
       </section>
