@@ -11,9 +11,6 @@ function App() {
 
   return (
     <>
-    <h1  className = "tiffanyBrand">The moon is made of pancakes.</h1>
-    <h1  color = "pinkBrand">The moon is made of pancakes.</h1>
-    <h1  className = "violetBrand">The moon is made of pancakes.</h1>
     <Navbar menu = {menu}/>
     <div>
     <Tabs/>
