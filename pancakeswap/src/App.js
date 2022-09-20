@@ -7,6 +7,7 @@ import { Tabs } from "./components/banner/tabs";
 import { MoonSection } from "./components/MoonSection/the-moon-section";
 import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
 import verticalMenuIcon from "./assets/asset 41.svg";
+import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 
 function App() {
   const Navigate = useNavigate();
@@ -64,6 +65,7 @@ function App() {
       <Navbar menu={menu} />
       <div>
         <MoonSection />
+        <CardsIntro />
       </div>
       <Routes>
         <Route path="/1" element={<Button buttonStyle={"btn--default"} />} />
