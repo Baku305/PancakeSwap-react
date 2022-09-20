@@ -32,12 +32,36 @@
 
     .menu_wrapper {
       @include flex(row, center, center);
+      height: 100%;
     }
 
     .menu_el_wrapper {
       padding: 0px 16px;
-      @include flex(row, center, center);
+      @include flex(column, center, flex-start);
       color: $subTitleViolet;
+      position : relative;
+      cursor: pointer;
+      height: 100%;
+
+      &:hover{
+        
+        border-radius: 16px;
+        background: $grayHover;
+        
+        .verticalMenu{
+          display: block;
+        }
+      }
+      
+      .verticalMenu {
+        top:55px;
+        position: absolute;
+        display: none;
+
+        &:hover {
+          display: block
+        }
+      }
     }
 
     .logo_wrapper {

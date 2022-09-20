@@ -4,6 +4,8 @@ import titleLogo from "../../assets/title.svg";
 import pancakeLogoButton from "../../assets/asset 43.svg";
 import { useEffect, useState } from "react";
 import "external-svg-loader";
+import verticalMenuIcon from "../../assets/asset 41.svg";
+import { VerticalMenu } from "../shared/vericalMenu/VerticaMenu";
 
 const eyesSvg = {
   open: "M75.614 117.896c0 9.718-4.593 14.779-10.258 14.779-5.665 0-10.258-5.061-10.258-14.779s4.593-14.779 10.258-14.779c5.665 0 10.258 5.061 10.258 14.779zM142.288 117.896c0 9.718-4.592 14.779-10.257 14.779-5.666 0-10.258-5.061-10.258-14.779s4.592-14.779 10.258-14.779c5.665 0 10.257 5.061 10.257 14.779z",
@@ -70,9 +72,13 @@ export const Navbar = ({ menu }) => {
           <div className="menu_wrapper">
             {menu.map((el, i) => {
               return (
+                <>
+                
                 <div key={i} className="menu_el_wrapper">
                   <h4>{el.name}</h4>
+                  <VerticalMenu icon={verticalMenuIcon} array= {el.content}/>
                 </div>
+                </>
               );
             })}
           </div>

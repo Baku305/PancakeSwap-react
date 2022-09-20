@@ -242,32 +242,45 @@ h1 {
 }
 
 /*Vertical Menù*/
-header .menu {
+header .menu, .verticalMenu {
+  margin-bottom: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
   border-radius: 1.6rem;
-  border: 0px #565065;
-  background-color: #27262c;
+  border: 1px solid #e7e3eb;
+  background-color: white;
   width: 28rem;
-  color: #b8add2;
+  color: #7a6eaa;
   overflow: hidden;
   font-size: 1.6rem;
+  left: 0px;
   /*set childs style*/
 }
-header .menu * {
+header .menu *, .verticalMenu * {
   list-style-type: none;
   width: 100%;
   /*set childs of childs style*/
 }
-header .menu * * {
+header .menu * *, .verticalMenu * * {
   padding: 6px 0px 6px 8px;
   cursor: pointer;
   /*set childs of childs hover*/
 }
-header .menu * *:hover {
-  background-color: #353547;
+header .menu * *:hover, .verticalMenu * *:hover {
+  background-color: #eff4f5;
+}
+header .menu * .verticalMenu .verticalMenu_content, .verticalMenu * .verticalMenu_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu * .verticalMenu .verticalMenu_content .verticalMenu_icon, .verticalMenu * .verticalMenu_content .verticalMenu_icon, .verticalMenu .verticalMenu_content * .verticalMenu_icon {
+  height: 100%;
+  width: 12%;
+  margin-right: 5%;
+  fill: #7a6eaa;
 }
 
 /*Vertical Tabs*/
@@ -2240,14 +2253,33 @@ button svg {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .nav_wrapper .nav_left_wrapper .menu_el_wrapper {
   padding: 0px 16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   color: #7a6eaa;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper:hover {
+  border-radius: 16px;
+  background: #eff4f5;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper:hover .verticalMenu {
+  display: block;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper .verticalMenu {
+  top: 55px;
+  position: absolute;
+  display: none;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper .verticalMenu:hover {
+  display: block;
 }
 .nav_wrapper .nav_left_wrapper .logo_wrapper {
   display: flex;
@@ -2564,7 +2596,7 @@ button svg {
 .tabs-container {
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 120px;
   padding: 20px;
   max-width: 1200px;
 }
