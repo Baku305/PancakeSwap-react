@@ -31,6 +31,7 @@ export const Navbar = ({ menu }) => {
             color="text"
             width="20px"
             xmlns="http://www.w3.org/2000/svg"
+            className="logo_img"
           >
             <path
               fill-rule="evenodd"

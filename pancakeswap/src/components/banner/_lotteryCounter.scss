@@ -5,36 +5,39 @@
   width: max-content;
   background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   margin-bottom: 10px;
   padding: 10px 1px;
-  @include flex(space-around,center,center);
+  @include flex(space-around, center, center);
 
-  :last-child{
-    h3{
+  :last-child {
+    h3 {
       padding-right: 15px;
     }
   }
 }
-.lottery-counter h2 {
-  background: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat
-    scroll 0% 0% padding-box text;
-  -webkit-text-fill-color: transparent;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.1;
-}
 
-.lottery-content-wrapper{
-  margin: 0px 5px; 
+.lottery-content-wrapper {
+  margin: 0px 5px;
   @include flexSpaceBetween;
   align-items: baseline;
-  background: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%) repeat
-    scroll 0% 0% padding-box text;
+  background: rgba(0, 0, 0, 0);
+  background: linear-gradient(0deg, rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
 
-  h3{
-    padding-inline:3px
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h3 {
+    padding-inline: 3px;
   }
 }

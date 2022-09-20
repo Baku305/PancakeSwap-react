@@ -31,12 +31,16 @@
     .logo_wrapper {
       @include flexCenter;
       height: 100%;
-      width: 160px;
+      width: 100%;
       margin-right: 16px;
 
       .logo_title {
-        width: 110%;
+        width: 160px;
         margin-top: 5px;
+
+        @media screen and (max-width:860px){
+          display: none;
+        }
       }
 
       svg {

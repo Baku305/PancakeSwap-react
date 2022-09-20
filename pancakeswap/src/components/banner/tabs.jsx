@@ -5,9 +5,22 @@ import "./_tabs.scss";
 
 import { SlideButton } from "./slideButton";
 
+import { UseFetchApi } from "../../custom hooks/useFetchApi";
+
+const tokensApi = "https://api.pancakeswap.info/api/v2/tokens"
+const pairsApi = "https://api.pancakeswap.info/api/v2/pairs"
+const summaryApi = "https://api.pancakeswap.info/api/v2/summary"
+
 export function Tabs() {
+
+  const {
+    data,
+    error,
+    isLoading
+  } = UseFetchApi(pairsApi)
   
   const [visibility, setVisibility] = useState(1);
+
 
   //*visibility fnc
   useEffect(() => {
@@ -18,8 +31,13 @@ export function Tabs() {
         setVisibility((v) => v = 1);
       }
     }, 5000);
+
+
+      console.log(data)
+
     return () => clearInterval(interval)
-  }, [visibility]);
+
+  }, [visibility,data]);
 
   //*button setting
 
