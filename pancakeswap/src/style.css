@@ -282,6 +282,16 @@ header .menu * .verticalMenu .verticalMenu_content .verticalMenu_icon, .vertical
   margin-right: 5%;
   fill: #7a6eaa;
 }
+header .menu * .verticalMenu .separator, .verticalMenu * .separator {
+  border-color: #e7e3eb;
+  border-style: solid;
+  border-width: 1px 0px 0px;
+  margin: 4px 0px;
+  padding: 0;
+}
+header .menu * .verticalMenu .separator:hover, .verticalMenu * .separator:hover {
+  background-color: white;
+}
 
 /*Vertical Tabs*/
 /*set vertical tab*/

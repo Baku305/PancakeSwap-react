@@ -6,7 +6,7 @@
   flex-direction: column;
   border-radius: 1.6rem;
   border: 1px solid $borderGray2;
-  background-color:white;
+  background-color: white;
   width: 28rem;
   color: $subTitleViolet;
   overflow: hidden;
@@ -36,6 +36,18 @@
       margin-right: 5%;
       fill: $subTitleViolet;
     }
+
+    %separator {
+      border-color: $borderGray2;
+      border-style: solid;
+      border-width: 1px 0px 0px;
+      margin: 4px 0px;
+      padding: 0;
+
+      &:hover{
+       background-color: white;
+      }
+    }
   }
 }
 
@@ -51,5 +63,10 @@
     .verticalMenu_icon {
       @extend %verticalMenu_icon;
     }
+  }
+  .separator {
+    @extend %separator;
+
+   
   }
 }

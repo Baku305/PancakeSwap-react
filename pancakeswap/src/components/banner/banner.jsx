@@ -8,13 +8,16 @@ import { Button } from "../shared/button/Button";
 import { useEffect } from "react";
 
 export function Banner(props) {
-  const [lottery, setLottery] = useState(500);
+
+  const [lottery, setLottery] = useState(2500);
 
   useEffect(() => {
+
     const interval = () => {
-      setInterval(() => setLottery(lottery + (lottery * Math.random()) / 100), 5000);
-    };
-    return clearInterval(interval);
+      setInterval(() => setLottery(lottery + (lottery * Math.random()) / 100), 2000); };
+    clearInterval(interval)
+    
+    return interval
   }, [lottery]);
 
   return (

@@ -49,11 +49,12 @@ function App() {
     {
       name: "···",
       content: [
-        { name: "swap" },
-        { name: "limit" },
-        { name: "liquidity" },
-        { name: "perpetual", icon: true },
-        { name: "bridge", icon: true },
+        { name: "Info" },
+        { name: "IFO" },
+        { name: "Voting", separator: true  },
+        { name: "Leaderboard", separator: true },
+        { name: "Blog", icon: true },
+        { name: "Docs", icon: true },
       ],
     },
   ];
