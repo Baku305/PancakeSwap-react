@@ -2171,7 +2171,55 @@ button svg {
   box-sizing: border-box;
 }
 
+.nav_wrapper_hidden {
+  -webkit-animation: topHidden 0.2s ease 0s;
+          animation: topHidden 0.2s ease 0s;
+  top: -126px;
+}
+@-webkit-keyframes topHidden {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -126px;
+    z-index: -1;
+  }
+}
+@keyframes topHidden {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -126px;
+    z-index: -1;
+  }
+}
+
+.nav_wrapper_entry {
+  -webkit-animation: topViewed 0.2s ease 0s;
+          animation: topViewed 0.2s ease 0s;
+  top: 0px;
+}
+@-webkit-keyframes topViewed {
+  0% {
+    top: -126px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes topViewed {
+  0% {
+    top: -126px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .nav_wrapper {
+  position: fixed;
+  z-index: 100;
   width: 100%;
   height: 56px;
   background-color: white;

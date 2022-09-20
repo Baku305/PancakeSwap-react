@@ -2,7 +2,7 @@ import "../../style.scss"
 import { Button } from "../shared/button/Button";
 import titleLogo from "../../assets/title.svg";
 import pancakeLogoButton from "../../assets/asset 43.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "external-svg-loader";
 
 const eyesSvg = {
@@ -15,6 +15,21 @@ const eyesSvg = {
 
 export const Navbar = ({ menu }) => {
   const [eyes, setEyes] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    console.log(scrollPosition)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
 
   const handleEyesClose = () => {
     setEyes(false);
@@ -23,7 +38,7 @@ export const Navbar = ({ menu }) => {
 
   return (
     <>
-      <div className="nav_wrapper">
+      <div className={scrollPosition < 300 ? "nav_wrapper nav_wrapper_entry" : "nav_wrapper nav_wrapper_hidden"}>
         <div className="nav_left_wrapper">
           <div className="logo_wrapper" onMouseEnter={handleEyesClose}>
             <svg
