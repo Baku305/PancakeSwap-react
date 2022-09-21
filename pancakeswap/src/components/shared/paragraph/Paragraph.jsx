@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "../shared/button/Button";
-import "../../style.scss";
-import "../shared/button/_button.scss";
+import { Button } from "../button/Button";
+import "../../../style.scss";
+import "../button/_button.scss";
 
 // se ltr è true immagine a dx e testo a sx
 
