@@ -1,6 +1,4 @@
-@import "../../style.scss";
-
-.tradeSection {
+.section {
   @include flexCenter;
   height: 62.2rem;
   flex-direction: column;

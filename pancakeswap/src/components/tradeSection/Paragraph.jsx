@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../shared/button/Button";
-import "./_paragraph.scss";
+import "../../style.scss";
 import "../shared/button/_button.scss";
 
 // se ltr è true immagine a dx e testo a sx
@@ -23,29 +23,29 @@ export const Paragraph = ({
 
   return (
     <>
-      <section className="tradeSection" style={backgroundStyle}>
+      <section className="section" style={backgroundStyle}>
         <div
-          className="tradeSection-content"
+          className="section-content"
           style={{
             flexDirection: ltr === false ? "row-reverse" : "row",
             justifyContent: ltr === false ? "normal" : "space-between",
             paddingBottom: ltr === false ? "60px" : "",
           }}
         >
-          <div className="tradeSection-content-title">
+          <div className="section-content-title">
             <h2>
               <span> {title.slice(0, 5)} </span>
               {title.slice(5)}
             </h2>
-            <div className="tradeSection-content-title-subtitle">
+            <div className="section-content-title-subtitle">
               <p className="subTitle">{subTitle}</p>
             </div>
-            <div className="tradeSection-button-container">
-              <div className="tradeSection-button-container-default">
+            <div className="section-button-container">
+              <div className="section-button-container-default">
                 <Button buttonStyle={"btn--default"}>{button}</Button>
               </div>
               <a
-                className="tradeSection-button-container-link"
+                className="section-button-container-link"
                 href="https://docs.pancakeswap.finance"
                 target="_blank"
                 rel="noreferrer"
@@ -55,7 +55,7 @@ export const Paragraph = ({
             </div>
           </div>
           <div
-            className="tradeSection-content-images"
+            className="section-content-images"
             style={{ marginRight: ltr === false ? "50px" : "" }}
           >
             <img className="img1" src={image1} alt="bnbCoin || pieChart" />
