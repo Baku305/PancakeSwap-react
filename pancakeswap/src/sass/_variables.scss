@@ -45,8 +45,8 @@ $greenBrand : #29910d;
 $greyMouse: #E9F2F6;
 $trasparency : #00000000; 
 $hoverEffect : #08060b00;
-
-
+$colorsTransp: #f4eeff99;
+$gradientGold: linear-gradient(180deg, $ocra4 0%, $ocra5 100%);
 .tiffanyBrand {
     color: $tiffanyBrand;
     fill: $tiffanyBrand;
@@ -117,7 +117,7 @@ $bgCardWrapper : #e7e3eb none repeat scroll 0% 0%;
 //         --colors-gradientBlue: linear-gradient(180deg, #00707F 0%, #19778C 100%);
 //         --colors-gradientViolet: linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%);
 //         --colors-gradientVioletAlt: linear-gradient(180deg, #434575 0%, #66578D 100%);
-//         --colors-gradientGold: linear-gradient(180deg, #FFD800 0%, #FDAB32 100%);
+//         
 //       }
 
 

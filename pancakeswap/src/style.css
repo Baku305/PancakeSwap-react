@@ -2509,6 +2509,24 @@ button svg {
   }
 }
 
+.tradeBanner-container .tradeBanner-content .tradeBanner-title h2:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(#ffd800 0%, #fdab32 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tradeBanner-container .tradeBanner-content .tradeBanner-title h2:last-child {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  background: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) text;
+  -webkit-text-stroke: 6px transparent;
+}
+
 .tradeBanner-container .tradeBanner-image-container {
   -webkit-animation: onLoadTransition 1s ease-out 0s 1;
           animation: onLoadTransition 1s ease-out 0s 1;
@@ -2534,6 +2552,42 @@ button svg {
   display: none;
 }
 
+.tradeBanner-image-container .tradeBanner-image-container-image-mobile {
+  z-index: 0;
+  max-width: 100%;
+  max-height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .tradeBanner-image-container .tradeBanner-image-container-image-mobile {
+    display: block;
+    width: 200px;
+  }
+  .tradeBanner-image-container .tradeBanner-image-container-image {
+    display: none;
+  }
+  .tradeBanner-container .tradeBanner-content .tradeBanner-title h2:first-child {
+    font-size: 24px;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    background: -webkit-linear-gradient(top, rgb(255, 216, 0), rgb(235, 140, 0)) text;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  }
+  .tradeBanner-container .tradeBanner-content .tradeBanner-title h2:last-child {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    background: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) text;
+    -webkit-text-stroke: 6px transparent;
+  }
+}
 .lottery-counter {
   background-image: url("../../assets/asset 37.png");
   width: -webkit-max-content;
@@ -2595,6 +2649,7 @@ button svg {
   backdrop-filter: blur(9.7px);
   -webkit-backdrop-filter: blur(9.7px);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .slideButton-container .slideButton {
@@ -2698,7 +2753,7 @@ button svg {
   background-color: aqua;
 }
 .wrapper {
-  background-color: blue;
+  background-color: rgba(244, 238, 255, 0.6);
   height: 100%;
   width: 100%;
   z-index: 10;
