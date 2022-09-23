@@ -36,6 +36,7 @@
       }
     }
   }
+
 }
 
 .card-container{
@@ -46,7 +47,11 @@
   -webkit-box-pack: end;
   justify-content: flex-end;
   border-radius: 24px;
-  background-color: white;
+  background-color: $tiffanyBrand;
+
+  &.dark-theme{
+    background-color: red
+    }
 }
 
 .card-header{

@@ -8,8 +8,14 @@ import { MoonSection } from "./components/MoonSection/the-moon-section";
 import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
 import verticalMenuIcon from "./assets/asset 41.svg";
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
+import React from "react";
+import { useTheme } from "./UseTheme";
+
+export const ThemeContext = React.createContext();
 
 function App() {
+  const [theme, updateTheme] = useTheme();
+
   const Navigate = useNavigate();
 
   const menu = [
@@ -25,10 +31,7 @@ function App() {
     },
     {
       name: "earn",
-      content: [
-        { name: "Farms" },
-        { name: "Pools" },
-      ],
+      content: [{ name: "Farms" }, { name: "Pools" }],
     },
     {
       name: "win",
@@ -52,7 +55,7 @@ function App() {
       content: [
         { name: "Info" },
         { name: "IFO" },
-        { name: "Voting", separator: true  },
+        { name: "Voting", separator: true },
         { name: "Leaderboard", separator: true },
         { name: "Blog", icon: true },
         { name: "Docs", icon: true },
@@ -61,24 +64,20 @@ function App() {
   ];
 
   return (
-    <>
+    <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
-      <div>
-        <MoonSection />
-        <CardsIntro />
-      </div>
       <Routes>
-        <Route path="/1" element={<Button buttonStyle={"btn--default"} />} />
         <Route
-          path="/2"
+          path="/"
           element={
-            <Button buttonSize={"btn--full"} type="button" as={Link} to="/">
-              Esempio
-            </Button>
+            <div>
+              <MoonSection/>
+              <Button buttonStyle="btn--default" type="button" />
+            </div>
           }
         />
       </Routes>
-    </>
+    </ThemeContext.Provider>
   );
 }
 

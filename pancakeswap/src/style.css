@@ -28,53 +28,6 @@ html {
   fill: #7645d9 !important;
 }
 
-body.dark, body[data-theme=dark] {
-  --colors-white: white;
-  --colors-failure: #ED4B9E;
-  --colors-failure33: #ED4B9E33;
-  --colors-primary: #1FC7D4;
-  --colors-primary0f: #1FC7D40f;
-  --colors-primary3D: #1FC7D43D;
-  --colors-primaryBright: #53DEE9;
-  --colors-primaryDark: #0098A1;
-  --colors-success: #31D0AA;
-  --colors-success19: #31D0AA19;
-  --colors-warning: #FFB237;
-  --colors-warning2D: #ED4B9E2D;
-  --colors-warning33: #ED4B9E33;
-  --colors-binance: #F0B90B;
-  --colors-overlay: #452a7a;
-  --colors-gold: #FFC700;
-  --colors-silver: #B2B2B2;
-  --colors-bronze: #E7974D;
-  --colors-secondary: #9A6AFF;
-  --colors-secondary80: #9A6AFF80;
-  --colors-background: #08060B;
-  --colors-backgroundDisabled: #3c3742;
-  --colors-backgroundAlt: #27262c;
-  --colors-backgroundAlt2: rgba(39, 38, 44, 0.7);
-  --colors-cardBorder: #383241;
-  --colors-contrast: #FFFFFF;
-  --colors-dropdown: #1E1D20;
-  --colors-dropdownDeep: #100C18;
-  --colors-invertedContrast: #191326;
-  --colors-input: #372F47;
-  --colors-inputSecondary: #262130;
-  --colors-tertiary: #353547;
-  --colors-text: #F4EEFF;
-  --colors-text99: #F4EEFF99;
-  --colors-textDisabled: #666171;
-  --colors-textSubtle: #B8ADD2;
-  --colors-disabled: #524B63;
-  --colors-gradientBubblegum: linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%);
-  --colors-gradientInverseBubblegum: linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%);
-  --colors-gradientCardHeader: linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%);
-  --colors-gradientBlue: linear-gradient(180deg, #00707F 0%, #19778C 100%);
-  --colors-gradientViolet: linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%);
-  --colors-gradientVioletAlt: linear-gradient(180deg, #434575 0%, #66578D 100%);
-  --colors-gradientGold: linear-gradient(180deg, #FFD800 0%, #FDAB32 100%);
-}
-
 /* MIXIN */
 /* FLEX MIXINS*/
 /*animations*/
@@ -556,6 +509,61 @@ label {
   top: 2.4rem;
   right: 2.4rem;
   width: 3.6rem;
+}
+
+.card-container {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 24px;
+  background-color: #1fc7d4;
+}
+.card-container.dark-theme {
+  background-color: red;
+}
+
+.card-header {
+  text-align: end;
+  min-width: 232px;
+}
+
+.card-body {
+  margin-top: 64px;
+  border-radius: 10px;
+}
+
+.cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-space-body-footer {
+  margin-bottom: 24px;
+}
+
+.card-shadow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1px 1px 4px;
+  box-sizing: border-box;
+  background: #e7e3eb;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-body > h2 {
+  color: #280d5f;
+}
+
+.card-body > p {
+  color: #7a6eaa;
 }
 
 /*PATH*/
@@ -2251,6 +2259,9 @@ button svg {
   transform: translate3d(0px, 0px, 0px);
   padding-inline: 16px;
 }
+.nav_wrapper.dark-theme {
+  background-color: black;
+}
 .nav_wrapper .nav_left_wrapper {
   display: flex;
   flex-direction: row;
@@ -2617,4 +2628,68 @@ button svg {
 
 .bg-actived-button {
   background-color: white;
+}
+
+.cards-intro-container {
+  background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+  padding-bottom: 48px;
+}
+
+.intro-cards-section {
+  text-align: center;
+}
+
+.intro-cards-section-h2-xl {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #280d5f;
+}
+
+.intro-card-section-p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #7a6eaa;
+}
+
+.intro-cards-section-cta {
+  font-weight: 600;
+}
+
+.white-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.white-card-position {
+  margin-right: 16px;
+}
+
+@media (max-width: 900px) {
+  .cards-intro-container {
+    padding: 0 24px;
+  }
+  .white-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 32px;
+  }
+}
+.settingModalWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  border: 1px solid blue;
+  padding: 20px 10px;
+  border-radius: 16px;
+  z-index: 100;
 }/*# sourceMappingURL=style.css.map */
