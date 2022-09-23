@@ -95,19 +95,26 @@ export function Footer(props) {
     return (
         <div className="footer">
             <div>
-                <ul>
-                    {/* viene renderizzato male. Ogni titolo deve stare in cima
-                    ad ogni lista/menu... perché non funziona? DA AGGIUSTARE!!!! */}
-                    <div className="footer-lists-container">
-                        {footerMenu.map((item, index) => <div className="title" key={index}>{item.title}</div>)}
-                            <ul>
-                                {footerMenu.map((item) => item.menu.map((item, index) => <li key={index + item}>{item.label}</li>))}
-                            </ul>
-                        <img style={{ width: "100px", height: "100px" }} src="./img1.png" alt="img"></img>
-                    </div>
-                </ul>
+                <div className="footer-lists-container">
+                    {
+                        footerMenu.map(item => {
+                            return (
+                                <div>
+                                    <div className="title">{item.title}</div>
+                                    <ul>
+                                        {item.menu.map((menuItem) => <li key={item}>{menuItem.label}</li>)}
+                                    </ul>
+
+                                </div>
+                            )
+                        })
+                    }
+                    <img style={{ width: "160px", height: "25px" }} src="./img1.png" alt="img"></img>
+                </div>
             </div>
         </div>
     )
 }
+
+
 
