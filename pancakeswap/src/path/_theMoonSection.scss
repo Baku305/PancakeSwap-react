@@ -4,6 +4,10 @@
     height: 100rem;
     background-color: #eef5ff;
 
+ &.dark-theme{
+    background: radial-gradient(103.12%50%at 50%50%,#21193a 0%,#191326 100%);
+  }
+
     .svgMoonSectionSeparator{
         width: 100%;
         position: absolute;
@@ -31,13 +35,25 @@
             h1{
                color: $violetBrand;
                font-size: 6.4rem;
+
+               &.dark-theme{
+                color: $violetBrand2;
+               }
             }
     
             h3{
                 color: $violetBrand1;
                 padding-block: 3rem;
                 font-weight: 600;
+
+                &.dark-theme{
+                    color: $lightViolet;
+                }
+
             }
+
+
+            
     
             .theMoonSection-buttons-container{
                 @include flexStart;

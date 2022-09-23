@@ -163,7 +163,7 @@ header .container-button .button3:hover {
 }
 header .container-button .button4, .btn--connect {
   height: 3.2rem;
-  max-width: 10.7rem;
+  width: auto;
   min-width: 12rem;
   padding: 0px 16px 0px 16px;
   line-height: 1.6rem;
@@ -913,6 +913,9 @@ header .container-button {
   height: 100rem;
   background-color: #eef5ff;
 }
+.theMoonSection-wrapper.dark-theme {
+  background: radial-gradient(103.12% 50% at 50% 50%, #21193a 0%, #191326 100%);
+}
 .theMoonSection-wrapper .svgMoonSectionSeparator {
   width: 100%;
   position: absolute;
@@ -939,10 +942,16 @@ header .container-button {
   color: #7645d9;
   font-size: 6.4rem;
 }
+.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container h1.dark-theme {
+  color: #9a6aff;
+}
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container h3 {
   color: #280d5f;
   padding-block: 3rem;
   font-weight: 600;
+}
+.theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container h3.dark-theme {
+  color: #f4eeff;
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container {
   display: flex;
@@ -2260,7 +2269,8 @@ button svg {
   padding-inline: 16px;
 }
 .nav_wrapper.dark-theme {
-  background-color: black;
+  background-color: #27262c;
+  border-bottom: 1px solid #383241;
 }
 .nav_wrapper .nav_left_wrapper {
   display: flex;

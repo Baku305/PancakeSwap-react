@@ -28,7 +28,8 @@
   padding-inline: 16px;
 
   &.dark-theme{
-    background-color: black;
+    background-color: $darkGray;
+    border-bottom: 1px solid $darkGray3;
   }
   
   .nav_left_wrapper {
