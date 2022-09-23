@@ -37,3 +37,53 @@
     }
   }
 }
+
+.card-container{
+  max-width: max-content;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.card-header{
+  text-align: end;
+  min-width: 232px;
+
+}
+
+.card-body{
+  margin-top: 64px;
+  border-radius: 10px;
+}
+
+.cards-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-space-body-footer{
+  margin-bottom: 24px;
+}
+
+.card-shadow{
+    height: fit-content;
+    padding: 1px 1px 4px;
+    box-sizing: border-box;
+    background: #e7e3eb;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-body > h2{
+  color: $violetBrand1;
+}
+
+.card-body > p{
+  color: $subTitleViolet;
+}
