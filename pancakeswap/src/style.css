@@ -417,13 +417,13 @@ label {
 }
 .switch .switchInput {
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 100%;
 }
-.switch .switchInput:checked + .slider:after {
+.switch .checked.switchInput + .slider:after {
   transform: translateX(16px);
 }
-.switch .switchInput:checked + .slider:before {
+.switch .checked.switchInput + .slider:before {
   box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
 }
 .switch .switchInput:focus + .slider:after {
@@ -432,10 +432,10 @@ label {
 .switch .switchInput:focus + .slider:before {
   box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
 }
-.switch .switchInput:checked + .slider:before {
+.switch .checked.switchInput + .slider:before {
   transform: translateX(16px);
 }
-.switch .switchInput:checked + .slider {
+.switch .checked.switchInput + .slider {
   background-color: rgb(49, 208, 170);
 }
 .switch .slider {

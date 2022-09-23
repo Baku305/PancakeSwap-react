@@ -9,7 +9,10 @@ export function MyDialog({ isOpen, setIsOpen }) {
         <div>
           <div className="wrapper" onClick={()=>setIsOpen(false)}></div>
           <div isOpen={isOpen} className="settingModalWrapper">
-            <button onClick={() => setIsOpen(false)}></button>
+            <div className="switch">
+              <input type={"checkbox"} className="switchInput"></input>
+              <div className="slider"></div>
+            </div>
           </div>
         </div>
       )}

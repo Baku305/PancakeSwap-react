@@ -30,3 +30,16 @@
   z-index: 10;
   position: absolute;
  }
+
+ .switch{
+
+  @extend %switch;
+
+  .switchInput{
+   @extend %switchInput;
+  }
+
+  .slider{
+   @extend %slider;
+  }
+ }
