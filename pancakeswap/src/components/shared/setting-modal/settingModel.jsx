@@ -1,22 +1,18 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import "../../../style.scss"
+import React, { useState, Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import "../../../style.scss";
 
-export function MyDialog({isOpen, onClose}) {
-  
-
+export function MyDialog({ isOpen, setIsOpen }) {
   return (
-    <Dialog className = "settingModalWrapper" open={isOpen} onClose={onClose}>
-      <Dialog.Panel className="settingModalContent">
-        <Dialog.Title className="settinModalTitle">Deactivate account</Dialog.Title>
-        <Dialog.Description>
-          This will permanently deactivate your account
-        </Dialog.Description>
-        <p>
-          Are you sure you want to deactivate your account? All of your data
-          will be permanently removed. This action cannot be undone.
-        </p>
-      </Dialog.Panel>
-    </Dialog>
-  )
+    <>
+      {isOpen && (
+        <div>
+          <div className="wrapper" onClick={()=>setIsOpen(false)}></div>
+          <div isOpen={isOpen} className="settingModalWrapper">
+            <button onClick={() => setIsOpen(false)}></button>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }

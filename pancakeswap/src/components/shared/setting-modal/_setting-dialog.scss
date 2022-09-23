@@ -1,18 +1,32 @@
-.settingModalWrapper{
- @include flexCenter;
- position: fixed;
- width: 500px;
- transform: translate(-50%, -50%);
- border: 1px solid blue;
- padding: 20px 10px;
- border-radius: 16px;
- z-index: 100;
 
- .settingModalContent{
 
-  .settinModalTitle{
-   
+ .settingModalWrapper{
+  @include flexCenter;
+  position: fixed;
+  width: 500px;
+  height: 250px;
+  margin-top: 50vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+  border: 1px solid blue;
+  padding: 20px 10px;
+  border-radius: 16px;
+  z-index: 100;
+  background-color: aqua;
+ 
+  .settingModalContent{
+ 
+   .settinModalTitle{
+    
+   }
+ 
   }
-
  }
-}
+
+ .wrapper{
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+ }

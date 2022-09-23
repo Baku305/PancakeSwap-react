@@ -14,6 +14,7 @@ import { useTheme } from "./UseTheme";
 export const ThemeContext = React.createContext();
 
 function App() {
+
   const [theme, updateTheme] = useTheme();
 
   const Navigate = useNavigate();
@@ -63,10 +64,13 @@ function App() {
     },
   ];
 
+  
+
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
       <Routes>
+
         <Route
           path="/"
           element={
@@ -76,6 +80,16 @@ function App() {
             </div>
           }
         />
+        <Route
+          path="/2"
+          element={
+            <div>
+              <MoonSection/>
+              <Button buttonStyle="btn--default" type="button" />
+            </div>
+          }
+        />
+        
       </Routes>
     </ThemeContext.Provider>
   );
