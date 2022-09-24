@@ -10,7 +10,7 @@ import verticalMenuIcon from "./assets/asset 41.svg";
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import React from "react";
 import { useTheme } from "./UseTheme";
-import { Checkbox } from "./components/shared/checkbox/Checkbox";
+import { Checkbox } from "./components/shared/form/checkbox/Checkbox";
 
 export const ThemeContext = React.createContext();
 
@@ -78,7 +78,8 @@ function App() {
             <div>
               <MoonSection/>
               <Button buttonStyle="btn--default" type="button" />
-              <Checkbox/>
+              <Checkbox types=""/>
+              <Checkbox types="theme"/>
             </div>
           }
         />
@@ -87,7 +88,7 @@ function App() {
           element={
             <div>
               <MoonSection/>
-              <Button buttonStyle="btn--default" type="button" />
+              <Button buttonStyle="btn--default" types="button" />
             </div>
           }
         />
