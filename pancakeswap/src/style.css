@@ -2821,18 +2821,23 @@ button svg {
 }
 .settingModal {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   position: fixed;
   width: 500px;
-  height: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 50vh;
   margin-left: 50vw;
   transform: translate(-50%, -50%);
-  border: 1px solid blue;
   padding: 10px 5px;
   border-radius: 16px;
   z-index: 100;
+}
+.settingModalTitle {
+  padding: 10px 5px;
 }
 .settingModal.light-theme {
   background-color: white;

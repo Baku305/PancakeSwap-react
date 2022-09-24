@@ -43,6 +43,7 @@ export function MyDialog({ isOpen, setIsOpen, array }) {
         <div>
           <div className="wrapper" onClick={() => setIsOpen(false)}></div>
           <div isOpen={isOpen} className = {`settingModal ${theme}-theme`}>
+            <h2 className="settingModalTitle">Settings</h2>
             {array.map((el) => (
               <div className="settingModalList">
                 <h3 className="settingModalListTitle">{el.title}</h3>
