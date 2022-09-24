@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import "external-svg-loader";
 import verticalMenuIcon from "../../assets/asset 41.svg";
 import { VerticalMenu } from "../shared/vericalMenu/VerticaMenu";
-import { MyDialog } from ".././shared/setting-modal/settingModel";
+import { MyDialog, settingArray } from ".././shared/setting-modal/settingModel";
 import { ThemeContext } from "../../App";
 
 const eyesSvg = {
@@ -45,7 +45,7 @@ export const Navbar = ({ menu }) => {
 
   return (
     <>
-      <MyDialog isOpen={isOpen}  setIsOpen = {setIsOpen} onClose={() => setIsOpen(false)}/>
+      <MyDialog isOpen={isOpen}  setIsOpen = {setIsOpen} onClose={() => setIsOpen(false)} array={settingArray}/>
       <div className={scrollPosition < 300 ? `nav_wrapper nav_wrapper_entry ${theme}-theme` : `nav_wrapper nav_wrapper_hidden ${theme}-theme` }>
         <div className="nav_left_wrapper">
           <div className="logo_wrapper" onMouseEnter={handleEyesClose}>

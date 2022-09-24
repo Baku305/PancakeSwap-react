@@ -31,7 +31,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) && buttonSize
 
     return(
-    <button className={`${checkButtonStyle} ${checkButtonSize} ${color} ${theme}-theme`} onClick={updateTheme} type={type}>
+    <button className={`${checkButtonStyle} ${checkButtonSize} ${color} ${theme}-theme`} type={type}>
     {children}
     </button>
     )

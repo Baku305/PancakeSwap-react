@@ -4,7 +4,7 @@
   width: 56px;
   height: 32px;
   cursor: pointer;
-  
+
   %switchInput {
     opacity: 0;
     width: 100%;
@@ -19,25 +19,22 @@
       &:before {
         transform: translateX(23px);
         // box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px,
-       // rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
+        // rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
       }
     }
 
     &.light-theme {
+      + %slider {
+        background-color: #eeeaf4;
 
-        + %slider{
-            background-color: #eeeaf4;
-
-        &:before{
-            background-color: white;
+        &:before {
+          background-color: white;
         }
+      }
 
-        }
-
-        &.checked + %slider {
-            background-color: rgb(49, 208, 170);
-        }
-
+      &.checked + %slider {
+        background-color: rgb(49, 208, 170);
+      }
     }
 
     + %slider {

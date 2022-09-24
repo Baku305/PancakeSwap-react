@@ -1,6 +1,6 @@
 
 
- .settingModalWrapper{
+ .settingModal{
   @include flexCenter;
   position: fixed;
   width: 500px;
@@ -14,10 +14,21 @@
   z-index: 100;
   background-color: aqua;
  
-  .settingModalContent{
+  &List{
  
-   .settinModalTitle{
+   &Title{
     
+   }
+
+   &Content{
+    @include flexSpaceBetween;
+   }
+
+   &ContentButton{
+
+    .buttonWrapper{
+     @include flex(row,center,center)
+    }
    }
  
   }
