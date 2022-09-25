@@ -76,6 +76,8 @@ function App() {
           path="/"
           element={
             <div>
+               <MoonSection/>
+               <MoonSection/>
               <MoonSection/>
               <Button buttonStyle="btn--default" type="button" />
               <Checkbox types=""/>

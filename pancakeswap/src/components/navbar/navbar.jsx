@@ -8,6 +8,7 @@ import verticalMenuIcon from "../../assets/asset 41.svg";
 import { VerticalMenu } from "../shared/vericalMenu/VerticaMenu";
 import { MyDialog, settingArray } from ".././shared/setting-modal/settingModel";
 import { ThemeContext } from "../../App";
+import { useWindowDimensions } from "../../custom hooks/useWindowDimensions";
 
 const eyesSvg = {
   open: "M75.614 117.896c0 9.718-4.593 14.779-10.258 14.779-5.665 0-10.258-5.061-10.258-14.779s4.593-14.779 10.258-14.779c5.665 0 10.258 5.061 10.258 14.779zM142.288 117.896c0 9.718-4.592 14.779-10.257 14.779-5.666 0-10.258-5.061-10.258-14.779s4.592-14.779 10.258-14.779c5.665 0 10.257 5.061 10.257 14.779z",
@@ -23,6 +24,8 @@ export const Navbar = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [eyes, setEyes] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const {height,width} = useWindowDimensions()
+  
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -33,8 +36,6 @@ export const Navbar = ({ menu }) => {
     isOpen ? document.body.style.overflow = "hidden" : document.body.style.overflowY = "scroll"
 
     window.addEventListener("scroll", handleScroll);
-
-    console.log(scrollPosition)
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -80,7 +81,6 @@ export const Navbar = ({ menu }) => {
           </svg>
           <img src={titleLogo} alt="title" className="logo_title"/>
           </div>
-          
           <div className="menu_wrapper">
             {menu.map((el, i) => {
               return (
@@ -120,6 +120,16 @@ export const Navbar = ({ menu }) => {
           </Button>
         </div>
       </div>
+      {width < 576 && <div className="mobile_menu_wrapper">
+            {menu.map((el, i) => {
+              return (
+                <div key={i} className="mobile_menu_el_wrapper">
+                  <h4>{el.name}</h4>
+                  <VerticalMenu icon={verticalMenuIcon} array= {el.content}/>
+                </div>
+              );
+            })}
+          </div>}
     </>
   );
 };
