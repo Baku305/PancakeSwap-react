@@ -1,66 +1,222 @@
-
-
- .settingModal{
-  @include flex(column,center,start);
-  position: fixed;
-  width: 500px;
-  height: fit-content;
+.settingModal {
+  @include flex(column, center, start);
+  position: absolute;
+  width: auto;
+  min-width: 320px;
+  height: auto;
   margin-top: 50vh;
   margin-left: 50vw;
   transform: translate(-50%, -50%);
-  padding: 10px 5px;
-  border-radius: 16px;
+  border-radius: 32px;
   z-index: 100;
+  max-height: 936px;
+  min-height: 300px;
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  @include onLoadTransition;
 
-  &Title{
-   padding: 10px 5px;
-  }
-  
-
-  &.light-theme{
-  background-color: white;
-  }
-
-  &.dark-theme{
-   background-color: #27262c;
-  }
- 
-  &List{
-
-   width: 100%;
-   height: 100%;
-   padding: 10px 5px;
-   @include flex(column,center,flex-start);
- 
-   &Title{
-    padding: 10px 5px
-   }
-
-   &Content{
+  .wrapperTitle {
     width: 100%;
     @include flexSpaceBetween;
-    padding: 10px 5px;
-   }
+    padding: 12px 24px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
 
-   &ContentButton{
-
-    width: 100%;
-    padding: 10px 5px;
-
-    .buttonWrapper{
-     width: 100%;
-    padding: 10px 5px;
-     @include flex(row,space-around,center)
+    &.light-theme {
+      color: #280d5f;
+      background-color: #eeeff4;
+      border-bottom: 1px solid #e7e3eb;
     }
-   }
- 
-  }
- }
 
- .wrapper{
+    &.dark-theme {
+      color: white;
+      background-color: #3a384d;
+      border-bottom: 1px solid #383241;
+    }
+
+    &Button {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      border-radius: 16px;
+      transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+      padding: 0;
+      svg {
+        fill: $tiffanyBrand;
+      }
+
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &List {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    padding-bottom: 48px;
+    @include flex(column, center, flex-start);
+
+    h4 {
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    &Title {
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-size: 18px;
+      color: #9a6aff;
+    }
+
+    &Content {
+      width: 100%;
+      @include flexSpaceBetween;
+      margin-bottom: 24px;
+      position: relative;
+
+      &Title {
+        @include flexCenter;
+
+        &Info {
+          width: 16px;
+          height: 18px;
+          margin-left: 4px;
+
+          svg {
+            height: 16px;
+            width: 16px;
+
+            &:hover {
+              + div {
+                display: block;
+              }
+            }
+
+            &.dark-theme {
+              fill: #b8add2;
+              + div {
+                background-color: #27262c;
+              }
+            }
+
+            &.light-theme {
+              fill: #280d5f;
+              + div {
+                background-color: white;
+              }
+            }
+          }
+
+          &Text {
+            position: absolute;
+            margin-bottom: 20px;
+            width: 320px;
+            bottom: 20px;
+            border-radius: 16px;
+            background-color: #27262c;
+            z-index: 150;
+            padding: 10px 20px;
+            display: none;
+            @include onLoadTransition;
+            box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px,
+              rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+          }
+        }
+      }
+
+      &.dark-theme {
+        color: white;
+      }
+
+      &.light-theme {
+        color: #280d5f;
+      }
+    }
+
+    &ContentButton {
+      width: 100%;
+      @include flex(column, center, flex-start);
+      min-width: 340px;
+      position: relative;
+
+      &.dark-theme {
+        color: white;
+      }
+
+      &.light-theme {
+        color: #280d5f;
+      }
+
+      &Title {
+        @include flexCenter;
+        margin-bottom: 12px;
+
+        .settingModalListContentTitleInfoText {
+          bottom: 55px;
+        }
+      }
+
+      .buttonWrapper {
+        width: 100%;
+        @include flex(row, space-around, center);
+
+        &.light-theme {
+          button {
+            background-color: #eff4f5;
+            box-shadow: none;
+            span {
+              color: $tiffanyBrand;
+            }
+          }
+        }
+
+        &.dark-theme {
+          button {
+            background-color: #353547;
+            box-shadow: none;
+            span {
+              color: $tiffanyBrand;
+            }
+          }
+        }
+
+        button {
+          margin-top: 4px;
+          margin-right: 4px;
+        }
+
+        .btnSelected {
+          button {
+            background-color: $tiffanyBrand;
+            box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+            span {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.light-theme {
+    background-color: white;
+    border: 1px solid #e7e3eb;
+  }
+
+  &.dark-theme {
+    background-color: #27262c;
+    border: 1px solid #383241;
+  }
+}
+
+.wrapper {
   background-color: $colorsTransp;
   height: 100%;
   width: 100%;
   z-index: 10;
   position: absolute;
- }
+}

@@ -121,6 +121,8 @@ header .container-button .button4, .btn--connect, header .container-button .butt
   letter-spacing: 0.48px;
   padding-inline: 2frem;
   cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
   /*SET DEFOULT STYLE*/
   /*SET ALT STYLE*/
   /*SET INFO STYLE*/
@@ -163,11 +165,9 @@ header .container-button .button3:hover {
 }
 header .container-button .button4, .btn--connect {
   height: 3.2rem;
-  width: auto;
-  min-width: 12rem;
-  padding: 0px 16px 0px 16px;
+  padding: 0px 16px;
   line-height: 1.6rem;
-  letter-spacing: normal;
+  font-weight: 600;
   color: #fff;
   background-color: #1fc7d4;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
@@ -2454,8 +2454,8 @@ button svg {
 }
 
 .lottery-banner {
-  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
-          animation: onLoadTransition 1s ease-out 0s 1;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2489,8 +2489,8 @@ button svg {
 }
 
 .lottery-image-container {
-  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
-          animation: onLoadTransition 1s ease-out 0s 1;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
   width: 100%;
   height: 100%;
   display: flex;
@@ -2578,8 +2578,8 @@ button svg {
   height: 100%;
   padding-left: 3rem;
   z-index: 2;
-  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
-          animation: onLoadTransition 1s ease-out 0s 1;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
 }
 @keyframes onLoadTransition {
   0% {
@@ -2609,8 +2609,8 @@ button svg {
 }
 
 .tradeBanner-container .tradeBanner-image-container {
-  -webkit-animation: onLoadTransition 1s ease-out 0s 1;
-          animation: onLoadTransition 1s ease-out 0s 1;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -2824,57 +2824,212 @@ button svg {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  position: fixed;
-  width: 500px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  position: absolute;
+  width: auto;
+  min-width: 320px;
+  height: auto;
   margin-top: 50vh;
   margin-left: 50vw;
   transform: translate(-50%, -50%);
-  padding: 10px 5px;
-  border-radius: 16px;
+  border-radius: 32px;
   z-index: 100;
+  max-height: 936px;
+  min-height: 300px;
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
 }
-.settingModalTitle {
-  padding: 10px 5px;
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
-.settingModal.light-theme {
-  background-color: white;
+.settingModal .wrapperTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
-.settingModal.dark-theme {
-  background-color: #27262c;
+.settingModal .wrapperTitle.light-theme {
+  color: #280d5f;
+  background-color: #eeeff4;
+  border-bottom: 1px solid #e7e3eb;
+}
+.settingModal .wrapperTitle.dark-theme {
+  color: white;
+  background-color: #3a384d;
+  border-bottom: 1px solid #383241;
+}
+.settingModal .wrapperTitleButton {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 16px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  padding: 0;
+}
+.settingModal .wrapperTitleButton svg {
+  fill: #1fc7d4;
+}
+.settingModal .wrapperTitleButton:hover {
+  opacity: 0.65;
 }
 .settingModalList {
   width: 100%;
   height: 100%;
-  padding: 10px 5px;
+  padding: 24px;
+  padding-bottom: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
+.settingModalList h4 {
+  line-height: 1.5;
+  font-size: 16px;
+}
 .settingModalListTitle {
-  padding: 10px 5px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: #9a6aff;
 }
 .settingModalListContent {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.settingModalListContentTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingModalListContentTitleInfo {
+  width: 16px;
+  height: 18px;
+  margin-left: 4px;
+}
+.settingModalListContentTitleInfo svg {
+  height: 16px;
+  width: 16px;
+}
+.settingModalListContentTitleInfo svg:hover + div {
+  display: block;
+}
+.settingModalListContentTitleInfo svg.dark-theme {
+  fill: #b8add2;
+}
+.settingModalListContentTitleInfo svg.dark-theme + div {
+  background-color: #27262c;
+}
+.settingModalListContentTitleInfo svg.light-theme {
+  fill: #280d5f;
+}
+.settingModalListContentTitleInfo svg.light-theme + div {
+  background-color: white;
+}
+.settingModalListContentTitleInfoText {
+  position: absolute;
+  margin-bottom: 20px;
+  width: 320px;
+  bottom: 20px;
+  border-radius: 16px;
+  background-color: #27262c;
+  z-index: 150;
+  padding: 10px 20px;
+  display: none;
+  -webkit-animation: onLoadTransition 0.5s ease-out 0s 1;
+          animation: onLoadTransition 0.5s ease-out 0s 1;
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+@keyframes onLoadTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.settingModalListContent.dark-theme {
+  color: white;
+}
+.settingModalListContent.light-theme {
+  color: #280d5f;
 }
 .settingModalListContentButton {
   width: 100%;
-  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 340px;
+  position: relative;
+}
+.settingModalListContentButton.dark-theme {
+  color: white;
+}
+.settingModalListContentButton.light-theme {
+  color: #280d5f;
+}
+.settingModalListContentButtonTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.settingModalListContentButtonTitle .settingModalListContentTitleInfoText {
+  bottom: 55px;
 }
 .settingModalListContentButton .buttonWrapper {
   width: 100%;
-  padding: 10px 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+.settingModalListContentButton .buttonWrapper.light-theme button {
+  background-color: #eff4f5;
+  box-shadow: none;
+}
+.settingModalListContentButton .buttonWrapper.light-theme button span {
+  color: #1fc7d4;
+}
+.settingModalListContentButton .buttonWrapper.dark-theme button {
+  background-color: #353547;
+  box-shadow: none;
+}
+.settingModalListContentButton .buttonWrapper.dark-theme button span {
+  color: #1fc7d4;
+}
+.settingModalListContentButton .buttonWrapper button {
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.settingModalListContentButton .buttonWrapper .btnSelected button {
+  background-color: #1fc7d4;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+}
+.settingModalListContentButton .buttonWrapper .btnSelected button span {
+  color: white;
+}
+.settingModal.light-theme {
+  background-color: white;
+  border: 1px solid #e7e3eb;
+}
+.settingModal.dark-theme {
+  background-color: #27262c;
+  border: 1px solid #383241;
 }
 
 .wrapper {
