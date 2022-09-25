@@ -29,6 +29,9 @@ export const Navbar = ({ menu }) => {
   };
 
   useEffect(() => {
+
+    isOpen ? document.body.style.overflow = "hidden" : document.body.style.overflowY = "scroll"
+
     window.addEventListener("scroll", handleScroll);
 
     console.log(scrollPosition)
@@ -36,12 +39,15 @@ export const Navbar = ({ menu }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollPosition]);
+
+    
+  }, [scrollPosition,isOpen]);
 
   const handleEyesClose = () => {
     setEyes(false);
     setTimeout(() => setEyes(true), 200);
   };
+
 
   return (
     <>

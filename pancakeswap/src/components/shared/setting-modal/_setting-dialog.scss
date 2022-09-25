@@ -15,6 +15,24 @@
     rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   @include onLoadTransition;
 
+  &.isOpenfalse {
+    @include onCloseTransition;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    margin: 0;
+    transform: none;
+    bottom: -5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include mobileModalIn;
+
+    &.isOpenfalse {
+      @include mobileModalOut;
+    }
+  }
+
   .wrapperTitle {
     width: 100%;
     @include flexSpaceBetween;
@@ -26,12 +44,20 @@
       color: #280d5f;
       background-color: #eeeff4;
       border-bottom: 1px solid #e7e3eb;
+
+      @media screen and (max-width: 850px) {
+        background-color: white;
+      }
     }
 
     &.dark-theme {
       color: white;
       background-color: #3a384d;
       border-bottom: 1px solid #383241;
+      
+      @media screen and (max-width: 850px) {
+        background-color: #27262c;
+      }
     }
 
     &Button {
@@ -164,6 +190,10 @@
         width: 100%;
         @include flex(row, space-around, center);
 
+        @media screen and (max-width: 850px) {
+          @include flexStart;
+        }
+
         &.light-theme {
           button {
             background-color: #eff4f5;
@@ -217,6 +247,7 @@
   background-color: $colorsTransp;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 3;
   position: absolute;
+  margin-top: 55px;
 }

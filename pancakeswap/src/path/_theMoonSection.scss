@@ -23,8 +23,8 @@
         
         &-external-container{
         @include flexSpaceBetween;
-        width: 115rem;
-        min-width: 115rem;
+        width: 100%;
+        //min-width: 115rem;
         height: 58rem;
         z-index: 1;
     

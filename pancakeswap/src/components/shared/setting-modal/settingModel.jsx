@@ -37,16 +37,23 @@ export const settingArray = [
 export function MyDialog({ isOpen, setIsOpen, array }) {
   const { theme } = useContext(ThemeContext);
   const [btnSelected, setBtnSelected] = useState();
+  const [onCloseClassName, setOnCloseClassName] = useState("")
+
+  const handleClose = () => {
+    setOnCloseClassName("isOpenfalse")
+    setTimeout(()=>{setIsOpen(false) ; setOnCloseClassName("")},400)
+  }
+
 
   return (
     <>
       {isOpen && (
         <div>
-          <div className="wrapper" onClick={() => setIsOpen(false)}></div>
-          <div isOpen={isOpen} className={`settingModal ${theme}-theme`}>
+          <div className="wrapper" onClick={handleClose}></div>
+          <div className={`settingModal ${theme}-theme ${onCloseClassName}`}>
             <div className={`wrapperTitle ${theme}-theme`}>
               <h3 className="settingModalTitle">Settings</h3>
-              <button className="wrapperTitleButton" onClick={()=>setIsOpen(false)}>
+              <button className="wrapperTitleButton" onClick={handleClose}>
                 <svg
                 data-src={closeIcon}
                 />
