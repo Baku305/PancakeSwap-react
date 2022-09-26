@@ -50,13 +50,22 @@
 }
 
 .card-header{
-  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
   min-width: 232px;
+}
 
+.card-header-text{
+  text-align: left;
+  margin-top: 64px;
+}
+
+.card-header-icon{
+  text-align: right;
 }
 
 .card-body{
-  margin-top: 64px;
   border-radius: 10px;
 }
 
@@ -86,4 +95,21 @@
 
 .card-body > p{
   color: $subTitleViolet;
+}
+
+@media (max-width: 900px) {
+  .card-shadow{
+    margin-bottom: 16px;
+  }
+  .card-body{
+    margin-top: 0px;
+  }
+  .card-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .card-header-text{
+    margin-top: 0px;
+  }
 }
