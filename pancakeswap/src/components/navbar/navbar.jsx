@@ -86,7 +86,7 @@ export const Navbar = ({ menu }) => {
           </svg>
           <svg data-src={titleLogo} alt="title" className="logo_title"/>
           </div>
-          {width > 576 && <div className="menu_wrapper">
+          {width > 620 && <div className="menu_wrapper">
             {menu.map((el, i) => {
               return (
                 <div key={i} className="menu_el_wrapper">
@@ -98,9 +98,12 @@ export const Navbar = ({ menu }) => {
           </div>}
         </div>
         <div className="nav_right_wrapper">
-          {width > 830 && <div className="pancake_asset_value_wrapper">
+          {((width > 660) || (width < 620)) ? 
+          <div className="pancake_asset_value_wrapper">
             <img src={pancakeLogoButton} alt="" className="pancake_asset_value_wrapper" />
             <h4>$4.500</h4>
+          </div> : <div className="pancake_asset_value_wrapper">
+            <img src={pancakeLogoButton} alt="" className="pancake_asset_value_wrapper" />
           </div>}
           <svg
             viewBox="0 0 24 24"
@@ -125,7 +128,7 @@ export const Navbar = ({ menu }) => {
           </Button>
         </div>
       </div>
-      {width < 576 && <div className={`mobile_menu_wrapper ${theme}-theme`}>
+      {width < 620 && <div className={`mobile_menu_wrapper ${theme}-theme`}>
             {menu.map((el, i) => {
               return (
                 <div key={i} className="mobile_menu_el_wrapper">
