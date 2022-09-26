@@ -4,7 +4,8 @@ import { Checkbox } from "../form/checkbox/Checkbox";
 import { Button } from "../button/Button";
 import { ThemeContext } from "../../../App";
 import closeIcon from "../../../assets/asset 38.svg";
-import infoIcon from "../../../assets/infoIcon.svg";
+import infoIcon from "../../../assets/infoIcon.svg"
+
 export const settingArray = [
   {
     title: "global",
