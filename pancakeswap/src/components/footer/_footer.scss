@@ -41,9 +41,18 @@
         align-self: baseline;
     }
 
-    // .socialsIcons{
-    //     display: flex;
+    .socialsIcons{
+        padding-bottom: 3.2rem;
+        border-bottom: 0.1rem solid $borderGray;
+        margin-bottom: 3.2rem;
+
+        a{
+            display:inline-block
+        }
         
-    // }
+        svg{
+            margin-right: 2.2rem;
+        }
+    }
 
 }
