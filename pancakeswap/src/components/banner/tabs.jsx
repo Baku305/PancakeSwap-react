@@ -24,21 +24,23 @@ export function Tabs() {
 
 
   //*visibility fnc
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (visibility === 1) {
-        setVisibility((v)=> v = 1);
-      } else if (visibility === 2) {
-        setVisibility((v) => v = 1);
-      }
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (visibility === 1) {
+  //       setVisibility((v)=> v = 1);
+  //     } else if (visibility === 2) {
+  //       setVisibility((v) => v = 1);
+  //     }
+  //   }, 5000);
+
+  //**! IO TI VEDO */
 
 
-      console.log(data)
+  //     console.log(data)
 
-    return () => clearInterval(interval)
+  //   return () => clearInterval(interval)
 
-  }, [visibility,data]);
+  // }, [visibility,data]);
 
   //*button setting
 

@@ -5,47 +5,79 @@
   @include flexStart;
   flex-direction: column;
   border-radius: 1.6rem;
-  border: 1px solid $borderGray2;
-  background-color: white;
   width: 28rem;
-  color: $subTitleViolet;
   overflow: hidden;
   font-size: 1.6rem;
   left: 0px;
   /*set childs style*/
-  * {
+  %vericalMenu_content_wrapper {
     list-style-type: none;
     width: 100%;
-
+    height: 100%;
     /*set childs of childs style*/
-    * {
-      padding: 6px 0px 6px 8px;
-      cursor: pointer;
-      /*set childs of childs hover*/
-      &:hover {
-        background-color: $grayHover;
-      }
-    }
+    cursor: pointer;
 
     %verticalMenu_content {
+      padding: 13px 0px 13px 10px;
       @include flexSpaceBetween;
+      %verticalMenu_name {
+      }
+      %verticalMenu_icon {
+        width: 24px;
+        margin-right: 5%;
+      }
     }
-    %verticalMenu_icon {
-      height: 100%;
-      width: 12%;
-      margin-right: 5%;
-      fill: $subTitleViolet;
-    }
-
     %separator {
-      border-color: $borderGray2;
       border-style: solid;
       border-width: 1px 0px 0px;
-      margin: 4px 0px;
-      padding: 0;
+      margin-block: 5px;
+    }
+  }
+}
 
-      &:hover{
-       background-color: white;
+.dark-theme {
+  %verticalMenu {
+    background-color: $darkGray;
+    color: $lightViolet2;
+    border: 1px solid $darkGray3;
+    %vericalMenu_content_wrapper {
+      %verticalMenu_content {
+        &:hover {
+          background-color: $hoverMenu;
+        }
+        %verticalMenu_icon {
+          fill: $lightViolet2;
+        }
+      }
+      %separator {
+        border-color: $darkGray3;
+        &:hover {
+          background-color: $darkGray;
+        }
+      }
+    }
+  }
+}
+
+.light-theme {
+  %verticalMenu {
+    background-color: white;
+    color: $subTitleViolet;
+    border: 1px solid $borderGray2;
+    %vericalMenu_content_wrapper {
+      %verticalMenu_content {
+        &:hover {
+          background-color: $grayHover;
+        }
+        %verticalMenu_icon {
+          fill: $subTitleViolet;
+        }
+      }
+    }
+    %separator {
+      border-color: $borderGray2;
+      &:hover {
+        background-color: white;
       }
     }
   }
@@ -53,20 +85,22 @@
 
 .verticalMenu {
   @extend %verticalMenu;
+  .vericalMenu_content_wrapper {
+    @extend %vericalMenu_content_wrapper;
 
-  .verticalMenu_content {
-    @extend %verticalMenu_content;
+    .verticalMenu_content {
+      @extend %verticalMenu_content;
 
-    .verticaMenu_name {
+      .verticalMenu_name {
+        @extend %verticalMenu_name;
+      }
+
+      .verticalMenu_icon {
+        @extend %verticalMenu_icon;
+      }
     }
-
-    .verticalMenu_icon {
-      @extend %verticalMenu_icon;
+    .separator {
+      @extend %separator;
     }
-  }
-  .separator {
-    @extend %separator;
-
-   
   }
 }

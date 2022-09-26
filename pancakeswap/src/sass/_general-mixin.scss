@@ -62,7 +62,7 @@
 
   @mixin onLoadTransition{
 
-    animation : onLoadTransition 1s ease-out 0s 1;
+    animation : onLoadTransition .5s ease-out 0s 1;
 
     @keyframes onLoadTransition {
       0% {
@@ -70,6 +70,21 @@
       }
       100% {
         opacity: 100%;
+      }
+    }
+    
+  }
+
+  @mixin onCloseTransition{
+
+    animation : onCloseTransition .5s ease-out 0s 1;
+
+    @keyframes onCloseTransition {
+      0% {
+        opacity: 100%;
+      }
+      100% {
+        opacity: 0;
       }
     }
     
@@ -93,8 +108,43 @@
     }
   }
 
+  @mixin mobileModalIn{
+    animation: mobileModalIn 0.5s ease 0s;
 
+    @keyframes mobileModalIn {
+      0%{bottom:-400px;opacity: 0;}
+      100%{bottom:0;opacity: 100%;}
+    }
+  }
 
+  @mixin mobileModalOut{
+    animation: mobileModalOut 0.5s ease 0s;
+
+    @keyframes mobileModalOut {
+      0%{bottom:0;opacity: 100%;}
+      100%{bottom:-400px;opacity: 0;}
+    }
+  }
+
+@mixin mobileMenuIn {
+
+  animation: mobileMenuOut 0.1s ease 0s;
+
+  @keyframes mobileMenuOut {
+    0%{height: 0;opacity: 0;}
+    100%{height:100%;opacity: 100%;}
+  }
+}
+
+@mixin mobileMenuOut {
+
+  animation: mobileMenuOut 0.1s ease 0s;
+
+  @keyframes mobileMenuOut {
+    0%{height:0;opacity: 0;}
+    100%{height: 100%;opacity: 1000%;}
+  }
+}
 
 
 

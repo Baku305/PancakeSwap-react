@@ -5,18 +5,23 @@ import Star3 from "../../assets/asset 9.png"
 import Rabbit1 from "../../assets/asset 8.png"
 import { Button } from '../shared/button/Button';
 import {Tabs} from "../banner/tabs"
+import { ThemeContext } from "../../App";
+import { useContext, useEffect, useState } from "react";
+
 export function MoonSection() {
 
 
+    const {theme, updateTheme} = useContext(ThemeContext)
+
     return (
         <>
-            <div className="theMoonSection-wrapper">
+            <div className={`theMoonSection-wrapper ${theme}-theme`} >
                 <Tabs/>
                 <section className="theMoonSection">
                     <div className="theMoonSection-external-container">
                         <div className="theMoonSection-leftTitle-container">
-                            <h1>The moon is made of pancakes.</h1>
-                            <h3>
+                            <h1 className={`${theme}-theme`}>The moon is made of pancakes.</h1>
+                            <h3 className={`${theme}-theme`}>
                                 Trade, earn, and win crypto on the most popular decentralized platform
                                 in the galaxy.
                             </h3>

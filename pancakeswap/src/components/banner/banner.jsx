@@ -8,23 +8,27 @@ import { Button } from "../shared/button/Button";
 import { useEffect } from "react";
 
 export function Banner(props) {
-
   const [lottery, setLottery] = useState(2500);
 
   useEffect(() => {
-
     const interval = () => {
-      setInterval(() => setLottery(lottery + (lottery * Math.random()) / 100), 2000); };
-      clearInterval(interval)
-    
-    return interval
+      setInterval(
+        () => setLottery(lottery + (lottery * Math.random()) / 100),
+        2000
+      );
+    };
+    clearInterval(interval);
+
+    return interval;
   }, []);
 
   return (
     <>
       <div className={props.className}>
         <div className="lottery-banner">
-          <h2 className="lottery-title">Win ${Math.round(lottery)} in lottery</h2>
+          <h2 className="lottery-title">
+            Win ${Math.round(lottery)} in lottery
+          </h2>
           <LotteryCounter></LotteryCounter>
           <div className="button_wrapper">
             <Button
@@ -38,8 +42,16 @@ export function Banner(props) {
           </div>
         </div>
         <div className="lottery-image-container">
-          <img src={imgLottery} alt="" className="lottery-image-container-image" />
-          <img src={imgLotteryMobile} alt="" className="lottery-image-container-image-mobile" />
+          <img
+            src={imgLottery}
+            alt=""
+            className="lottery-image-container-image"
+          />
+          <img
+            src={imgLotteryMobile}
+            alt=""
+            className="lottery-image-container-image-mobile"
+          />
         </div>
       </div>
     </>

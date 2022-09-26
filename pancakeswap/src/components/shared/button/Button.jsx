@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 import "../../../style.scss";
 
 const STYLES = [
@@ -20,6 +22,8 @@ export const Button = ({
     color,
 }) => {
 
+    const {theme, updateTheme} = useContext(ThemeContext)
+
     const checkButtonStyle = STYLES.includes(buttonStyle) 
     ? buttonStyle 
     : STYLES[0]; 
@@ -27,7 +31,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) && buttonSize
 
     return(
-    <button className={`${checkButtonStyle} ${checkButtonSize} ${color}`} onClick={onClick} type={type}>
+    <button className={`${checkButtonStyle} ${checkButtonSize} ${color} ${theme}-theme`} type={type}>
     {children}
     </button>
     )
