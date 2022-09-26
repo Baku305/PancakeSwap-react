@@ -2371,11 +2371,6 @@ button svg {
   align-items: center;
   height: 100%;
 }
-@media screen and (max-width: 576px) {
-  .nav_wrapper .nav_left_wrapper .menu_wrapper {
-    display: none;
-  }
-}
 .nav_wrapper .nav_left_wrapper .menu_el_wrapper {
   padding: 0px 16px;
   display: flex;
