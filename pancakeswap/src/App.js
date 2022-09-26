@@ -1,16 +1,14 @@
 import "./style.scss";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import { Button } from "./components/shared/button/Button";
-import { color } from "./components/Color";
+
 import { Navbar } from "./components/navbar/navbar";
-import { Tabs } from "./components/banner/tabs";
+
 import { MoonSection } from "./components/MoonSection/the-moon-section";
-import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
-import verticalMenuIcon from "./assets/asset 41.svg";
+
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import React from "react";
 import { useTheme } from "./UseTheme";
-import { Checkbox } from "./components/shared/form/checkbox/Checkbox";
 import tradeMobileIcon from "./assets/trade_menu_icon_vuota.svg";
 import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
 import winMobileIcon from "./assets/win_menu_icon_vuota.svg";
@@ -81,17 +79,12 @@ function App() {
     <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
       <Routes>
-
         <Route
           path="/"
           element={
             <div>
-               <MoonSection/>
-               <MoonSection/>
-              <MoonSection/>
-              <Button buttonStyle="btn--default" type="button" />
-              <Checkbox types=""/>
-              <Checkbox types="theme"/>
+                <MoonSection/>
+                <CardsIntro/>
             </div>
           }
         />
