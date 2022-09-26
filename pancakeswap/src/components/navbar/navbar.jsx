@@ -90,7 +90,7 @@ export const Navbar = ({ menu }) => {
             {menu.map((el, i) => {
               return (
                 <div key={i} className="menu_el_wrapper">
-                  <h4>{el.name}</h4>
+                  {el.name !== "..." ? <h4>{el.name}</h4> : <svg data-src={el.icon} className= "menuIcon"/>}
                   <VerticalMenu icon={verticalMenuIcon} array= {el.content}/>
                 </div>
               );

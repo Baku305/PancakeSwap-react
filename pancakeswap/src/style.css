@@ -2530,6 +2530,9 @@ button svg {
 .nav_wrapper.dark-theme .menu_el_wrapper:hover {
   background: #353547;
 }
+.nav_wrapper.dark-theme .menu_el_wrapper .menuIcon {
+  fill: #b8add2;
+}
 .nav_wrapper.dark-theme .nav_right_wrapper .settings_button {
   fill: #b8add2;
 }
@@ -2548,6 +2551,9 @@ button svg {
 }
 .nav_wrapper.light-theme .menu_el_wrapper:hover {
   background: #eff4f5;
+}
+.nav_wrapper.light-theme .menu_el_wrapper .menuIcon {
+  fill: #7a6eaa;
 }
 .nav_wrapper.light-theme .nav_right_wrapper .settings_button {
   fill: #7a6eaa;
