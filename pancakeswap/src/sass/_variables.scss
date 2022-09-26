@@ -1,73 +1,70 @@
 /* COLORS */
 
-$primary : #666171;
+$primary: #666171;
 
-$darkBlack : #08060b;
-$blackBrand : #191326;
-$lightBlack : #222222;
-$borderBlack : #262130;
-$darkBlackTransp : #08060b99;
+$darkBlack: #08060b;
+$blackBrand: #191326;
+$lightBlack: #222222;
+$borderBlack: #262130;
+$darkBlackTransp: #08060b99;
 $ligthTransp: #fff9;
 
-$darkGray3 : #383241;
-$darkGray2 : #3c3742;
-$darkGray : #27262c;
-$gray : #999999;
-$lightGray : #cccccc;
-$borderGray : #565065;
+$darkGray3: #383241;
+$darkGray2: #3c3742;
+$darkGray: #27262c;
+$gray: #999999;
+$lightGray: #cccccc;
+$borderGray: #565065;
 $borderGray2: #e7e3eb;
-$grayHover : #eff4f5;
+$grayHover: #eff4f5;
 
-$violetBrand : #7645d9;
+$violetBrand: #7645d9;
 $violetBrand1: #280d5f;
-$violetBrand2 : #9a6aff;
-$violetBrand3 : #5121b1;
-$lightViolet : #f4eeff;
-$lightViolet2 : #b8add2;
-$subTitleViolet : #7a6eaa;
-$violetSeparator : #d8cbed;
+$violetBrand2: #9a6aff;
+$violetBrand3: #5121b1;
+$lightViolet: #f4eeff;
+$lightViolet2: #b8add2;
+$subTitleViolet: #7a6eaa;
+$violetSeparator: #d8cbed;
 
-$blueBrand : #1155cc;
-$darkBlue : #280d5f;
-$darkBlue2 : #3c1786;
-$tabBlue : #372f47;
+$blueBrand: #1155cc;
+$darkBlue: #280d5f;
+$darkBlue2: #3c1786;
+$tabBlue: #372f47;
 $hoverMenu: #353547;
 
-$pinkBrand : #ed4b9e;
-$ocra : #ffb237;
+$pinkBrand: #ed4b9e;
+$ocra: #ffb237;
 $ocra2: #ffcd51;
 $ocra3: #ffe76a;
 $ocra4: #ffd800;
-$ocra5: #fdab32; 
-$whiteBrand : #ffffff;
-$tiffanyBrand : #1fc7d4;
-$greenBrand : #29910d;
-$greyMouse: #E9F2F6;
-$trasparency : #00000000; 
-$hoverEffect : #08060b00;
+$ocra5: #fdab32;
+$whiteBrand: #ffffff;
+$tiffanyBrand: #1fc7d4;
+$greenBrand: #29910d;
+$greyMouse: #e9f2f6;
+$trasparency: #00000000;
+$hoverEffect: #08060b00;
 $colorsTransp: #f4eeff99;
 $gradientGold: linear-gradient(180deg, $ocra4 0%, $ocra5 100%);
+
 .tiffanyBrand {
-    color: $tiffanyBrand;
-    fill: $tiffanyBrand;
+  color: $tiffanyBrand;
+  fill: $tiffanyBrand;
 }
 
 .pinkBrand {
-    color: $pinkBrand;
-    fill: $pinkBrand;
+  color: $pinkBrand;
+  fill: $pinkBrand;
 }
 
 .violetBrand {
-    color : $violetBrand !important;
-    fill : $violetBrand !important;
+  color: $violetBrand !important;
+  fill: $violetBrand !important;
 }
 
-
-$bgCardContainer : $whiteBrand none repeat scroll 0% 0%;
-$bgCardWrapper : #e7e3eb none repeat scroll 0% 0%;
-
-
-
+$bgCardContainer: $whiteBrand none repeat scroll 0% 0%;
+$bgCardWrapper: #e7e3eb none repeat scroll 0% 0%;
 
 // body.dark, body[data-theme="dark"] {
 
@@ -117,10 +114,5 @@ $bgCardWrapper : #e7e3eb none repeat scroll 0% 0%;
 //         --colors-gradientBlue: linear-gradient(180deg, #00707F 0%, #19778C 100%);
 //         --colors-gradientViolet: linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%);
 //         --colors-gradientVioletAlt: linear-gradient(180deg, #434575 0%, #66578D 100%);
-//         
+//
 //       }
-
-
-
-
-

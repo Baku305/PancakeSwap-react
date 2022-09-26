@@ -9,12 +9,17 @@ import { VerticalMenu } from "../shared/vericalMenu/VerticaMenu";
 import { MyDialog, settingArray } from ".././shared/setting-modal/settingModel";
 import { ThemeContext } from "../../App";
 import { useWindowDimensions } from "../../custom hooks/useWindowDimensions";
+import "external-svg-loader"
 
 const eyesSvg = {
   open: "M75.614 117.896c0 9.718-4.593 14.779-10.258 14.779-5.665 0-10.258-5.061-10.258-14.779s4.593-14.779 10.258-14.779c5.665 0 10.258 5.061 10.258 14.779zM142.288 117.896c0 9.718-4.592 14.779-10.257 14.779-5.666 0-10.258-5.061-10.258-14.779s4.592-14.779 10.258-14.779c5.665 0 10.257 5.061 10.257 14.779z",
   closed:
     "M75.614 117.896C75 120 65 120 65 120 65 120 56 120 55 118S65 116 65 116C65 116 75 116 75.516 118zM142.288 117.896C142 120 132 120 132 120 132 120 122 120 121.773 117.896S132 116 132 116C132 116 142 116 142.288 117.896z",
 };
+
+
+
+
 
 //transform="translate(-475.57 -282.11)"
 
@@ -79,7 +84,7 @@ export const Navbar = ({ menu }) => {
             />
             <path class="eye" d={eyes ? eyesSvg.open : eyesSvg.closed} fill="#633001" />
           </svg>
-          <img src={titleLogo} alt="title" className="logo_title"/>
+          <svg data-src={titleLogo} alt="title" className="logo_title"/>
           </div>
           <div className="menu_wrapper">
             {menu.map((el, i) => {
@@ -120,11 +125,15 @@ export const Navbar = ({ menu }) => {
           </Button>
         </div>
       </div>
-      {width < 576 && <div className="mobile_menu_wrapper">
+      {width < 576 && <div className={`mobile_menu_wrapper ${theme}-theme`}>
             {menu.map((el, i) => {
               return (
                 <div key={i} className="mobile_menu_el_wrapper">
-                  <h4>{el.name}</h4>
+                  <svg
+                  data-src = {el.icon}
+                  className = "menuIcon"
+                  />
+                  {el.name !== "..." && <p>{el.name}</p>}
                   <VerticalMenu icon={verticalMenuIcon} array= {el.content}/>
                 </div>
               );

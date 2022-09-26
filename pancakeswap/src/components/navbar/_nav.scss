@@ -19,16 +19,9 @@
   z-index: 100;
   width: 100%;
   height: 56px;
-  background-color: white;
   @include flex(row, space-between, center);
-  border-bottom: 1px solid #e7e3eb;
   transform: translate3d(0px, 0px, 0px);
   padding-inline: 16px;
-
-  &.dark-theme {
-    background-color: $darkGray;
-    border-bottom: 1px solid $darkGray3;
-  }
 
   .nav_left_wrapper {
     @include flex(row, center, center);
@@ -46,15 +39,12 @@
     .menu_el_wrapper {
       padding: 0px 16px;
       @include flex(column, center, flex-start);
-      color: $subTitleViolet;
       position: relative;
       cursor: pointer;
       height: 100%;
 
       &:hover {
         border-radius: 16px;
-        background: $grayHover;
-
         .verticalMenu {
           display: block;
         }
@@ -102,12 +92,10 @@
     @include flex(row, center, center);
 
     .settings_button {
-      fill: $subTitleViolet;
       margin: 0 8px;
     }
 
     .language_button {
-      fill: $subTitleViolet;
       margin: 0 8px;
     }
 
@@ -116,7 +104,6 @@
       padding-inline: 4px;
 
       h4 {
-        color: $subTitleViolet;
         font-weight: 600;
       }
 
@@ -134,26 +121,24 @@
 
 .mobile_menu_wrapper {
   width: 100%;
-  @include flex(row,space-around,center);
-  top: 92vh;
+  @include flex(row, space-around, center);
+  bottom: 0;
   position: fixed;
   z-index: 10;
-  border-top: 1px solid #383241;
-  background: #27262c;
   padding-right: 8px;
   padding-left: 8px;
+
   .mobile_menu_el_wrapper {
     height: 50px;
     padding: 0px 16px;
-    @include flex(column, center, flex-start);
-    color: $subTitleViolet;
+    @include flex(column, center, center);
+
     cursor: pointer;
     //padding: 4px 12px;
 
     &:hover {
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
-      background: $grayHover;
 
       .verticalMenu {
         display: block;
@@ -167,10 +152,110 @@
       width: 100%;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      @include mobileMenuIn;
 
       &:hover {
         display: block;
       }
     }
+  }
+}
+
+.nav_wrapper {
+  &.dark-theme {
+
+    .logo_title{
+      fill: white;
+    }
+    background-color: $darkGray;
+    border-bottom: 1px solid $darkGray3;
+    .menu_el_wrapper {
+      color: $lightViolet2;
+      &:hover {
+        background: $hoverMenu;
+      }
+    }
+    .nav_right_wrapper {
+      .settings_button {
+        fill: $lightViolet2;
+      }
+      .language_button {
+        fill: $lightViolet2;
+      }
+      .pancake_asset_value_wrapper {
+        h4 {
+          color: $lightViolet2;
+        }
+      }
+    }
+  }
+
+  &.light-theme {
+    background-color: white;
+    border-bottom: 1px solid $grayHover;
+    .menu_el_wrapper {
+      color: $subTitleViolet;
+      &:hover {
+        background: $grayHover;
+      }
+    }
+    .nav_right_wrapper {
+      .settings_button {
+        fill: $subTitleViolet;
+      }
+      .language_button {
+        fill: $subTitleViolet;
+      }
+      .pancake_asset_value_wrapper {
+        h4 {
+          color: $subTitleViolet;
+        }
+      }
+    }
+  }
+}
+
+.mobile_menu_wrapper {
+  &.dark-theme {
+    background-color: $darkGray;
+    border-top: 1px solid $darkGray3;
+
+    .mobile_menu_el_wrapper {
+      color: $lightViolet2;
+
+      .menuIcon {
+        fill: $lightViolet2;
+      }
+
+      &:hover {
+        background: $hoverMenu;
+      }
+
+      p{
+        color: $lightViolet2;
+      }
+    }
+  }
+
+  &.light-theme {
+    background-color: white;
+    border-top: 1px solid $grayHover;
+
+    .mobile_menu_el_wrapper{
+
+      .menuIcon {
+        fill: $subTitleViolet;
+      }
+  
+      &:hover {
+        background: $grayHover;
+      }
+  
+      p{
+        color: $subTitleViolet;
+      }
+
+    }
+
   }
 }

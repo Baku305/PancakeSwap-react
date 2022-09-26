@@ -11,6 +11,11 @@ import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import React from "react";
 import { useTheme } from "./UseTheme";
 import { Checkbox } from "./components/shared/form/checkbox/Checkbox";
+import tradeMobileIcon from "./assets/trade_menu_icon_vuota.svg";
+import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
+import winMobileIcon from "./assets/win_menu_icon_vuota.svg";
+import nftMobileIcon from "./assets/nft_menu_icon_vuota.svg";
+import dotsMobileIcon from "./assets/dots_menu_icon.svg";
 
 export const ThemeContext = React.createContext();
 
@@ -30,10 +35,12 @@ function App() {
         { name: "Perpetual", icon: true },
         { name: "Bridge", icon: true },
       ],
+      icon: tradeMobileIcon,
     },
     {
       name: "earn",
       content: [{ name: "Farms" }, { name: "Pools" }],
+      icon: earnMobileIcon
     },
     {
       name: "win",
@@ -43,6 +50,7 @@ function App() {
         { name: "Lottery" },
         { name: "Pottery" },
       ],
+      icon:winMobileIcon
     },
     {
       name: "nft",
@@ -51,9 +59,10 @@ function App() {
         { name: "Collections" },
         { name: "Activity" },
       ],
+      icon:nftMobileIcon
     },
     {
-      name: "···",
+      name: "...",
       content: [
         { name: "Info" },
         { name: "IFO" },
@@ -62,6 +71,7 @@ function App() {
         { name: "Blog", icon: true },
         { name: "Docs", icon: true },
       ],
+      icon: dotsMobileIcon
     },
   ];
 
