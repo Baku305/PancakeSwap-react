@@ -4,9 +4,9 @@ import { Button } from "./components/shared/button/Button";
 import { color } from "./components/Color";
 import { Navbar } from "./components/navbar/navbar";
 import { Tabs } from "./components/banner/tabs";
-import { Paragraph } from "./components/shared/paragraph/Paragraph.jsx";
 import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection.jsx";
+import { CakeSection } from "./components/cakeSection/CakeSection";
 
 function App() {
   const Navigate = useNavigate();
@@ -29,12 +29,13 @@ function App() {
         <Tabs />
       </div>
 
-      <div>
-        <TradeSection />
+      <TradeSection />
 
-        <EarnSection />
-      </div>
-      <Routes>
+      <EarnSection />
+
+      <CakeSection />
+
+      {/* <Routes>
         <Route
           path="/"
           element={
@@ -56,7 +57,7 @@ function App() {
             </Button>
           }
         />
-      </Routes>
+      </Routes> */}
     </>
   );
 }
