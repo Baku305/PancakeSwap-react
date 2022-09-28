@@ -1,6 +1,6 @@
 @import "../../style.scss";
 
-.footer {
+.footerSection {
     width: 100%;
     height: 49.9rem;
     background-color: $darkGray;
@@ -9,52 +9,54 @@
     // justify-content: center;
 
 
-    &-lists-container {
+    &ListsContainer {
         width: 120rem;
         height: 24rem;
         margin-bottom: 3.6rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
 
-    div.menuTitle {
-        color: $violetBrand2;
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
-
-    .ulMenu {
-
-        li {
-            color: $whiteBrand;
+        &MenuTitle {
+            color: $violetBrand2;
             font-size: 1.6rem;
-            font-weight: 400;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
-
-
+        
+        &UlMenu {
+    
+            li {
+                color: $whiteBrand;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+    
+    
+    
+    
+        }
     }
 
-    .svgP {
+    &SvgPancake {
         align-self: center;
         align-self: baseline;
     }
 
-    .socialsIcons {
+    .socialsIconsContainer {
         padding-bottom: 3.2rem;
         border-bottom: 0.1rem solid $borderGray;
         margin-bottom: 3.2rem;
 
         a {
-            display: inline-block
-        }
-
-        svg {
+            display: inline-block;
+            
+            svg {
             margin-right: 2.2rem;
+}
         }
 
-        div.hiddenTelegramMenuContainer {
+        &HiddenTelegramMenuContainer {
             display: inline-block;
             position: relative;
 
@@ -92,30 +94,6 @@
 
                 }
             }
-
-            // div.hiddenTelegramMenu:hover{
-            //     display:inline-block;
-            //     position: absolute;
-            //     width: max-content;
-            //     display: flex;
-            //     flex-direction: column;
-            //     position: absolute;
-            //     left: 50%;
-            //     bottom: 100%;
-            //     background-color: $darkGray;
-            //     // box-shadow:
-            //     padding: 16px;
-            //     max-height: 0px;
-            //     overflow: hidden;
-            //     z-index: 10;
-            //     border-radius: 0.05rem;
-            //     opacity: 0;
-            //     will-change: opacity;
-            //     pointer-events: none;
-            //     transform: translate(-50%);
-            //     transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
-            // }
         }
     }
-
 }
