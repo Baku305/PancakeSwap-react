@@ -67,33 +67,37 @@
                 color: $textSubtle;
             }
 
-            div.hiddenTelegramMenu-1 {
-                // display: none;
+            
 
-                div.hiddenTelegramMenu-2 {
-                    display: inline-block;
-                    width: max-content;
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    left: 50%;
-                    bottom: 100%;
-                    background-color: green; //$darkGray;
-                    // box-shadow:
-                    padding: 16px;
-                    max-height: 0px;
-                    overflow: scroll;
-                    z-index: 10;
-                    border-radius: 0.5rem;
-                    // opacity:0;
-                    // will-change: opacity;
-                    // pointer-events: none;
-                    transform: translate(-50%);
-                    transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+            div.hiddenTelegramMenu {
+                width: max-content;
+                // max-height: 0px;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 50%;
+                bottom: 110%;
+                background-color: $darkGray;
+                // box-shadow:
+                padding: 16px;
+                overflow: auto;
+                z-index: 10;
+                border-radius: 0.5rem;
+                opacity:0;
+                // will-change: opacity;
+                // pointer-events: none;
+                transform: translate(-50%);
+                transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
 
+            }
 
-                }
+            div.hiddenTelegramMenu:hover{
+                opacity: 1;
+
             }
         }
     }
 }
+
+
+            
