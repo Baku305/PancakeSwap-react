@@ -5,7 +5,7 @@ export const WhiteCard = ({ icon, title, title2, title2Color, text }) => {
   const { theme, updateTheme } = useContext(ThemeContext);
 
   return (
-      <div className="card-shadow">
+      <div className={`${theme}-theme card-shadow`}>
         <div className={`${theme}-theme card-container`}>
           <div className="card-header">  
           <div className="card-header-icon">{icon}</div>
