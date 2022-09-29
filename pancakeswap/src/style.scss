@@ -43,15 +43,13 @@ html {
 @import "./path/loginSection";
 @import "./path/footer";
 
-
 /*jsx*/
 
 @import "./components/navbar/nav";
-
 @import "./components/banner/banner";
 @import "./components/banner/banner_2.scss";
 @import "./components/banner/lotteryCounter";
 @import "./components/banner/slideButton";
 @import "./components/banner/tabs";
 @import "./components/BuildTrustSection/CardsIntro.scss";
-@import "./components/shared/setting-modal/setting-dialog.scss"
+@import "./components/shared/setting-modal/setting-dialog.scss";

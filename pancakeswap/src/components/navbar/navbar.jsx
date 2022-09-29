@@ -1,4 +1,5 @@
 import "../../style.scss"
+
 import { Button } from "../shared/button/Button";
 import titleLogo from "../../assets/title.svg";
 import pancakeLogoButton from "../../assets/asset 43.svg";

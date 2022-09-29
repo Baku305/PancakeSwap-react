@@ -1,11 +1,8 @@
 import "./style.scss";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import { Button } from "./components/shared/button/Button";
-
 import { Navbar } from "./components/navbar/navbar";
-
 import { MoonSection } from "./components/MoonSection/the-moon-section";
-
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import React from "react";
 import { useTheme } from "./UseTheme";
