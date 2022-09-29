@@ -33,6 +33,10 @@
       margin-block: 5px;
     }
   }
+  &::-webkit-scrollbar-track {
+    background-color: #27262c;
+    border-radius: 20px;
+   }
 }
 
 .dark-theme {
@@ -104,3 +108,5 @@
     }
   }
 }
+
+

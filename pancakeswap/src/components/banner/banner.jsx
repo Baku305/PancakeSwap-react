@@ -1,6 +1,6 @@
 import { LotteryCounter } from "./lotteryCounter";
 import { useState } from "react";
-import "../../style.scss";
+// import "../../style.scss";
 import imgLottery from "../../assets/asset 2.png";
 import imgLotteryMobile from "../../assets/lotteryMobile.png";
 import arrowButton from "../../assets/asset 56.svg";

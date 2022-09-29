@@ -1,4 +1,4 @@
-import "../../style.scss";
+// import "../../style.scss";
 import imgTrade from "../../assets/perpetual.webp";
 import imgTradeMobile from "../../assets/perpetualMobile.webp";
 import { Button } from "../shared/button/Button";

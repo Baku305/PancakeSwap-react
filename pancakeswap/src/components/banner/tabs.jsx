@@ -1,7 +1,7 @@
 import { Banner } from "./banner";
 import { Banner2 } from "./Banner_2";
 import { useEffect, useState } from "react";
-import "../../style.scss";
+// import "../../style.scss";
 
 
 import { SlideButton } from "./slideButton";
