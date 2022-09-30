@@ -48,7 +48,7 @@
         border-bottom: 0.1rem solid $borderGray;
         margin-bottom: 3.2rem;
 
-        a {
+        a, div {
             display: inline-block;
             
             svg {
@@ -57,44 +57,57 @@
         }
 
         &HiddenTelegramMenuContainer {
-            display: inline-block;
             position: relative;
+            background-color: yellowgreen;
 
-            a {
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 1.5;
-                color: $textSubtle;
+            svg.prova{
+                border: 1px solid red;
+                // display: block;
+                
+                
             }
-
-            
 
             div.hiddenTelegramMenu {
                 width: max-content;
-                // max-height: 0px;
+                //max-height: 0px;
                 display: flex;
                 flex-direction: column;
                 position: absolute;
-                left: 50%;
+                left: 60%;
                 bottom: 110%;
                 background-color: $darkGray;
-                // box-shadow:
+                // box-shadow: 10px, 10px, 20px orange;
                 padding: 16px;
                 overflow: auto;
-                z-index: 10;
+                z-index: 0;
                 border-radius: 0.5rem;
-                opacity:0;
+                // opacity:1;
                 // will-change: opacity;
-                // pointer-events: none;
+                //pointer-events: none;
                 transform: translate(-50%);
                 transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+                
+                .ob:hover{
+                    background-color: green;
+                }
+                div.hiddenTelegramMenu:hover{
+                    background-color: blue;
+                    display: block;
+        
+                }
+                a.hiddenTelegramMenuMappedAElements {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    color: $textSubtle;
+                }
+        }
+            
+                
+                
 
-            }
 
-            div.hiddenTelegramMenu:hover{
-                opacity: 1;
 
-            }
         }
     }
 }
