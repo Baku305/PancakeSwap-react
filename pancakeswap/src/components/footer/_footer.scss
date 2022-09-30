@@ -1,6 +1,6 @@
 @import "../../style.scss";
 
-.footerSection {
+.footer-section {
     width: 100%;
     height: 49.9rem;
     background-color: $darkGray;
@@ -9,7 +9,7 @@
     // justify-content: center;
 
 
-    &ListsContainer {
+    &-lists-container {
         width: 120rem;
         height: 24rem;
         margin-bottom: 3.6rem;
@@ -17,100 +17,88 @@
         flex-direction: row;
         justify-content: space-between;
 
-        &MenuTitle {
+        &-menu-title {
             color: $violetBrand2;
             font-size: 1.6rem;
             font-weight: 600;
             margin-bottom: 8px;
         }
-        
-        &UlMenu {
-    
+
+        &-ul-menu {
+
             li {
                 color: $whiteBrand;
                 font-size: 1.6rem;
                 font-weight: 400;
             }
-    
-    
-    
-    
+
+
+
+
         }
     }
 
-    &SvgPancake {
+    &-svg-pancake {
         align-self: center;
         align-self: baseline;
     }
 
-    .socialsIconsContainer {
+    .social-icons-container {
         padding-bottom: 3.2rem;
         border-bottom: 0.1rem solid $borderGray;
         margin-bottom: 3.2rem;
 
         a, div {
             display: inline-block;
-            
-            svg {
             margin-right: 2.2rem;
-}
         }
 
-        &HiddenTelegramMenuContainer {
+        &-hidden-telegram-menu {
             position: relative;
-            background-color: yellowgreen;
+            background-color: red;
 
-            svg.prova{
-                border: 1px solid red;
-                // display: block;
-                
-                
-            }
-
-            div.hiddenTelegramMenu {
+            &-list {
                 width: max-content;
                 //max-height: 0px;
-                display: flex;
-                flex-direction: column;
+                // flex-direction: column;
                 position: absolute;
                 left: 60%;
                 bottom: 110%;
                 background-color: $darkGray;
+                border: 2px solid blue;
                 // box-shadow: 10px, 10px, 20px orange;
                 padding: 16px;
                 overflow: auto;
                 z-index: 0;
                 border-radius: 0.5rem;
-                // opacity:1;
+                // opacity:0;
                 // will-change: opacity;
                 //pointer-events: none;
                 transform: translate(-50%);
                 transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+
                 
-                .ob:hover{
-                    background-color: green;
-                }
-                div.hiddenTelegramMenu:hover{
-                    background-color: blue;
-                    display: block;
-        
-                }
-                a.hiddenTelegramMenuMappedAElements {
+                a.hidden-telegram-menu-list-mapped-a {
                     font-size: 16px;
                     font-weight: 600;
                     line-height: 1.5;
                     color: $textSubtle;
+                    background-color: yellow;
                 }
+
+            }
         }
+        .social-icons-container-hidden-telegram-menu:hover .social-icons-container-hidden-telegram-menu-list{
+            display: flex;
+            flex-direction: column;
+            // display: block;
             
-                
-                
-
-
-
         }
     }
+
 }
 
 
-            
+
+
+
