@@ -1,5 +1,4 @@
 import { Paragraph } from "../shared/paragraph/Paragraph";
-import "../../style.scss";
 import coin1 from "../../assets/asset 27.png";
 import coin2 from "../../assets/asset 28.png";
 import pancakeToken from "../../assets/asset 29.png";
@@ -20,6 +19,7 @@ export const CakeSection = () => {
         image4={coin3}
         miniCard={true}
       />
+
       <MiniCard />
     </>
   );

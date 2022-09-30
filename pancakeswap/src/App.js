@@ -7,6 +7,7 @@ import { Tabs } from "./components/banner/tabs";
 import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection.jsx";
 import { CakeSection } from "./components/cakeSection/CakeSection";
+import { MiniCard } from "./components/cakeSection/MiniCard";
 
 function App() {
   const Navigate = useNavigate();

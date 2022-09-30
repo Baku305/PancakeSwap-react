@@ -1,5 +1,4 @@
 import { Paragraph } from "../shared/paragraph/Paragraph";
-import "../../style.scss";
 import pieChart from "../../assets/asset 15.png";
 import arrowChart from "../../assets/asset 16.png";
 import coinFolder from "../../assets/asset 17.png";

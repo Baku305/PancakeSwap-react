@@ -1,5 +1,4 @@
 import { Paragraph } from "../shared/paragraph/Paragraph";
-import "../../style.scss";
 import bnbCoin from "../../assets/asset 12.png";
 import btcCoin from "../../assets/asset 13.png";
 import pancakeCoin from "../../assets/asset 14.png";

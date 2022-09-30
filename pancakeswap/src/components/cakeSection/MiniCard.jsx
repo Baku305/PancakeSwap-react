@@ -1,5 +1,3 @@
-import "../../style.scss";
-
 export const MiniCard = () => {
   return (
     <>

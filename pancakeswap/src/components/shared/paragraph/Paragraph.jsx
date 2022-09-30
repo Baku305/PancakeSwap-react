@@ -1,7 +1,5 @@
 import React from "react";
 import { Button } from "../button/Button";
-import "../../../style.scss";
-import "../button/_button.scss";
 import { MiniCard } from "../../cakeSection/MiniCard";
 
 // se ltr è true immagine a dx e testo a sx

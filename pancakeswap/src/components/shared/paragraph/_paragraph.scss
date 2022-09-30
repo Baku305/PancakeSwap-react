@@ -99,14 +99,15 @@
 
 .MiniCard {
   display: grid;
-  height: 132px;
+  height: 13.2rem;
   width: 92rem;
   grid-template-areas:
     "a b c"
     "d e f";
   gap: 32px;
   grid-template-columns: repeat(3, auto);
-  margin-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 80px;
   justify-content: stretch;
   align-content: center;
   margin: 0 auto;
@@ -140,7 +141,7 @@
     flex-direction: column;
     padding: 32px 24px;
     width: 100vw;
-    height: 446px;
+    height: 44.6rem;
     overflow: hidden;
   }
 
@@ -198,11 +199,6 @@
     position: absolute;
     width: 192px;
     height: 192px;
-    //top: -40px;
-    //right: 30px;
-  }
-  .earn-images img {
-    margin-left: 40px;
   }
   .MiniCard {
     gap: 16px;

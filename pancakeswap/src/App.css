@@ -87,7 +87,7 @@ a {
 }
 
 /*OTHERS*/
-.earnSection-content-title-subtitle .subTitle, .tradeSection-content-title-subtitle .subTitle, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-subTitle, .feedbackSection-wrapper #feedbackSection .external-container .title-container .subTitle, .feedbackSection-wrapper #feedbackSection .external-container .title-container .subTitle-highlighted {
+.section-content-title-subtitle .subTitle, .earnSection-content-title-subtitle .subTitle, .tradeSection-content-title-subtitle .subTitle, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-subTitle, .feedbackSection-wrapper #feedbackSection .external-container .title-container .subTitle, .feedbackSection-wrapper #feedbackSection .external-container .title-container .subTitle-highlighted {
   color: #7a6eaa;
   font-weight: 400;
   line-height: 1.5;
@@ -108,7 +108,7 @@ a {
 
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .section-content-title .section-button-container-default, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,13 +127,13 @@ header .container-button .button4, header .container-button .button3, .theMoonSe
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+.section-content-title .section-button-container-default, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button:hover, .earnSection-content-title .earnSection-button-container-default:hover, .tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
+.section-content-title .section-button-container-default:hover, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button:hover, .earnSection-content-title .earnSection-button-container-default:hover, .tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -1123,7 +1123,6 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 0px 16px;
-  border-left: 1px solid rgb(215, 202, 236);
   margin-right: 60px;
 }
 .MiniCard .MiniCardContent p {
@@ -2101,6 +2100,222 @@ button svg {
   opacity: 0.65;
 }
 
+/*jsx*/
+.svgFeedbackSectionSeparator {
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  top: 0px;
+}
+.svgFeedbackSectionSeparator-svg {
+  background-color: #E9F2F6;
+  fill: #d8cbed;
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62.2rem;
+  flex-direction: column;
+  width: 100%;
+}
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92rem;
+  height: 43rem;
+}
+.section-content-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 23.2rem;
+  width: 42.8rem;
+}
+.section-content-title h2 {
+  font-size: 4rem;
+  color: #280d5f;
+  margin-bottom: 2.4rem;
+}
+.section-content-title h2 span {
+  color: #7645d9;
+}
+.section-content-title-subtitle .subTitle {
+  margin-bottom: 2.4rem;
+}
+.section-content-title .section-button-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.section-content-title .section-button-container-default {
+  margin-right: 1.6rem;
+  width: 12.9rem;
+}
+.section-content-title .section-button-container-link {
+  color: rgb(31, 199, 212);
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.section-content-title .section-button-container-link:hover {
+  text-decoration: underline;
+}
+.section-content-images {
+  display: flex;
+  flex-direction: unset;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 42.8rem;
+}
+.section-content-images img {
+  -webkit-animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+          animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+  position: absolute;
+  height: 42.8rem;
+  width: 42.8rem;
+}
+@keyframes bouncing {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.section-content-images .img1 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.section-content-images .img2 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.section-content-images .img3 {
+  z-index: -1;
+}
+
+.MiniCard {
+  display: grid;
+  height: 13.2rem;
+  width: 92rem;
+  grid-template-areas: "a b c" "d e f";
+  gap: 32px;
+  grid-template-columns: repeat(3, auto);
+  padding-top: 20px;
+  padding-bottom: 80px;
+  justify-content: stretch;
+  align-content: center;
+  margin: 0 auto;
+}
+.MiniCard .MiniCardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+  margin-right: 60px;
+}
+.MiniCard .MiniCardContent p {
+  color: rgb(122, 110, 170);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.MiniCard .MiniCardContent h4 {
+  color: rgb(40, 13, 95);
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    width: 100vw;
+    height: 44.6rem;
+    overflow: hidden;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    height: 370px;
+    width: 100%;
+    position: relative;
+    border: 1px solid red;
+  }
+  .section-content-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 0%;
+    height: 155px;
+    border: 1px solid red;
+    width: 100vw;
+    position: relative;
+  }
+  .section-content-title h2 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .subTitle {
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .section-button-container {
+    display: flex;
+  }
+  .section-button-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .section-content-images {
+    display: flex;
+    align-items: center;
+    height: 192px;
+    width: 192px;
+    margin-bottom: 34px;
+    align-self: flex-start;
+    position: relative;
+    border: 1px solid red;
+  }
+  .section-content-images img {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+  }
+  .MiniCard {
+    gap: 16px;
+    width: 100%;
+    height: 183px;
+    grid-template-areas: "a d" "b e" "c f";
+    grid-template-columns: repeat(2, auto);
+  }
+  .MiniCardContent {
+    width: 100%;
+  }
+  .MarketCap {
+    border-left: 1px solid rgb(215, 202, 236);
+  }
+}
 h1 {
   color: #1fc7d4;
 }/*# sourceMappingURL=App.css.map */
