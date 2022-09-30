@@ -14,11 +14,13 @@ import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
 import winMobileIcon from "./assets/win_menu_icon_vuota.svg";
 import nftMobileIcon from "./assets/nft_menu_icon_vuota.svg";
 import dotsMobileIcon from "./assets/dots_menu_icon.svg";
+import { TradeSection } from "./components/tradeSection/TradeSection";
+import { EarnSection } from "./components/earnSection/EarnSection";
+import { CakeSection } from "./components/cakeSection/CakeSection";
 
 export const ThemeContext = React.createContext();
 
 function App() {
-
   const [theme, updateTheme] = useTheme();
 
   const Navigate = useNavigate();
@@ -38,7 +40,7 @@ function App() {
     {
       name: "earn",
       content: [{ name: "Farms" }, { name: "Pools" }],
-      icon: earnMobileIcon
+      icon: earnMobileIcon,
     },
     {
       name: "win",
@@ -48,7 +50,7 @@ function App() {
         { name: "Lottery" },
         { name: "Pottery" },
       ],
-      icon:winMobileIcon
+      icon: winMobileIcon,
     },
     {
       name: "nft",
@@ -57,7 +59,7 @@ function App() {
         { name: "Collections" },
         { name: "Activity" },
       ],
-      icon:nftMobileIcon
+      icon: nftMobileIcon,
     },
     {
       name: "...",
@@ -69,11 +71,9 @@ function App() {
         { name: "Blog", icon: true },
         { name: "Docs", icon: true },
       ],
-      icon: dotsMobileIcon
+      icon: dotsMobileIcon,
     },
   ];
-
-  
 
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
@@ -83,8 +83,11 @@ function App() {
           path="/"
           element={
             <div>
-                <MoonSection/>
-                <CardsIntro/>
+              <MoonSection />
+              <CardsIntro />
+              <TradeSection />
+              <EarnSection />
+              <CakeSection />
             </div>
           }
         />
@@ -92,12 +95,11 @@ function App() {
           path="/2"
           element={
             <div>
-              <MoonSection/>
+              <MoonSection />
               <Button buttonStyle="btn--default" types="button" />
             </div>
           }
         />
-        
       </Routes>
     </ThemeContext.Provider>
   );

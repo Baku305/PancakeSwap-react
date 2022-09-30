@@ -1,0 +1,220 @@
+.svgFeedbackSectionSeparator {
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  top: 0px;
+
+  &-svg {
+    background-color: $greyMouse;
+    fill: #d8cbed;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.section {
+  @include flexCenter;
+  height: 62.2rem;
+  flex-direction: column;
+  width: 100%;
+
+  &-content {
+    @include flexSpaceBetween;
+    width: 92rem;
+    height: 43rem;
+
+    &-title {
+      @include flexCenter;
+      flex-direction: column;
+      height: 23.2rem;
+      width: 42.8rem;
+
+      h2 {
+        font-size: 4rem;
+        color: $darkBlue;
+        margin-bottom: 2.4rem;
+
+        span {
+          color: $violetBrand;
+        }
+      }
+
+      &-subtitle {
+        .subTitle {
+          @extend %subTitle;
+          margin-bottom: 2.4rem;
+        }
+      }
+
+      .section-button-container {
+        @include flexStart;
+        width: 100%;
+
+        &-default {
+          @include b-selector(default);
+          margin-right: 1.6rem;
+          width: 12.9rem;
+        }
+
+        &-link {
+          color: rgb(31, 199, 212);
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 16px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &-images {
+      @include flex(unset, end, center);
+      position: relative;
+      width: fit-content;
+      height: 42.8rem;
+
+      img {
+        @include bouncing;
+        position: absolute;
+        height: 42.8rem;
+        width: 42.8rem;
+      }
+
+      .img1 {
+        animation-delay: 1.5s;
+      }
+
+      .img2 {
+        animation-delay: 3s;
+      }
+
+      .img3 {
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.MiniCard {
+  display: grid;
+  height: 13.2rem;
+  width: 92rem;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+  gap: 32px;
+  grid-template-columns: repeat(3, auto);
+  padding-top: 20px;
+  padding-bottom: 80px;
+  justify-content: stretch;
+  align-content: center;
+  margin: 0 auto;
+
+  .MiniCardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    //border-left: 1px solid rgb(215, 202, 236);
+    margin-right: 60px;
+
+    p {
+      color: rgb(122, 110, 170);
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    h4 {
+      color: rgb(40, 13, 95);
+      font-weight: 600;
+      line-height: 1.1;
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    width: 100vw;
+    height: 44.6rem;
+    overflow: hidden;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    height: 370px;
+    width: 100%;
+    position: relative;
+    border: 1px solid red;
+  }
+  .section-content-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 0%;
+    height: 155px;
+    border: 1px solid red;
+    width: 100vw;
+    position: relative;
+    //order: 2;
+  }
+  .section-content-title h2 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .subTitle {
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .section-button-container {
+    display: flex;
+  }
+  .section-button-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .section-content-images {
+    display: flex;
+    align-items: center;
+    height: 192px;
+    width: 192px;
+    margin-bottom: 34px;
+    align-self: flex-start;
+    position: relative;
+    //order: 1;
+    border: 1px solid red;
+  }
+  .section-content-images img {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+  }
+  .MiniCard {
+    gap: 16px;
+    width: 100%;
+    height: 183px;
+    //margin: 0 auto;
+    grid-template-areas:
+      "a d"
+      "b e"
+      "c f";
+    grid-template-columns: repeat(2, auto);
+  }
+  .MiniCardContent {
+    width: 100%;
+  }
+  .MarketCap {
+    border-left: 1px solid rgb(215, 202, 236);
+  }
+}
