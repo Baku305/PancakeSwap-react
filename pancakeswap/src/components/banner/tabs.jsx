@@ -1,46 +1,17 @@
 import { Banner } from "./banner";
 import { Banner2 } from "./Banner_2";
-import { useEffect, useState } from "react";
 // import "../../style.scss";
 
 
 import { SlideButton } from "./slideButton";
 
-import { UseFetchApi } from "../../custom hooks/useFetchApi";
+import { useVisibilityOnOff } from "../../custom hooks/useVisibiliyOnOff";
 
-const tokensApi = "https://api.pancakeswap.info/api/v2/tokens"
-const pairsApi = "https://api.pancakeswap.info/api/v2/pairs"
-const summaryApi = "https://api.pancakeswap.info/api/v2/summary"
 
 export function Tabs() {
 
-  const {
-    data,
-    error,
-    isLoading
-  } = UseFetchApi(pairsApi)
-  
-  const [visibility, setVisibility] = useState(1);
 
-
-  //*visibility fnc
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (visibility === 1) {
-  //       setVisibility((v)=> v = 1);
-  //     } else if (visibility === 2) {
-  //       setVisibility((v) => v = 1);
-  //     }
-  //   }, 5000);
-
-  //**! IO TI VEDO */
-
-
-  //     console.log(data)
-
-  //   return () => clearInterval(interval)
-
-  // }, [visibility,data]);
+  const {visibility, setVisibility} = useVisibilityOnOff(1)
 
   //*button setting
 

@@ -10,6 +10,7 @@ import { ThemeContext } from "../../App";
 import { useWindowDimensions } from "../../custom hooks/useWindowDimensions";
 import "external-svg-loader";
 import { languageList } from "../../data/data";
+import { UseFetchApi } from "../../custom hooks/useFetchApi";
 
 const eyesSvg = {
   open: "M75.614 117.896c0 9.718-4.593 14.779-10.258 14.779-5.665 0-10.258-5.061-10.258-14.779s4.593-14.779 10.258-14.779c5.665 0 10.258 5.061 10.258 14.779zM142.288 117.896c0 9.718-4.592 14.779-10.257 14.779-5.666 0-10.258-5.061-10.258-14.779s4.592-14.779 10.258-14.779c5.665 0 10.257 5.061 10.257 14.779z",
@@ -26,13 +27,23 @@ export const Navbar = ({ menu }) => {
   const [eyes, setEyes] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const { height, width } = useWindowDimensions();
+  const [pancakeTokenPrice, setPancakeTokenPrice] = useState();
 
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
 
+  const {
+    data: pancakeTokenData,
+    error: pancakeTokenError,
+    isLoading: pancakeTokenIsLoading,
+  } = UseFetchApi(
+    "https://api.pancakeswap.info/api/v2/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"
+  );
+
   useEffect(() => {
+    pancakeTokenData && setPancakeTokenPrice(Number(pancakeTokenData.data.price).toFixed(4))
     isOpen
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflowY = "scroll");
@@ -40,7 +51,7 @@ export const Navbar = ({ menu }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollPosition, isOpen]);
+  }, [scrollPosition, isOpen , pancakeTokenPrice, pancakeTokenData]);
 
   const handleEyesClose = () => {
     setEyes(false);
@@ -118,7 +129,7 @@ export const Navbar = ({ menu }) => {
                 alt=""
                 className="pancake_asset_value_wrapper"
               />
-              <h4>$4.500</h4>
+              {<h4>{pancakeTokenPrice}</h4>}
             </div>
           ) : (
             <div className="pancake_asset_value_wrapper">
@@ -152,8 +163,10 @@ export const Navbar = ({ menu }) => {
           {languageOpen && (
             <div className="language_list">
               <VerticalMenu
-              onMouseLeave={() => setLanguageOpen(false)}
-              onMouseEnter={() => setLanguageOpen(true)} array={languageList} />
+                onMouseLeave={() => setLanguageOpen(false)}
+                onMouseEnter={() => setLanguageOpen(true)}
+                array={languageList}
+              />
             </div>
           )}
           <Button
