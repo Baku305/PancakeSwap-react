@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../button/Button";
-import { MiniCard } from "../../cakeSection/MiniCard";
 
 // se ltr è true immagine a dx e testo a sx
 
@@ -27,10 +26,10 @@ export const Paragraph = ({
       <section className="section" style={backgroundStyle}>
         <div
           className="section-content"
-          style={{
-            flexDirection: ltr === false ? "row-reverse" : "row",
-            justifyContent: ltr === false ? "normal" : "space-between",
-          }}
+          // style={{
+          //   flexDirection: ltr === false ? "row-reverse" : "row",
+          //   justifyContent: ltr === false ? "normal" : "space-between",
+          // }}
         >
           <div className="section-content-title">
             <h2>
@@ -56,7 +55,7 @@ export const Paragraph = ({
           </div>
           <div
             className="section-content-images earn-images"
-            style={{ marginRight: ltr === false ? "50px" : "" }}
+            // style={{ marginRight: ltr === false ? "50px" : "" }}
           >
             <img className="img1" src={image1} alt="bnbCoin || pieChart" />
             <img src={image2} alt="btcCoin || arrowChart" />

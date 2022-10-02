@@ -15,7 +15,7 @@ export const EarnSection = () => {
         image2={arrowChart}
         image3={coinFolder}
         background={"earnSection"}
-        ltr={false}
+        ltr={true}
       />
     </>
   );
