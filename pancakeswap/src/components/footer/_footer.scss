@@ -55,27 +55,24 @@
 
         &-hidden-telegram-menu {
             position: relative;
-            background-color: red;
 
             &-list {
-                width: max-content;
-                //max-height: 0px;
-                // flex-direction: column;
+                // width: max-content;
+                // max-height: 0px;
+                display: none !important;
                 position: absolute;
                 left: 60%;
-                bottom: 110%;
+                bottom: 100%;
                 background-color: $darkGray;
-                border: 2px solid blue;
-                // box-shadow: 10px, 10px, 20px orange;
                 padding: 16px;
-                overflow: auto;
-                z-index: 0;
+                overflow: scroll;
+                z-index: 10;
                 border-radius: 0.5rem;
-                // opacity:0;
                 // will-change: opacity;
                 //pointer-events: none;
                 transform: translate(-50%);
-                transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+                
+                
 
                 
                 a.hidden-telegram-menu-list-mapped-a {
@@ -83,16 +80,13 @@
                     font-weight: 600;
                     line-height: 1.5;
                     color: $textSubtle;
-                    background-color: yellow;
                 }
 
             }
         }
+
         .social-icons-container-hidden-telegram-menu:hover .social-icons-container-hidden-telegram-menu-list{
-            display: flex;
-            flex-direction: column;
-            // display: block;
-            
+            display: block !important;
         }
     }
 
