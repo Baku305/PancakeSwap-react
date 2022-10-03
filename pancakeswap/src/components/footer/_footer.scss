@@ -47,8 +47,9 @@
         padding-bottom: 3.2rem;
         border-bottom: 0.1rem solid $borderGray;
         margin-bottom: 3.2rem;
+        
 
-        a, div {
+        a.b, div.c {
             display: inline-block;
             margin-right: 2.2rem;
         }
@@ -59,6 +60,7 @@
             &-list {
                 // width: max-content;
                 // max-height: 0px;
+                height: 400px;
                 display: none !important;
                 position: absolute;
                 left: 60%;
