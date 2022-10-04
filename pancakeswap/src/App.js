@@ -1,13 +1,15 @@
 import "./style.scss";
-import { Route, Routes, Link, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Button } from "./components/shared/button/Button";
-
+import { menu } from "./data/data";
 import { Navbar } from "./components/navbar/navbar";
-
+import { Footer } from "./components/footer/Footer"
 import { MoonSection } from "./components/MoonSection/the-moon-section";
 
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
+import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
+
 import { useTheme } from "./UseTheme";
 import tradeMobileIcon from "./assets/trade_menu_icon_vuota.svg";
 import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
@@ -17,11 +19,14 @@ import dotsMobileIcon from "./assets/dots_menu_icon.svg";
 import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection";
 import { CakeSection } from "./components/cakeSection/CakeSection";
+import { useTheme } from "./custom hooks/UseTheme";
+
 
 export const ThemeContext = React.createContext();
 
 function App() {
   const [theme, updateTheme] = useTheme();
+
 
   const Navigate = useNavigate();
 
@@ -75,6 +80,7 @@ function App() {
     },
   ];
 
+
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
@@ -83,11 +89,17 @@ function App() {
           path="/"
           element={
             <div>
+
               <MoonSection />
               <CardsIntro />
               <TradeSection />
               <EarnSection />
+               <WinMilionsInPrizes/>
               <CakeSection />
+
+               
+                
+
             </div>
           }
         />
@@ -101,6 +113,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer/>
     </ThemeContext.Provider>
   );
 }

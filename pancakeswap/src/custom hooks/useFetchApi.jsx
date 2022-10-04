@@ -1,6 +1,5 @@
 import useSWR from 'swr'
 
-
 export const UseFetchApi = (endoint) => {
 
  const fetcher = (endoint) => fetch(endoint).then(res => res.json())
@@ -16,3 +15,4 @@ export const UseFetchApi = (endoint) => {
  )
 
 }
+

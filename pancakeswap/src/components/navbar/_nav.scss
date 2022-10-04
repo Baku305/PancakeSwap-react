@@ -98,6 +98,26 @@
     .language_button {
       margin: 0 8px;
     }
+    
+    .language_list {
+      position: absolute;
+      height: fit-content;
+      cursor: pointer;
+      top: 56px;
+      right: 50px;
+      width: fit-content;
+      .verticalMenu{
+        overflow-y: scroll;
+        width: 100%;
+        max-height: 250px;
+        border-radius: 8px;
+        .vericalMenu_content_wrapper{
+          .verticalMenu_content{
+            padding: 10px 30px 10px 10px
+          }
+        }
+      }
+    }
 
     .pancake_asset_value_wrapper {
       @include flex(row, center, center);
@@ -265,3 +285,7 @@
 
   }
 }
+
+
+
+
