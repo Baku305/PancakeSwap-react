@@ -46,8 +46,12 @@
     width: 100%;
     max-height: 250px;
     border-radius: 8px;
-    %verticalMenu_content{
-      padding: 10px;
+    %vericalMenu_content_wrapper {
+      @include flexCenter;
+      padding: 5px 10px;
+      %verticalMenu_content{
+        padding: 10px;
+      }
     }
   }
 }
@@ -77,8 +81,6 @@
   .language_list {
     %verticalMenu {
       %vericalMenu_content_wrapper {
-        @include flexCenter;
-        padding-inline: 10px;
         %verticalMenu_content {
           color: $lightViolet;
           &:hover {

@@ -261,7 +261,13 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
   max-height: 250px;
   border-radius: 8px;
 }
-.verticalMenu .vericalMenu_content_wrapper .language_list header .menu .verticalMenu_content, header .verticalMenu .vericalMenu_content_wrapper .language_list .menu .verticalMenu_content, .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
+.verticalMenu .language_list header .menu .vericalMenu_content_wrapper, header .verticalMenu .language_list .menu .vericalMenu_content_wrapper, .language_list .verticalMenu .vericalMenu_content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+.verticalMenu .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
   padding: 10px;
 }
 
@@ -281,12 +287,6 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
 }
 .verticalMenu .dark-theme header .menu .vericalMenu_content_wrapper .separator:hover, header .verticalMenu .dark-theme .menu .vericalMenu_content_wrapper .separator:hover, .dark-theme .verticalMenu .vericalMenu_content_wrapper .separator:hover {
   background-color: #27262c;
-}
-.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-inline: 10px;
 }
 .verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
   color: #f4eeff;
