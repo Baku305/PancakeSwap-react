@@ -19,7 +19,7 @@
         height: 83rem;
         position: relative;
         width: 100%;
-    
+        max-width: 1200px;
         
         &-external-container{
         @include flexSpaceBetween;
