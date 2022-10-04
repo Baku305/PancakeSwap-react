@@ -22,7 +22,6 @@ export const CakeSection = () => {
           image3={pancakeToken}
           image4={coin3}
         />
-
         <MiniCard />
       </div>
     </>

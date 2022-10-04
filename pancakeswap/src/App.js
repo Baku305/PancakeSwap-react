@@ -10,7 +10,7 @@ import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
 
-import { useTheme } from "./UseTheme";
+import { useTheme } from "./custom hooks/UseTheme";
 import tradeMobileIcon from "./assets/trade_menu_icon_vuota.svg";
 import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
 import winMobileIcon from "./assets/win_menu_icon_vuota.svg";
@@ -19,16 +19,14 @@ import dotsMobileIcon from "./assets/dots_menu_icon.svg";
 import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection";
 import { CakeSection } from "./components/cakeSection/CakeSection";
-import { useTheme } from "./custom hooks/UseTheme";
 
 
 export const ThemeContext = React.createContext();
 
 function App() {
+
   const [theme, updateTheme] = useTheme();
 
-
-  const Navigate = useNavigate();
 
   const menu = [
     {
@@ -89,17 +87,12 @@ function App() {
           path="/"
           element={
             <div>
-
               <MoonSection />
               <CardsIntro />
               <TradeSection />
               <EarnSection />
-               <WinMilionsInPrizes/>
+              <WinMilionsInPrizes/>
               <CakeSection />
-
-               
-                
-
             </div>
           }
         />
