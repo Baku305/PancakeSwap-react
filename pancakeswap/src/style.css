@@ -255,6 +255,16 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 
+.language_list header .menu, header .language_list .menu, .language_list .verticalMenu {
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+}
+.verticalMenu .vericalMenu_content_wrapper .language_list header .menu .verticalMenu_content, header .verticalMenu .vericalMenu_content_wrapper .language_list .menu .verticalMenu_content, .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
+  padding: 10px;
+}
+
 .dark-theme header .menu, header .dark-theme .menu, .dark-theme .verticalMenu {
   background-color: #27262c;
   color: #b8add2;
@@ -271,6 +281,12 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
 }
 .verticalMenu .dark-theme header .menu .vericalMenu_content_wrapper .separator:hover, header .verticalMenu .dark-theme .menu .vericalMenu_content_wrapper .separator:hover, .dark-theme .verticalMenu .vericalMenu_content_wrapper .separator:hover {
   background-color: #27262c;
+}
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 10px;
 }
 .verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
   color: #f4eeff;
@@ -2477,19 +2493,10 @@ button svg {
   height: fit-content;
   cursor: pointer;
   top: 56px;
-  right: 50px;
+  right: 70px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-.nav_wrapper .nav_right_wrapper .language_list .verticalMenu {
-  overflow-y: scroll;
-  width: 100%;
-  max-height: 250px;
-  border-radius: 8px;
-}
-.nav_wrapper .nav_right_wrapper .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
-  padding: 10px 30px 10px 10px;
 }
 .nav_wrapper .nav_right_wrapper .pancake_asset_value_wrapper {
   display: flex;

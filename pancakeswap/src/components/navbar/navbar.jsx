@@ -73,6 +73,7 @@ export const Navbar = ({ menu }) => {
             : `nav_wrapper nav_wrapper_hidden ${theme}-theme`
         }
         onMouseEnter = {() => setLanguageOpen(false)}
+        onMouseLeave={() => setLanguageOpen(false)}
       >
         <div className="nav_left_wrapper">
           <div className="logo_wrapper" onMouseEnter={handleEyesClose}>
