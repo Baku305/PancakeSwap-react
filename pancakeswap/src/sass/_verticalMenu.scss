@@ -36,7 +36,7 @@
   &::-webkit-scrollbar-track {
     background-color: #27262c;
     border-radius: 20px;
-   }
+  }
 }
 
 .dark-theme {
@@ -57,6 +57,30 @@
         border-color: $darkGray3;
         &:hover {
           background-color: $darkGray;
+        }
+      }
+    }
+  }
+  .language_list {
+    %verticalMenu {
+      %vericalMenu_content_wrapper {
+        %verticalMenu_content {
+          color: $lightViolet;
+          &:hover {
+            background-color: initial;
+          }
+          %verticalMenu_name {
+            &:hover {
+              transition: 0.3s;
+              color: $lightViolet2;
+            }
+          }
+        }
+        %separator {
+          border-color: $darkGray3;
+          &:hover {
+            background-color: initial;
+          }
         }
       }
     }
@@ -85,6 +109,30 @@
       }
     }
   }
+  .language_list {
+    %verticalMenu {
+      %vericalMenu_content_wrapper {
+        %verticalMenu_content {
+          color: $violetBrand1;
+          &:hover {
+            background-color: initial;
+          }
+          %verticalMenu_name {
+            &:hover {
+              transition: 0.3s;
+              color: $subTitleViolet;
+            }
+          }
+        }
+        %separator {
+          border-color: $darkGray3;
+          &:hover {
+            background-color: initial;
+          }
+        }
+      }
+    }
+  }
 }
 
 .verticalMenu {
@@ -108,5 +156,3 @@
     }
   }
 }
-
-

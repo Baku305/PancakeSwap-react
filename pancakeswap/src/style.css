@@ -272,6 +272,22 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
 .verticalMenu .dark-theme header .menu .vericalMenu_content_wrapper .separator:hover, header .verticalMenu .dark-theme .menu .vericalMenu_content_wrapper .separator:hover, .dark-theme .verticalMenu .vericalMenu_content_wrapper .separator:hover {
   background-color: #27262c;
 }
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
+  color: #f4eeff;
+}
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content:hover, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content:hover, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content:hover {
+  background-color: initial;
+}
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover {
+  transition: 0.3s;
+  color: #b8add2;
+}
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .separator, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .separator, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .separator {
+  border-color: #383241;
+}
+.verticalMenu .dark-theme .language_list header .menu .vericalMenu_content_wrapper .separator:hover, header .verticalMenu .dark-theme .language_list .menu .vericalMenu_content_wrapper .separator:hover, .dark-theme .language_list .verticalMenu .vericalMenu_content_wrapper .separator:hover {
+  background-color: initial;
+}
 
 .light-theme header .menu, header .light-theme .menu, .light-theme .verticalMenu {
   background-color: white;
@@ -289,6 +305,22 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
 }
 .verticalMenu .vericalMenu_content_wrapper .light-theme header .menu .separator:hover, header .verticalMenu .vericalMenu_content_wrapper .light-theme .menu .separator:hover, .light-theme .verticalMenu .vericalMenu_content_wrapper .separator:hover {
   background-color: white;
+}
+.verticalMenu .light-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .light-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .light-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
+  color: #280d5f;
+}
+.verticalMenu .light-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content:hover, header .verticalMenu .light-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content:hover, .light-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content:hover {
+  background-color: initial;
+}
+.verticalMenu .light-theme .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover, header .verticalMenu .light-theme .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover, .light-theme .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_name:hover {
+  transition: 0.3s;
+  color: #7a6eaa;
+}
+.verticalMenu .light-theme .language_list header .menu .vericalMenu_content_wrapper .separator, header .verticalMenu .light-theme .language_list .menu .vericalMenu_content_wrapper .separator, .light-theme .language_list .verticalMenu .vericalMenu_content_wrapper .separator {
+  border-color: #383241;
+}
+.verticalMenu .light-theme .language_list header .menu .vericalMenu_content_wrapper .separator:hover, header .verticalMenu .light-theme .language_list .menu .vericalMenu_content_wrapper .separator:hover, .light-theme .language_list .verticalMenu .vericalMenu_content_wrapper .separator:hover {
+  background-color: initial;
 }
 
 /*Vertical Tabs*/
