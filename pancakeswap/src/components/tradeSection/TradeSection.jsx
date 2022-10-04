@@ -2,11 +2,14 @@ import { Paragraph } from "../shared/paragraph/Paragraph";
 import bnbCoin from "../../assets/asset 12.png";
 import btcCoin from "../../assets/asset 13.png";
 import pancakeCoin from "../../assets/asset 14.png";
+import { ThemeContext } from "../../App";
+import { useContext } from "react";
 
 export const TradeSection = () => {
+  const { theme, updateTheme } = useContext(ThemeContext);
   return (
     <>
-      <div className="TradeSection">
+      <div className={`Background ${theme}-theme`}>
         <div className="svgFeedbackSectionSeparator">
           <svg
             viewBox="0 0 1660 48"
@@ -26,7 +29,7 @@ export const TradeSection = () => {
           image1={bnbCoin}
           image2={btcCoin}
           image3={pancakeCoin}
-          background={"tradeSection"}
+          //background={"tradeSection"}
           ltr={true}
         />
       </div>
