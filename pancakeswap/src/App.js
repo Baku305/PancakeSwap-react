@@ -7,6 +7,7 @@ import { Navbar } from "./components/navbar/navbar";
 import { MoonSection } from "./components/MoonSection/the-moon-section";
 
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
+import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
 import { useTheme } from "./custom hooks/UseTheme";
 
@@ -26,6 +27,7 @@ function App() {
             <div>
                 <MoonSection/>
                 <CardsIntro/>
+                <WinMilionsInPrizes/>
             </div>
           }
         />
