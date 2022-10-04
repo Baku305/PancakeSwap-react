@@ -90,13 +90,22 @@
 
   .nav_right_wrapper {
     @include flex(row, center, center);
+    height: 100%;
 
     .settings_button {
       margin: 0 8px;
+      height: 100%;
     }
 
     .language_button {
       margin: 0 8px;
+      height: 100%;
+    }
+
+    .button_wrapper{
+      height: 100%;
+      @include flex(row,center,center);
+      width: fit-content;
     }
     
     .language_list {
