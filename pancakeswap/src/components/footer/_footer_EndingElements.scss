@@ -1,0 +1,25 @@
+@import "../../style.scss";
+
+.ending-items-container{
+    background-color: yellow;
+    width: 100%;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+
+    &-left-items{
+        width: 16rem;
+        height: 4.8rem;
+        background-color: red;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-right-items{
+        width: 23.5rem;
+        height: 4.8rem;
+        background-color: green;
+        display: flex;
+        justify-content: space-around;
+    }
+}

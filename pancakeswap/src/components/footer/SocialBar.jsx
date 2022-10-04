@@ -1,6 +1,7 @@
 import React from "react";
 import { svgArr } from "./data/svgs"
 import { telegramMenuLanguages } from "./data/telegramMenuLanguages";
+import "./_footer_SocialBar.scss";
 
 export function SocialBar() {
     return (
