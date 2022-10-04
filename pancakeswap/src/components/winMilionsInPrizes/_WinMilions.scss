@@ -3,6 +3,9 @@
     padding: 1px;
     display: flex;
     justify-content: center;
+    &.dark-theme{
+        background: linear-gradient(#0a4373 0%, #091116 100%);
+    }
 }
 
 .win-milions-container{
@@ -18,6 +21,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    &.dark-theme{
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid #302f30;
+    }
 }
 
 .win-milions-container-title{
@@ -25,11 +32,17 @@
     font-weight: 600;
     line-height: 1.1;
     color: $violetBrand1;
-    margin: 33.2px 0 24px;
+    margin: 0 0 24px;
+    &.dark-theme{
+        color: $lightViolet;
+    }
 }
 
 .win-milions-container-win{
     color: $violetBrand;
+    &.dark-theme{
+        color:$violetBrand2
+    }
 }
 
 .win-milions-container-paragraph{
@@ -37,6 +50,9 @@ color: $subTitleViolet;
 font-weight: 400;
 line-height: 1.5;
 font-size: 16px;
+&.dark-theme{
+    color: $lightViolet2;
+}
 }
 
 .win-milions-container-paragraph2{
