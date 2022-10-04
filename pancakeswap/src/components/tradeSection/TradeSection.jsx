@@ -9,18 +9,19 @@ export const TradeSection = () => {
   const { theme, updateTheme } = useContext(ThemeContext);
   return (
     <>
+      {/* <div className={`svgFeedbackSectionSeparator ${theme}-theme`}>
+        <svg
+          viewBox="0 0 1660 48"
+          preserveAspectRatio="none"
+          color="text"
+          width="20px"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`${theme}-theme`}
+        >
+          <path d="M1660 48C1139.02 46.1887 336.256 15.2453 0 0H1660V48Z"></path>
+        </svg>
+      </div> */}
       <div className={`Background ${theme}-theme`}>
-        <div className="svgFeedbackSectionSeparator">
-          <svg
-            viewBox="0 0 1660 48"
-            preserveAspectRatio="none"
-            fill="white"
-            width="100%"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M-346 48C174.985 46.1887 977.744 15.2453 1314 0H-346V48Z" />
-          </svg>
-        </div>
         <Paragraph
           title="Trade anything. No registration, no hassle."
           subTitle="Trade any token on BNB Smart Chain in seconds, just by connecting your wallet."
