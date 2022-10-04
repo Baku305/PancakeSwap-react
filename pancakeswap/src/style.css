@@ -265,7 +265,7 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
+  padding-inline: 10px;
 }
 .verticalMenu .language_list header .menu .vericalMenu_content_wrapper .verticalMenu_content, header .verticalMenu .language_list .menu .vericalMenu_content_wrapper .verticalMenu_content, .language_list .verticalMenu .vericalMenu_content_wrapper .verticalMenu_content {
   padding: 10px;
@@ -763,6 +763,7 @@ label {
 .color-card-container {
   padding: 24px;
   border-radius: 24px;
+  min-width: 300px;
 }
 
 .color-card-header {
@@ -3626,6 +3627,16 @@ button svg {
   margin: 0 108px;
 }
 
+@media screen and (max-width: 900px) {
+  .color-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .win-milions-container {
+    margin: 16px 24px;
+    padding: 0px;
+  }
+}
 .footer-section {
   width: 100%;
   height: 49.9rem;

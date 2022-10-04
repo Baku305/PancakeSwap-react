@@ -48,7 +48,7 @@
     border-radius: 8px;
     %vericalMenu_content_wrapper {
       @include flexCenter;
-      padding: 5px 10px;
+      padding-inline: 10px;
       %verticalMenu_content{
         padding: 10px;
       }
