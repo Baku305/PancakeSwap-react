@@ -1,7 +1,7 @@
 import React from "react";
 import { footerMenu } from "./data/footerMenu";
 import { svgArr } from "./data/svgs"
-import "./_footer_MenuLists.scss";
+
 
 export function MenuLists() {
     return (

@@ -1,5 +1,4 @@
 import React from "react";
-import "./_footer_EndingElements.scss"
 
 export function EndingElements() {
     return(

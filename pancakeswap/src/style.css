@@ -712,6 +712,58 @@ label {
     margin-top: 0px;
   }
 }
+.color-card-container {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.color-card-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.color-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.color-card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.color-card-tagline {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.color-card-title {
+  color: #280d5f;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+.color-card-subtitle {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.color-card-paragraph {
+  color: #280d5f;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
 /*PATH*/
 header {
   /*CONTENITORE BOTTONI DEL SITO*/
@@ -1673,7 +1725,7 @@ p.last-child {
   flex: 1 1 0%;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper.last-child .CardContainer {
-  background: linear-gradient(#7645d9 0%, #5121b1 100%);
+  background: linear-gradient(#7645d9 0%, #7645d9 100%);
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p {
   font-weight: 600;
@@ -3375,4 +3427,142 @@ button svg {
   z-index: 3;
   position: absolute;
   margin-top: 55px;
+}
+
+.win-milions-wrapper {
+  background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.win-milions-container {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border: 1px solid #e7e3eb;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 72px;
+  text-align: center;
+  margin: 48px 24px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.win-milions-container-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #280d5f;
+  margin: 33.2px 0 24px;
+}
+
+.win-milions-container-win {
+  color: #7645d9;
+}
+
+.win-milions-container-paragraph {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.win-milions-container-paragraph2 {
+  margin: 0 0 40px;
+}
+
+.color-cards-wrapper {
+  display: flex;
+  gap: 20px;
+  margin: 0 108px;
+}
+
+.footer-section {
+  width: 100%;
+  height: 49.9rem;
+  background-color: #27262c;
+  padding: 5.6rem 4rem 3.2rem 4rem;
+}
+
+.footer-section-lists-container {
+  width: 120rem;
+  height: 24rem;
+  margin-bottom: 3.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-section-lists-container-menu-title {
+  color: #9a6aff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.footer-section-lists-container-ul-menu li {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.social-icons-container {
+  padding-bottom: 3.2rem;
+  border-bottom: 0.1rem solid #565065;
+  margin-bottom: 3.2rem;
+}
+.social-icons-container a.b, .social-icons-container div.c {
+  display: inline-block;
+  margin-right: 2.2rem;
+}
+.social-icons-container-hidden-telegram-menu {
+  position: relative;
+}
+.social-icons-container-hidden-telegram-menu-list {
+  height: 400px;
+  display: none !important;
+  position: absolute;
+  left: 60%;
+  bottom: 100%;
+  background-color: #27262c;
+  padding: 16px;
+  overflow: scroll;
+  z-index: 10;
+  border-radius: 0.5rem;
+  transform: translate(-50%);
+}
+.social-icons-container-hidden-telegram-menu-list a.hidden-telegram-menu-list-mapped-a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #b8add2;
+}
+.social-icons-container .social-icons-container-hidden-telegram-menu:hover .social-icons-container-hidden-telegram-menu-list {
+  display: block !important;
+}
+
+.ending-items-container {
+  background-color: yellow;
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.ending-items-container-left-items {
+  width: 16rem;
+  height: 4.8rem;
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+.ending-items-container-right-items {
+  width: 23.5rem;
+  height: 4.8rem;
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */

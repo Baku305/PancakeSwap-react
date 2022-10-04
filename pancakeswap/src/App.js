@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Button } from "./components/shared/button/Button";
 import { menu } from "./data/data";
 import { Navbar } from "./components/navbar/navbar";
-
+import { Footer } from "./components/footer/Footer"
 import { MoonSection } from "./components/MoonSection/the-moon-section";
 
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
@@ -40,8 +40,8 @@ function App() {
             </div>
           }
         />
-        
       </Routes>
+      <Footer/>
     </ThemeContext.Provider>
   );
 }
