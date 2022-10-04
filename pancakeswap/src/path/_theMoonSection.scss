@@ -112,21 +112,37 @@
     
 }
 
-@media screen and (max-width:860px) {
-    .theMoonSection-wrapper .theMoonSection-external-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        min-width: 100%;
-        // height: 58rem;
-        z-index: 1;
-        flex-direction: column-reverse;
+ @media screen and (max-width:860px) {
+    .theMoonSection{
+
+       
+
+        .theMoonSection-external-container{
+
+            @include flex(column-reverse, center, center) ;
+            width: 100%;
+            min-width: auto;
+
+            .theMoonSection-leftTitle-container{
+
+                width: 100%;
+                padding: 15px;
+               
+
+            }
+
+            .theMoonSection-floatingimgs-container{
+                @include flex(row, flex-end, center);
+                img{
+                    width: 192px;
+                    height: 192px;
+                }
+
+
+            }
+
+
+        }
     }
 
-    .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-floatingimgs-container img {
-        width: 20%;
-        height: auto;
-        position: absolute;
-    }
-}
+ }

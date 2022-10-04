@@ -1130,6 +1130,30 @@ header .container-button {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .theMoonSection .theMoonSection-external-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: auto;
+  }
+  .theMoonSection .theMoonSection-external-container .theMoonSection-leftTitle-container {
+    width: 100%;
+    padding: 15px;
+  }
+  .theMoonSection .theMoonSection-external-container .theMoonSection-floatingimgs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .theMoonSection .theMoonSection-external-container .theMoonSection-floatingimgs-container img {
+    width: 192px;
+    height: 192px;
+  }
+}
 h2 {
   font-size: 4rem;
 }

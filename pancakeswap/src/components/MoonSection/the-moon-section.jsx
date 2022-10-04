@@ -35,8 +35,9 @@ export function MoonSection() {
                             <img className="theMoonSection-star1" src={Image1} alt="" />
                             <img className="theMoonSection-star2" src={Star2} alt="" />
                             <img className="theMoonSection-star3" src={Star3} alt="" />
-                            <img className="theMoonSection-rabbit1" src={Rabbit1} alt="coniglio maledetto" />                        </div>
-                    </div>
+                            <img className="theMoonSection-rabbit1" src={Rabbit1} alt="coniglio maledetto" />                       
+                            </div>
+                        </div>
                 </section>
                 <svg className="svgMoonSectionSeparator" viewBox="0 0 1660 339" width="100%" fill="url('#paint0_linear_light')"
                     xmlns="http://www.w3.org/2000/svg" className="svgMoonSectionSeparator">
