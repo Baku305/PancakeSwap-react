@@ -1,6 +1,6 @@
 import { LotteryCounter } from "./lotteryCounter";
 import { useState } from "react";
-import "../../style.scss";
+// import "../../style.scss";
 import imgLottery from "../../assets/asset 2.png";
 import imgLotteryMobile from "../../assets/lotteryMobile.png";
 import arrowButton from "../../assets/asset 56.svg";
@@ -8,19 +8,19 @@ import { Button } from "../shared/button/Button";
 import { useEffect } from "react";
 
 export function Banner(props) {
-  const [lottery, setLottery] = useState(2500);
+  const [lottery, setLottery] = useState(251502);
 
   useEffect(() => {
     const interval = () => {
       setInterval(
-        () => setLottery(lottery + (lottery * Math.random()) / 100),
-        2000
+        () => setLottery(lottery + (lottery * Math.random()) / 1000),
+        3000
       );
     };
     clearInterval(interval);
 
     return interval;
-  }, []);
+  }, [lottery]);
 
   return (
     <>

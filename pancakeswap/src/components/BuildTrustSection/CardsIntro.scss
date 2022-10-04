@@ -1,7 +1,12 @@
 .cards-intro-container{
     background: linear-gradient(180deg,#fff 22%,#d7caec 100%);
     padding-bottom: 48px;
+    &.dark-theme{
+        background: linear-gradient(180deg,#09070c 22%,#201335 100%);
+        }
 }
+
+
 
 .intro-cards-section{
     text-align: center;
@@ -11,7 +16,10 @@
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;
-    color: $violetBrand1; 
+    color: $violetBrand1;
+        &.dark-theme{
+            color: #F4EEFF
+            }
 }
 
 .intro-card-section-p {
@@ -19,6 +27,9 @@
     line-height: 1.5;
     font-size: 16px;
     color: $subTitleViolet;
+    &.dark-theme{
+        color: #b8add2
+        }
 }
 
 .intro-cards-section-cta{
@@ -40,6 +51,9 @@
 @media (max-width: 900px) {
     .cards-intro-container{
         padding: 0 24px;
+    }
+    .white-card-position{
+        margin-right: 0;
     }
     .white-cards-container{
         display: flex; 

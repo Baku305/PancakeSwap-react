@@ -6,7 +6,6 @@
   @include flexCenter;
   height: 4.8rem;
   width: auto;
-  
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
@@ -14,6 +13,8 @@
   letter-spacing: 0.48px;
   padding-inline: 2frem;
   cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
 
 /*SET DEFOULT STYLE*/
   &-default {
@@ -71,11 +72,9 @@
   &-connect {
     @extend %button;
     height: 3.2rem;
-    width: auto;
-    min-width: 12rem;
-    padding: 0px 16px 0px 16px;
+    padding: 0px 16px;
     line-height: 1.6rem;
-    letter-spacing: normal;
+    font-weight: 600;
     color: #fff;
     background-color: $tiffanyBrand;
     box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
