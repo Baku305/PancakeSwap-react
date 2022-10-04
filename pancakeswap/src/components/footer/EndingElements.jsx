@@ -14,6 +14,9 @@ export function EndingElements() {
                     <div className="buy-cake-btn">BUY CAKE BUTTON</div>
                 </div>
             </div>
+            
+            
+            
         </>
     )
 }
