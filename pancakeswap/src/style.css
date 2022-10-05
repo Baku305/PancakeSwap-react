@@ -245,6 +245,14 @@ header .menu, .verticalMenu {
   width: 24px;
   margin-right: 5%;
 }
+.verticalMenu .vericalMenu_content_wrapper .verticalMenu_content .verticalMenu_news {
+  border: 2px solid #31d0aa;
+  padding-inline: 8px;
+  color: #31d0aa;
+  border-radius: 16px;
+  margin-right: 5px;
+  font-size: 14px;
+}
 .verticalMenu .vericalMenu_content_wrapper .separator {
   border-style: solid;
   border-width: 1px 0px 0px;
@@ -2428,6 +2436,18 @@ button svg {
 }
 .nav_wrapper .nav_left_wrapper .menu_el_wrapper:hover .verticalMenu {
   display: block;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper .menu_title_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_wrapper .nav_left_wrapper .menu_el_wrapper .menu_title_wrapper .news_icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #31d0aa;
+  margin-left: 12px;
 }
 .nav_wrapper .nav_left_wrapper .menu_el_wrapper .verticalMenu {
   top: 55px;

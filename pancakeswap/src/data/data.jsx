@@ -42,6 +42,7 @@ export const menu = [
       { name: "Pottery" },
     ],
     icon: winMobileIcon,
+    
   },
   {
     name: "nft",
@@ -57,11 +58,12 @@ export const menu = [
     content: [
       { name: "Info" },
       { name: "IFO" },
-      { name: "Voting", separator: true },
+      { name: "Voting", separator: true, news: "vote now" },
       { name: "Leaderboard", separator: true },
       { name: "Blog", icon: true },
       { name: "Docs", icon: true },
     ],
     icon: dotsMobileIcon,
+    news : true
   },
 ];

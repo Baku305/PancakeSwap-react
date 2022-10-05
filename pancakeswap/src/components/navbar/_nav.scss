@@ -49,6 +49,18 @@
           display: block;
         }
       }
+      .menu_title_wrapper{
+        @include flexSpaceBetween;
+
+        .news_icon{
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #31d0aa;
+          margin-left: 12px;
+        }
+      }
+
 
       .verticalMenu {
         top: 55px;

@@ -28,57 +28,6 @@ function App() {
   const [theme, updateTheme] = useTheme();
 
 
-  const menu = [
-    {
-      name: "trade",
-      content: [
-        { name: "Swap" },
-        { name: "Limit" },
-        { name: "Liquidity" },
-        { name: "Perpetual", icon: true },
-        { name: "Bridge", icon: true },
-      ],
-      icon: tradeMobileIcon,
-    },
-    {
-      name: "earn",
-      content: [{ name: "Farms" }, { name: "Pools" }],
-      icon: earnMobileIcon,
-    },
-    {
-      name: "win",
-      content: [
-        { name: "Trading competition" },
-        { name: "Prediction (Beta)" },
-        { name: "Lottery" },
-        { name: "Pottery" },
-      ],
-      icon: winMobileIcon,
-    },
-    {
-      name: "nft",
-      content: [
-        { name: "Overview" },
-        { name: "Collections" },
-        { name: "Activity" },
-      ],
-      icon: nftMobileIcon,
-    },
-    {
-      name: "...",
-      content: [
-        { name: "Info" },
-        { name: "IFO" },
-        { name: "Voting", separator: true },
-        { name: "Leaderboard", separator: true },
-        { name: "Blog", icon: true },
-        { name: "Docs", icon: true },
-      ],
-      icon: dotsMobileIcon,
-    },
-  ];
-
-
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
@@ -106,7 +55,7 @@ function App() {
           }
         />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </ThemeContext.Provider>
   );
 }

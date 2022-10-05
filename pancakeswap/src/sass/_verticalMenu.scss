@@ -26,6 +26,14 @@
         width: 24px;
         margin-right: 5%;
       }
+      %verticalMenu_news{
+        border: 2px solid #31d0aa;
+        padding-inline: 8px;
+        color: #31d0aa;
+        border-radius: 16px;
+        margin-right: 5px;
+        font-size: 14px;
+      }
     }
     %separator {
       border-style: solid;
@@ -163,6 +171,10 @@
 
       .verticalMenu_name {
         @extend %verticalMenu_name;
+      }
+
+      .verticalMenu_news {
+        @extend %verticalMenu_news;
       }
 
       .verticalMenu_icon {
