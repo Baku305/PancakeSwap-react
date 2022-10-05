@@ -90,13 +90,22 @@
 
   .nav_right_wrapper {
     @include flex(row, center, center);
+    height: 100%;
 
     .settings_button {
       margin: 0 8px;
+      height: 100%;
     }
 
     .language_button {
       margin: 0 8px;
+      height: 100%;
+    }
+
+    .button_wrapper{
+      height: 100%;
+      @include flex(row,center,center);
+      width: fit-content;
     }
     
     .language_list {
@@ -104,19 +113,8 @@
       height: fit-content;
       cursor: pointer;
       top: 56px;
-      right: 50px;
+      right: 70px;
       width: fit-content;
-      .verticalMenu{
-        overflow-y: scroll;
-        width: 100%;
-        max-height: 250px;
-        border-radius: 8px;
-        .vericalMenu_content_wrapper{
-          .verticalMenu_content{
-            padding: 10px 30px 10px 10px
-          }
-        }
-      }
     }
 
     .pancake_asset_value_wrapper {
