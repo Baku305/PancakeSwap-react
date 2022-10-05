@@ -39,7 +39,7 @@ export function MoonSection() {
                             </div>
                         </div>
                 </section>
-                <svg className="svgMoonSectionSeparator" viewBox="0 0 1660 339" width="100%" fill={(theme === "dark")? "url('#linear_dark')":"url('linear_light')"}
+                <svg className="svgMoonSectionSeparator" viewBox="0 0 1660 339" width="100%" fill={(theme === "dark")? "url('#linear_dark')":"url('#linear_light')"}
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M804 167.023C520.5 167.023 267.5 290.522 0 304.5V339H1660V0.5C1358.83 0.5 1104 167.023 804 167.023Z">
