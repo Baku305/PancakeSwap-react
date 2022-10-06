@@ -194,6 +194,22 @@ export const Navbar = ({ menu }) => {
               )}
             </Button>
           </div>
+          <div
+            className="button_wrapper"
+            onMouseEnter={() => setLanguageOpen(false)}
+          >
+            <Button
+              color=""
+              onClick={() => console.log("ciao")}
+              buttonStyle={"btn--connect"}
+            >
+              {width > 940 ? (
+                <span className="ButtonTitle">Connect Wallet</span>
+              ) : (
+                <span className="ButtonTitle">Connect</span>
+              )}
+            </Button>
+          </div>
         </div>
       </div>
       {width < 620 && (
