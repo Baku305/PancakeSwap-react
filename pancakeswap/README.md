@@ -12,7 +12,7 @@
   <h3 align="center">PancakeSwap T.1</h3>
 
   <p align="center">
-    A reamake of PancakeSwap site by Team 1 of Fullstack 3 class in Develhope
+    A clone of PancakeSwap site by Team 1 of Fullstack 3 class in Develhope
     <br />
     <a href="https://github.com/Baku305/PancakeSwap-react/blob/feat/navbar/pancakeswap"><strong>Explore the docs »</strong></a>
     <br />
@@ -103,17 +103,6 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
