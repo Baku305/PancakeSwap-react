@@ -49,6 +49,17 @@
           display: block;
         }
       }
+      .menu_title_wrapper {
+        @include flexSpaceBetween;
+
+        .news_icon {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #31d0aa;
+          margin-left: 12px;
+        }
+      }
 
       .verticalMenu {
         top: 55px;
@@ -66,6 +77,10 @@
       height: 100%;
       width: 100%;
       margin-right: 16px;
+
+      @media screen and (max-width: 860px) {
+        margin: 0;
+      }
 
       .logo_title {
         width: 160px;
@@ -97,25 +112,88 @@
       height: 100%;
     }
 
-    .language_button {
-      margin: 0 8px;
+
+
+    .network_button_wrapper {
       height: 100%;
+      @include flex(row, center, center);
+      width: fit-content;
+      position: relative;
+
+      &:hover{
+        .verticalMenu{
+          display: block;
+        }
+      }
+
+      .network_button {
+        @include b-selector(connect);
+        position: relative;
+        padding-right: 5px;
+        margin-right: 5px;
+
+        .ButtonTitle {
+          padding-left: 15px;
+        }
+
+        .network_button_logo {
+          position: absolute;
+          left: -5px;
+          height: 100%;
+        }
+
+        &:hover {
+          opacity: 70%;
+        }
+      }
+      .verticalMenu {
+        top: 55px;
+        position: absolute;
+        display: none;
+
+        @media screen and (max-width: 1050px){
+              left:-170px
+        }
+
+        img {
+          height: 25px;
+          padding-right: 10px;
+        }
+
+        &:hover {
+          display: block;
+        }
+        .verticalMenu_content {
+          justify-content: flex-start;
+        }
+      }
+    }
+    .button_wrapper {
+      height: 100%;
+      @include flex(row, center, center);
+      width: fit-content;
+      position: relative;
     }
 
-    .button_wrapper{
+    .language_wrapper{
       height: 100%;
-      @include flex(row,center,center);
-      width: fit-content;
+      position: relative;
+      margin-right: 10px;
+
+      .language_button {
+        margin: 0 8px;
+        height: 100%;
+      }
+
+      .language_list {
+        position: absolute;
+        height: fit-content;
+        cursor: pointer;
+        top: 56px;
+        width: fit-content;
+      }
     }
-    
-    .language_list {
-      position: absolute;
-      height: fit-content;
-      cursor: pointer;
-      top: 56px;
-      right: 70px;
-      width: fit-content;
-    }
+
 
     .pancake_asset_value_wrapper {
       @include flex(row, center, center);
@@ -136,6 +214,8 @@
     }
   }
 }
+
+
 
 .mobile_menu_wrapper {
   width: 100%;
@@ -181,8 +261,7 @@
 
 .nav_wrapper {
   &.dark-theme {
-
-    .logo_title{
+    .logo_title {
       fill: white;
     }
     background-color: $darkGray;
@@ -202,6 +281,17 @@
       }
       .language_button {
         fill: $lightViolet2;
+      }
+      .network_button{
+        background-color: $hoverMenu;
+
+        .network_button_arrow{
+          fill:white
+        }
+
+        &:hover{
+          background-color: $hoverMenu;
+        }
       }
       .pancake_asset_value_wrapper {
         h4 {
@@ -230,6 +320,21 @@
       .language_button {
         fill: $subTitleViolet;
       }
+      .network_button{
+        background-color: $grayHover;
+
+        .ButtonTitle{
+          color: $violetBrand1;
+        }
+
+        .network_button_arrow{
+          fill:$violetBrand1
+        }
+
+        &:hover{
+        background-color: $grayHover;
+        }
+      }
       .pancake_asset_value_wrapper {
         h4 {
           color: $subTitleViolet;
@@ -255,7 +360,7 @@
         background: $hoverMenu;
       }
 
-      p{
+      p {
         color: $lightViolet2;
       }
     }
@@ -265,25 +370,18 @@
     background-color: white;
     border-top: 1px solid $grayHover;
 
-    .mobile_menu_el_wrapper{
-
+    .mobile_menu_el_wrapper {
       .menuIcon {
         fill: $subTitleViolet;
       }
-  
+
       &:hover {
         background: $grayHover;
       }
-  
-      p{
+
+      p {
         color: $subTitleViolet;
       }
-
     }
-
   }
 }
-
-
-
-
