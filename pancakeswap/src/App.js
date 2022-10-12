@@ -27,7 +27,6 @@ function App() {
 
   const [theme, updateTheme] = useTheme();
 
-
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
       <Navbar menu={menu} />
@@ -36,12 +35,12 @@ function App() {
           path="/"
           element={
             <div>
-              <MoonSection />
+              {/* <MoonSection />
               <CardsIntro />
               <TradeSection />
               <EarnSection />
               <WinMilionsInPrizes/>
-              <CakeSection />
+              <CakeSection /> */}
             </div>
           }
         />

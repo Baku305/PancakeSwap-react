@@ -128,7 +128,7 @@ a {
 
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, .btn--connect, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .btn--alternative, .section-content-title .section-button-container-default, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1, .btn--default {
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button, header .container-button .button4, .btn--connect, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .btn--alternative, .section-content-title .section-button-container-default, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a button, .earnSection-content-title .earnSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1, .btn--default {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,7 +183,7 @@ header .container-button .button3 {
 header .container-button .button3:hover {
   opacity: 0.65;
 }
-header .container-button .button4, .btn--connect {
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button, header .container-button .button4, .btn--connect {
   height: 3.2rem;
   padding: 0px 16px;
   line-height: 1.6rem;
@@ -193,7 +193,7 @@ header .container-button .button4, .btn--connect {
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   /*SET CONNECT STYLE HOVER*/
 }
-header .container-button .button4:hover, .btn--connect:hover {
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button:hover, header .container-button .button4:hover, .btn--connect:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -2465,6 +2465,11 @@ button svg {
   width: 100%;
   margin-right: 16px;
 }
+@media screen and (max-width: 860px) {
+  .nav_wrapper .nav_left_wrapper .logo_wrapper {
+    margin: 0;
+  }
+}
 .nav_wrapper .nav_left_wrapper .logo_wrapper .logo_title {
   width: 160px;
   margin-top: 5px;
@@ -2493,9 +2498,55 @@ button svg {
   margin: 0 8px;
   height: 100%;
 }
-.nav_wrapper .nav_right_wrapper .language_button {
-  margin: 0 8px;
+.nav_wrapper .nav_right_wrapper .network_button_wrapper {
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper:hover .verticalMenu {
+  display: block;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button {
+  position: relative;
+  padding-right: 5px;
+  margin-right: 5px;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button .ButtonTitle {
+  padding-left: 15px;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button .network_button_logo {
+  position: absolute;
+  left: -5px;
+  height: 100%;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .network_button:hover {
+  opacity: 70%;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .verticalMenu {
+  top: 55px;
+  position: absolute;
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  .nav_wrapper .nav_right_wrapper .network_button_wrapper .verticalMenu {
+    left: -170px;
+  }
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .verticalMenu img {
+  height: 25px;
+  padding-right: 10px;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .verticalMenu:hover {
+  display: block;
+}
+.nav_wrapper .nav_right_wrapper .network_button_wrapper .verticalMenu .verticalMenu_content {
+  justify-content: flex-start;
 }
 .nav_wrapper .nav_right_wrapper .button_wrapper {
   height: 100%;
@@ -2506,15 +2557,24 @@ button svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
 }
-.nav_wrapper .nav_right_wrapper .language_list {
+.nav_wrapper .nav_right_wrapper .language_wrapper {
+  height: 100%;
+  position: relative;
+  margin-right: 10px;
+}
+.nav_wrapper .nav_right_wrapper .language_wrapper .language_button {
+  margin: 0 8px;
+  height: 100%;
+}
+.nav_wrapper .nav_right_wrapper .language_wrapper .language_list {
   position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   cursor: pointer;
   top: 56px;
-  right: 70px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2621,6 +2681,15 @@ button svg {
 .nav_wrapper.dark-theme .nav_right_wrapper .language_button {
   fill: #b8add2;
 }
+.nav_wrapper.dark-theme .nav_right_wrapper .network_button {
+  background-color: #353547;
+}
+.nav_wrapper.dark-theme .nav_right_wrapper .network_button .network_button_arrow {
+  fill: white;
+}
+.nav_wrapper.dark-theme .nav_right_wrapper .network_button:hover {
+  background-color: #353547;
+}
 .nav_wrapper.dark-theme .nav_right_wrapper .pancake_asset_value_wrapper h4 {
   color: #b8add2;
 }
@@ -2642,6 +2711,18 @@ button svg {
 }
 .nav_wrapper.light-theme .nav_right_wrapper .language_button {
   fill: #7a6eaa;
+}
+.nav_wrapper.light-theme .nav_right_wrapper .network_button {
+  background-color: #eff4f5;
+}
+.nav_wrapper.light-theme .nav_right_wrapper .network_button .ButtonTitle {
+  color: #280d5f;
+}
+.nav_wrapper.light-theme .nav_right_wrapper .network_button .network_button_arrow {
+  fill: #280d5f;
+}
+.nav_wrapper.light-theme .nav_right_wrapper .network_button:hover {
+  background-color: #eff4f5;
 }
 .nav_wrapper.light-theme .nav_right_wrapper .pancake_asset_value_wrapper h4 {
   color: #7a6eaa;
