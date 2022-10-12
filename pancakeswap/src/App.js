@@ -35,12 +35,12 @@ function App() {
           path="/"
           element={
             <div>
-              {/* <MoonSection />
+              <MoonSection />
               <CardsIntro />
               <TradeSection />
               <EarnSection />
               <WinMilionsInPrizes/>
-              <CakeSection /> */}
+              <CakeSection />
             </div>
           }
         />
