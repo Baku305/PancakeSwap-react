@@ -49,7 +49,7 @@ export const Navbar = ({ menu }) => {
 
   useEffect(() => {
     pancakeTokenData &&
-      setPancakeTokenPrice(Number(pancakeTokenData.data.price).toFixed(4));
+      setPancakeTokenPrice(Number(pancakeTokenData.data.price).toFixed(3));
     isOpen
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflowY = "scroll");

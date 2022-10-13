@@ -7,10 +7,12 @@ import { VerticalMenu } from "../shared/vericalMenu/VerticaMenu";
 import { Button } from "../shared/button/Button";
 import { svgArr } from "./data/svgs";
 import { UseFetchApi } from "./../../custom hooks/useFetchApi";
+import { useEffect } from "react";
 
 
 export function EndingElements() {
     const [pancakeTokenPrice, setPancakeTokenPrice] = useState("0");
+    
     const {
         data: pancakeTokenData,
         error: pancakeTokenError,
@@ -19,6 +21,10 @@ export function EndingElements() {
         "https://api.pancakeswap.info/api/v2/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82"
       );
       
+      useEffect(()=>{
+        pancakeTokenData &&
+      setPancakeTokenPrice(Number(pancakeTokenData.data.price).toFixed(3));
+      },[pancakeTokenPrice,pancakeTokenData])
     
 
     return (
@@ -42,7 +48,7 @@ export function EndingElements() {
                             alt=""
                             className="pancake_asset_value_wrapper"
                         />
-                        {<h4>{pancakeTokenPrice}</h4>}
+                        {<h4>{`$${pancakeTokenPrice}`}</h4>}
                         {/* <h4 className="">$4.470</h4> */}
                     </div>
                     <Button buttonStyle={"btn--connect"}>Buy CAKE{svgArr[8].icon}</Button>
