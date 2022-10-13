@@ -69,9 +69,19 @@ font-size: 16px;
     .color-cards-wrapper{
         display: flex;
         flex-direction: column;
+        margin: 0 80px;
     }
     .win-milions-container{
         margin: 16px 24px;
-        padding: 0px;
+        padding: 24px 0px 24px 0px;
+    }
+    .win-milions-wrapper{
+        padding-bottom: 30px;
+    }
+    .win-milions-container-win{
+        font-size: 32px;
+    }
+    .win-milions-container-title{
+        font-size: 32px;
     }
 }
