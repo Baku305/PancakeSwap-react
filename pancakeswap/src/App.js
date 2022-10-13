@@ -19,6 +19,7 @@ import dotsMobileIcon from "./assets/dots_menu_icon.svg";
 import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection";
 import { CakeSection } from "./components/cakeSection/CakeSection";
+import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
 
 
 export const ThemeContext = React.createContext();
