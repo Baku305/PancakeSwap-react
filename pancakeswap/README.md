@@ -51,14 +51,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-We are a small new-entry team composed by five full stack young students at Develhope Tech School (Italy 🇮🇹). 
-We spent seven months studying Web Development, strategies and best practices. We learned how a real team use to work into an Agile environment. 
-We first had a close look to HTML, CSS, and SASS, than Javascript, React, Typescript. Finally we move on to Node.js.
+We are a small new-entry team composed by five full stack young students at Develhope Tech School (Italy 🇮🇹). We spent seven months studying Web Development, strategies and best practices. We learned how a real team use to work into an Agile environment. We first had a close look to HTML, CSS, and SASS, than Javascript, React, Typescript. Finally we moved on to Node.js.
 
-During the last months, we entirely designed and structured a clone website, based on the real Pancake Swap Finance one, entirely by using the well known React framework.
-We managed all the element in several components, each of which had a specific scss style file and used shared components for repetitive elements.
-We're so proud of what we've done. 
-We hope you'll be glad to visit our project and enjoing it.
+During the last months, we entirely designed and structured a clone website, based on the real Pancake Swap Finance one, entirely by using the well known React framework. We managed all the elements in several components, each of which has a specific scss style file and used shared components for repetitive elements. We're so proud of what we've done. We hope you'll be glad to visit our project and enjoing it.
 
 Have a nice dive 🏄‍♂️
 
