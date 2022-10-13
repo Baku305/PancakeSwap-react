@@ -1,0 +1,227 @@
+// .svgFeedbackSectionSeparator {
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+
+//   svg {
+//     fill: $violetSeparator;
+//     height: 100%;
+//     width: 100%;
+
+//     &.dark-theme {
+//       fill: $darkBlack;
+//     }
+//   }
+// }
+// .svgEarnSectionSeparator {
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   flex-shrink: 0;
+
+//   svg {
+//     fill: #faf9fa;
+//     width: 150%;
+//     height: 100%;
+//   }
+// }
+.Background {
+  background: $whiteBrand;
+
+  &.dark-theme {
+    background: $darkBlack;
+  }
+}
+.BackgroundSecond {
+  background: $grayHover;
+
+  &.dark-theme {
+    background: $hoverMenu;
+  }
+}
+
+.section {
+  @include flexCenter;
+  height: 62.2rem;
+  flex-direction: column;
+  width: 100%;
+
+  &-content {
+    @include flexSpaceBetween;
+    width: 92rem;
+    height: 43rem;
+    padding: 32px 24px;
+
+    &-title {
+      @include flexCenter;
+      flex-direction: column;
+      height: 23.2rem;
+      width: 42.8rem;
+
+      h2 {
+        font-size: 4rem;
+        color: $darkBlue;
+        margin-bottom: 2.4rem;
+
+        &.dark-theme {
+          color: $borderGray2;
+        }
+
+        span {
+          color: $violetBrand;
+        }
+      }
+
+      &-subtitle {
+        .subTitle {
+          @extend %subTitle;
+          margin-bottom: 2.4rem;
+
+          &.dark-theme {
+            color: $lightViolet2;
+          }
+        }
+      }
+
+      .section-button-container {
+        @include flexStart;
+        width: 100%;
+
+        &-default {
+          @include b-selector(default);
+          margin-right: 1.6rem;
+          width: 12.9rem;
+        }
+
+        &-link {
+          color: rgb(31, 199, 212);
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 16px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &-images {
+      @include flex(unset, flex-end, center);
+      position: relative;
+      width: fit-content;
+      height: 42.8rem;
+
+      img {
+        @include bouncing;
+        position: absolute;
+        height: 42.8rem;
+        width: 42.8rem;
+      }
+
+      .img1 {
+        animation-delay: 1.5s;
+      }
+
+      .img2 {
+        animation-delay: 3s;
+      }
+
+      .img3 {
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.MiniCard {
+  display: grid;
+  padding: 0px 32px 0px 32px;
+  width: 100%;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+  gap: 32px;
+  grid-template-columns: repeat(3, auto);
+  padding-bottom: 80px;
+  justify-content: space-evenly;
+  align-content: center;
+
+  .MiniCardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 16px;
+      color: $subTitleViolet;
+
+      &.dark-theme {
+        color: $lightViolet2;
+      }
+    }
+
+    h4 {
+      color: $violetBrand1;
+      font-weight: 600;
+      line-height: 1.1;
+      font-size: 24px;
+
+      &.dark-theme {
+        color: $borderGray2;
+      }
+    }
+  }
+  .borderSeparator {
+    border-left: 1px solid $violetSeparator;
+
+    &.dark-theme {
+      border-left: 1px solid $borderBlack;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 32px 24px;
+    height: 44.6rem;
+  }
+
+  .section-content {
+    flex-direction: column-reverse;
+    width: 100%;
+    position: relative;
+  }
+  .section-content-title {
+    align-items: stretch;
+    flex: 1 1 0%;
+    width: 100%;
+    position: relative;
+  }
+  .section-content-title h2 {
+    font-size: 3.2rem;
+  }
+
+  .section-content-images {
+    margin-bottom: 34px;
+    align-self: flex-end;
+  }
+  .section-content-images img {
+    width: 192px;
+    height: 192px;
+  }
+  .MiniCard {
+    gap: 16px;
+    grid-template-areas:
+      "a d"
+      "b e"
+      "c f";
+    grid-template-columns: repeat(2, auto);
+    justify-content: stretch;
+  }
+  .MiniCardContent {
+    width: 100%;
+  }
+}

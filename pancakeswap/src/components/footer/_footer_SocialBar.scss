@@ -1,0 +1,48 @@
+.social-icons-container {
+    padding-bottom: 3.2rem;
+    border-bottom: 0.1rem solid $borderGray;
+    margin-bottom: 3.2rem;
+    
+
+    a.b, div.c {
+        display: inline-block;
+        margin-right: 2.2rem;
+    }
+
+    &-hidden-telegram-menu {
+        position: relative;
+
+        &-list {
+            // width: max-content;
+            // max-height: 0px;
+            height: 400px;
+            display: none !important;
+            position: absolute;
+            left: 60%;
+            bottom: 100%;
+            background-color: $darkGray;
+            padding: 16px;
+            overflow: scroll;
+            z-index: 10;
+            border-radius: 0.5rem;
+            // will-change: opacity;
+            //pointer-events: none;
+            transform: translate(-50%);
+            
+            
+
+            
+            a.hidden-telegram-menu-list-mapped-a {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.5;
+                color: $textSubtle;
+            }
+
+        }
+    }
+
+    .social-icons-container-hidden-telegram-menu:hover .social-icons-container-hidden-telegram-menu-list{
+        display: block !important;
+    }
+}

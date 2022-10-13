@@ -1,21 +1,24 @@
 
 import { useState,useEffect } from "react";
 
-export function useVisibilityOnOf(info) {
+export function useVisibilityOnOff(info) {
 
   const [visibility, setVisibility] = useState(info);
 
   //*visibility fnc
   useEffect(() => {
     const interval = setInterval(() => {
-      if (visibility === "none") {
-        setVisibility((v) => (v = "flex"));
-      } else {
-        setVisibility((v) => (v = "none"));
+      if (visibility === 1) {
+        setVisibility((v)=> v = 2);
+      } else if (visibility === 2) {
+        setVisibility((v) => v = 1);
       }
-      return clearInterval(interval);
-    }, 5000);
+    }, 10000);
+
+
+    return () => clearInterval(interval)
+
   }, [visibility]);
 
-  return visibility
+  return {visibility,setVisibility}
 }

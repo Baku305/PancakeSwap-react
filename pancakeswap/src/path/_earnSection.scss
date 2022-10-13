@@ -101,7 +101,7 @@
         }
         
         &-images{
-        @include flex(unset, end, center);
+        @include flex(unset, flex-end, center);
          position: relative;
          width: fit-content;
          height: 42.8rem;

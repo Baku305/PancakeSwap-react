@@ -3,13 +3,55 @@
  margin: 0;
  box-sizing: border-box;
  font-family: 'Kanit', sans-serif;
+  scrollbar-width: none;
+  scrollbar-color: #b8add2 #27262c;
+  scrollbar-width: auto;
+  ::-webkit-scrollbar-corner{
+   background-color: #27262c;
+  }
+  //scrollbar-color: #8f54a0 #ffffff;
+&::-webkit-scrollbar {
+    width: 12px;
+    background-color: #27262c;
+    border-radius: 30px;
+    margin-right: 10px;
 }
+&::-webkit-scrollbar-thumb {
+  border: 2px solid #9490bf;
+  border-radius: 16px;
+  background-color: #b8add2;
+}
+&::-webkit-scrollbar-track {
+ background-color: #27262c;
+ //border-radius: 20px;
+}
+
+}
+
+* {
+
+   scrollbar-color: #b8add2 transparent;
+   ::-webkit-scrollbar-corner{
+    background-color: transparent;
+   }
+   //scrollbar-color: #8f54a0 #ffffff;
+ &::-webkit-scrollbar {
+     background-color: transparent;
+ }
+ &::-webkit-scrollbar-thumb {
+   border: 2px solid #9490bf;
+   background-color: #b8add2;
+ }
+ &::-webkit-scrollbar-track {
+  background-color: transparent;
+  //border-radius: 20px;
+ }
+ 
+ }
 
 html {
- font-size: 10px;
+  font-size: 10px;
 }
-
-
 
 /* VARIABLES */
 @import "./sass/variables";
@@ -31,7 +73,7 @@ html {
 @import "./sass/card";
 @import "./sass/general-sections-dimensions";
 
-/*PATH*/ 
+/*PATH*/
 @import "./path/header";
 @import "./path/nabvar";
 @import "./path/theMoonSection";
@@ -53,3 +95,10 @@ html {
 @import "./components/banner/tabs";
 @import "./components/BuildTrustSection/CardsIntro.scss";
 @import "./components/shared/setting-modal/setting-dialog.scss";
+@import "./components/shared/paragraph/paragraph.scss";
+@import "./components/winMilionsInPrizes/WinMilions.scss";
+@import "./components/footer/footer";
+@import "./components/footer/footer_MenuLists";
+@import "./components/footer/footer_SocialBar";
+@import "./components/footer/footer_EndingElements";
+@import "./components/BuildTrustSection/CardsIntro"

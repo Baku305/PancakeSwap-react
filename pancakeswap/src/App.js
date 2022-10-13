@@ -1,76 +1,32 @@
 import "./style.scss";
-import { Route, Routes, Link, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Button } from "./components/shared/button/Button";
+import { menu } from "./data/data";
 import { Navbar } from "./components/navbar/navbar";
+import { Footer } from "./components/footer/Footer"
 import { MoonSection } from "./components/MoonSection/the-moon-section";
+
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
+import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
-import { useTheme } from "./UseTheme";
+
+import { useTheme } from "./custom hooks/UseTheme";
 import tradeMobileIcon from "./assets/trade_menu_icon_vuota.svg";
 import earnMobileIcon from "./assets/earn_menu_icon_vuota.svg";
 import winMobileIcon from "./assets/win_menu_icon_vuota.svg";
 import nftMobileIcon from "./assets/nft_menu_icon_vuota.svg";
 import dotsMobileIcon from "./assets/dots_menu_icon.svg";
+import { TradeSection } from "./components/tradeSection/TradeSection";
+import { EarnSection } from "./components/earnSection/EarnSection";
+import { CakeSection } from "./components/cakeSection/CakeSection";
+import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
+
 
 export const ThemeContext = React.createContext();
 
 function App() {
 
   const [theme, updateTheme] = useTheme();
-
-  const Navigate = useNavigate();
-
-  const menu = [
-    {
-      name: "trade",
-      content: [
-        { name: "Swap" },
-        { name: "Limit" },
-        { name: "Liquidity" },
-        { name: "Perpetual", icon: true },
-        { name: "Bridge", icon: true },
-      ],
-      icon: tradeMobileIcon,
-    },
-    {
-      name: "earn",
-      content: [{ name: "Farms" }, { name: "Pools" }],
-      icon: earnMobileIcon
-    },
-    {
-      name: "win",
-      content: [
-        { name: "Trading competition" },
-        { name: "Prediction (Beta)" },
-        { name: "Lottery" },
-        { name: "Pottery" },
-      ],
-      icon:winMobileIcon
-    },
-    {
-      name: "nft",
-      content: [
-        { name: "Overview" },
-        { name: "Collections" },
-        { name: "Activity" },
-      ],
-      icon:nftMobileIcon
-    },
-    {
-      name: "...",
-      content: [
-        { name: "Info" },
-        { name: "IFO" },
-        { name: "Voting", separator: true },
-        { name: "Leaderboard", separator: true },
-        { name: "Blog", icon: true },
-        { name: "Docs", icon: true },
-      ],
-      icon: dotsMobileIcon
-    },
-  ];
-
-  
 
   return (
     <ThemeContext.Provider value={{ theme, updateTheme }}>
@@ -80,8 +36,12 @@ function App() {
           path="/"
           element={
             <div>
-                <MoonSection/>
-                <CardsIntro/>
+              <MoonSection />
+              <CardsIntro />
+              <TradeSection />
+              <EarnSection />
+              <WinMilionsInPrizes/>
+              <CakeSection />
             </div>
           }
         />
@@ -89,13 +49,13 @@ function App() {
           path="/2"
           element={
             <div>
-              <MoonSection/>
+              <MoonSection />
               <Button buttonStyle="btn--default" types="button" />
             </div>
           }
         />
-        
       </Routes>
+      <Footer/>
     </ThemeContext.Provider>
   );
 }

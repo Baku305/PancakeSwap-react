@@ -1,5 +1,5 @@
 .theMoonSection-wrapper{
-    @include flex(column, end, center);
+    @include flex(column, flex-end, center);
     position: relative;
     height: 100rem;
     background-color: #eef5ff;
@@ -19,7 +19,7 @@
         height: 83rem;
         position: relative;
         width: 100%;
-    
+        max-width: 1200px;
         
         &-external-container{
         @include flexSpaceBetween;
@@ -111,3 +111,38 @@
 
     
 }
+
+ @media screen and (max-width:860px) {
+    .theMoonSection{
+
+       
+
+        .theMoonSection-external-container{
+
+            @include flex(column-reverse, center, center) ;
+            width: 100%;
+            min-width: auto;
+
+            .theMoonSection-leftTitle-container{
+
+                width: 100%;
+                padding: 15px;
+               
+
+            }
+
+            .theMoonSection-floatingimgs-container{
+                @include flex(row, flex-end, center);
+                img{
+                    width: 192px;
+                    height: 192px;
+                }
+
+
+            }
+
+
+        }
+    }
+
+ }
