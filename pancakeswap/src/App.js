@@ -5,7 +5,7 @@ import { menu } from "./data/data";
 import { Navbar } from "./components/navbar/navbar";
 import { Footer } from "./components/footer/Footer"
 import { MoonSection } from "./components/MoonSection/the-moon-section";
-
+import { LoginSection } from "./components/loginSection/loginSection";
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
@@ -42,6 +42,7 @@ function App() {
               <EarnSection />
               <WinMilionsInPrizes/>
               <CakeSection />
+              <LoginSection />
             </div>
           }
         />
@@ -55,6 +56,7 @@ function App() {
           }
         />
       </Routes>
+      
       <Footer/>
     </ThemeContext.Provider>
   );
