@@ -2,7 +2,7 @@ import "../../style.scss";
 import Image1 from "../../assets/asset 11.png"
 import Star2 from "../../assets/asset 10.png"
 import Star3 from "../../assets/asset 9.png"
-import Rabbit1 from "../../assets/asset 8.png"
+import Rabbit1 from "../../assets/astronaut-bunny.png"
 import { Button } from '../shared/button/Button';
 import {Tabs} from "../banner/tabs"
 import { ThemeContext } from "../../App";
