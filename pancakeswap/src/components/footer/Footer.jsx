@@ -8,9 +8,11 @@ export function Footer(props) {
     return (
         <>
             <div className="footer-section">
-                <MenuLists />
-                <SocialBar />
-                <EndingElements />
+                <div className="footer-section-wrapper">
+                    <MenuLists />
+                    <SocialBar />
+                    <EndingElements />
+                </div>
             </div>
         </>
     )
