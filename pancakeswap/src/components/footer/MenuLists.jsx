@@ -25,7 +25,7 @@ export function MenuLists() {
                         )
                     })
                 }
-                <div>{svgArr[0].icon}</div>
+                <div className="pancakeSwap-icon">{svgArr[0].icon}</div>
             </div>
         </>
     )

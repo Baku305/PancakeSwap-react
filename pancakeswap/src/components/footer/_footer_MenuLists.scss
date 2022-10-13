@@ -1,11 +1,8 @@
-
-
 .footer-section-lists-container {
-    width: 120rem;
-    height: 24rem;
+    width: 100%;
+    height: 100%;
     margin-bottom: 3.6rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 
     &-menu-title {
@@ -21,6 +18,24 @@
             color: $whiteBrand;
             font-size: 1.6rem;
             font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .footer-section-lists-container{
+        // background-color: blue;
+        flex-direction: column;
+        position: relative;
+
+        &-menu-title {
+            margin-top: 3rem;
+        }
+
+        .pancakeSwap-icon {
+            position: absolute;
+            bottom: 99%;
+            
         }
     }
 }
