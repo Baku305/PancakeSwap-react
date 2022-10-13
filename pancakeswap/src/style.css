@@ -27,6 +27,23 @@
   background-color: #27262c;
 }
 
+* {
+  scrollbar-color: #b8add2 transparent;
+}
+* ::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+*::-webkit-scrollbar {
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  border: 2px solid #9490bf;
+  background-color: #b8add2;
+}
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 html {
   font-size: 10px;
 }
@@ -218,7 +235,7 @@ h1 {
 header .menu, .verticalMenu {
   margin-bottom: 20px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border-radius: 1.6rem;
@@ -351,7 +368,7 @@ header .menu::-webkit-scrollbar-track, .verticalMenu::-webkit-scrollbar-track {
 /*set vertical tab*/
 header .tab {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   width: 13rem;
@@ -1164,7 +1181,7 @@ header .container-button {
 .theMoonSection-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   height: 100rem;
@@ -1212,7 +1229,7 @@ header .container-button {
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
@@ -1427,7 +1444,7 @@ h2 {
 }
 .earnSection-content-title .earnSection-button-container {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
@@ -1447,7 +1464,7 @@ h2 {
 .earnSection-content-images {
   display: flex;
   flex-direction: unset;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   width: -webkit-fit-content;
@@ -3179,7 +3196,7 @@ button svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   position: absolute;
   width: auto;
   min-width: 320px;
@@ -3443,7 +3460,7 @@ button svg {
 @media screen and (max-width: 850px) {
   .settingModalListContentButton .buttonWrapper {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
   }
 }
@@ -3547,7 +3564,7 @@ button svg {
 }
 .section-content-title .section-button-container {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
@@ -3567,7 +3584,7 @@ button svg {
 .section-content-images {
   display: flex;
   flex-direction: unset;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   width: -webkit-fit-content;
@@ -3757,10 +3774,20 @@ button svg {
   .color-cards-wrapper {
     display: flex;
     flex-direction: column;
+    margin: 0 80px;
   }
   .win-milions-container {
     margin: 16px 24px;
-    padding: 0px;
+    padding: 24px 0px 24px 0px;
+  }
+  .win-milions-wrapper {
+    padding-bottom: 30px;
+  }
+  .win-milions-container-win {
+    font-size: 32px;
+  }
+  .win-milions-container-title {
+    font-size: 32px;
   }
 }
 .footer-section {
@@ -3845,4 +3872,68 @@ button svg {
   background-color: green;
   display: flex;
   justify-content: space-around;
+}
+
+.cards-intro-container {
+  background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+  padding-bottom: 48px;
+}
+.cards-intro-container.dark-theme {
+  background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+}
+
+.intro-cards-section {
+  text-align: center;
+}
+
+.intro-cards-section-h2-xl {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #280d5f;
+}
+.intro-cards-section-h2-xl.dark-theme {
+  color: #F4EEFF;
+}
+
+.intro-card-section-p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #7a6eaa;
+}
+.intro-card-section-p.dark-theme {
+  color: #b8add2;
+}
+
+.intro-cards-section-cta {
+  font-weight: 600;
+}
+
+.white-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.white-card-position {
+  margin-right: 16px;
+}
+
+@media (max-width: 900px) {
+  .cards-intro-container {
+    padding: 0 24px;
+  }
+  .white-card-position {
+    margin-right: 0;
+  }
+  .white-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */

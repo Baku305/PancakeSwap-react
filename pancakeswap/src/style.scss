@@ -3,8 +3,6 @@
  margin: 0;
  box-sizing: border-box;
  font-family: 'Kanit', sans-serif;
-
-
   scrollbar-width: none;
   scrollbar-color: #b8add2 #27262c;
   scrollbar-width: auto;
@@ -12,14 +10,12 @@
    background-color: #27262c;
   }
   //scrollbar-color: #8f54a0 #ffffff;
-
 &::-webkit-scrollbar {
     width: 12px;
     background-color: #27262c;
     border-radius: 30px;
     margin-right: 10px;
 }
-
 &::-webkit-scrollbar-thumb {
   border: 2px solid #9490bf;
   border-radius: 16px;
@@ -31,6 +27,27 @@
 }
 
 }
+
+* {
+
+   scrollbar-color: #b8add2 transparent;
+   ::-webkit-scrollbar-corner{
+    background-color: transparent;
+   }
+   //scrollbar-color: #8f54a0 #ffffff;
+ &::-webkit-scrollbar {
+     background-color: transparent;
+ }
+ &::-webkit-scrollbar-thumb {
+   border: 2px solid #9490bf;
+   background-color: #b8add2;
+ }
+ &::-webkit-scrollbar-track {
+  background-color: transparent;
+  //border-radius: 20px;
+ }
+ 
+ }
 
 html {
   font-size: 10px;
@@ -84,4 +101,4 @@ html {
 @import "./components/footer/footer_MenuLists";
 @import "./components/footer/footer_SocialBar";
 @import "./components/footer/footer_EndingElements";
-
+@import "./components/BuildTrustSection/CardsIntro"

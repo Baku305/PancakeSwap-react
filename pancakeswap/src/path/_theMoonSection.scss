@@ -1,5 +1,5 @@
 .theMoonSection-wrapper{
-    @include flex(column, end, center);
+    @include flex(column, flex-end, center);
     position: relative;
     height: 100rem;
     background-color: #eef5ff;
