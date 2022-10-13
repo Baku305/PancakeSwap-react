@@ -22,13 +22,14 @@
 }
 
 #loginSection {
+
+}
+.loginSection-container {
   width: 100%;
   height: 428px;
   background: rgba(0, 0, 0, 0)
     linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%) repeat scroll
     0% 0%;
-}
-.loginSection-container {
   height: 428px;
   display: flex;
   flex-direction: column;
@@ -140,14 +141,15 @@
 }
 .text-link {
   color: white;
+  font-size: 16px;
   
 
 }
 .text-registration {
-    p{
-        color: white;
-        font-weight: 500;
-    }
+  color: white;
+  font-weight: 500;
+  font-size:16px;
+
 
 
   margin-bottom: 24px;
@@ -499,4 +501,14 @@ button svg {
 .buy:hover {
   text-decoration: none;
   opacity: 0.65;
+}
+
+
+@media screen and (max-width:860px) {
+.svg-coin-container{
+  display: none;
+}
+.loginSection-content{
+  width: 100%;
+}
 }
