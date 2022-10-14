@@ -85,7 +85,7 @@ Have a nice dive 🏄‍♂️
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Here you'll find what are the main rules to follow to configure our project on your locally machine and work following our steps:
 
 
 1. Clone the repo
@@ -96,6 +96,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,10 +128,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feat/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feat/AmazingFeature`)
-5. Open a Pull Request
+2. Create your Feature Branch always starting with a lower case letter (`git checkout -b feat/amazing-feature`)
+3. Use scss sheets to style your code. Every scss file must be named as the following: `_newComponent.scss` or `_new_Component.scss`
+4. Commit your Changes (`git commit -m 'Add some amazing-feature'`)
+4. Push to the Branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request to `develop` branch
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,10 +142,15 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 We're not one. We're just Team 1:
+<br>
 Martina Boccuzzi
+<br>
 Francesco Cristini
+<br>
 Karim Hajuan
+<br>
 Jonathan Biasella
+<br>
 Elio Scaletta
 
 Project Link: [https://github.com/Baku305/PancakeSwap-react](https://github.com/Baku305/PancakeSwap-react)
