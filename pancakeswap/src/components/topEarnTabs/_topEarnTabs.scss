@@ -56,10 +56,6 @@
         font-size: 16px;
       }
     }
-    :first-child {
-      padding-left: 0;
-      border-left: none;
-    }
 
     &.tab_out {
       @include mobileTabOut;
