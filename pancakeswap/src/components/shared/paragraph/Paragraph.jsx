@@ -38,7 +38,7 @@ export const Paragraph = ({
             </div>
             <div className="section-button-container">
               <div className="section-button-container-default">
-                <Button buttonStyle={"btn--default"}>{button}</Button>
+                {button}
               </div>
               <a
                 className="section-button-container-link"
