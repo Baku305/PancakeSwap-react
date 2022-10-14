@@ -27,23 +27,6 @@
   background-color: #27262c;
 }
 
-* {
-  scrollbar-color: #b8add2 transparent;
-}
-* ::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-*::-webkit-scrollbar {
-  background-color: transparent;
-}
-*::-webkit-scrollbar-thumb {
-  border: 2px solid #9490bf;
-  background-color: #b8add2;
-}
-*::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
 html {
   font-size: 10px;
 }
@@ -1842,18 +1825,19 @@ p.last-child {
   position: relative;
   padding: 48px 0px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .loginSection-content {
   margin: 0px;
   height: 332px;
-  width: 968px;
+  width: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
 }
 
 .svg-rays-container {
-  width: 1512px;
+  width: 100%;
   height: 428px;
   position: absolute;
   top: 0px;
@@ -1865,7 +1849,7 @@ p.last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1512px;
+  width: 100%;
   height: 428px;
 }
 
@@ -1875,7 +1859,7 @@ p.last-child {
 }
 
 .svg-coin-container {
-  width: 1200px;
+  width: 100%;
   height: 428px;
   top: 0px;
   left: 50%;
@@ -1907,6 +1891,7 @@ p.last-child {
   max-height: 256px;
   width: 256px;
   position: relative;
+  overflow: hidden;
 }
 
 .coin-item-top {

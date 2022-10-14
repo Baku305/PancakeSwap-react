@@ -11,7 +11,6 @@ export function LoginSection() {
   
     return (
         <>
-                
             <div className="loginSection-container">
                 <div className="loginSection-content">
                     <div className="svg-rays-container">
@@ -24,7 +23,7 @@ export function LoginSection() {
                                         fill="url(#paint0_radial)" fill-opacity="0.1"></path>
                                 </g>
                                 <defs>
-                                    <filter id="filter0_f" x="0" y="0" width="1956" height="1956"
+                                    <filter id="filter0_f" x="0" y="0" height="1956"
                                         filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                         <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
                                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
