@@ -51,16 +51,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+We are a small new-entry team composed by five full stack young students at Develhope Tech School (Italy 🇮🇹). We spent seven months studying Web Development, strategies and best practices. We learned how a real team use to work into an Agile environment. We first had a close look to HTML, CSS, and SASS, than Javascript, React, Typescript. Finally we moved on to Node.js.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+During the last months, we entirely designed and structured a clone website, based on the real Pancake Swap Finance one, entirely by using the well known React framework. We managed all the elements in several components, each of which has a specific scss style file and used shared components for repetitive elements. We're so proud of what we've done. We hope you'll be glad to visit our project and enjoing it.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Have a nice dive 🏄‍♂️
 
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +85,7 @@ Use the `BLANK_README.md` to get started.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Here you'll find what are the main rules to follow to configure our project on your locally machine and work following our steps:
 
 
 1. Clone the repo
@@ -100,6 +96,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,10 +128,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feat/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feat/AmazingFeature`)
-5. Open a Pull Request
+2. Create your Feature Branch always starting with a lower case letter (`git checkout -b feat/amazing-feature`)
+3. Use scss sheets to style your code. Every scss file must be named as the following: `_newComponent.scss` or `_new_Component.scss`
+4. Commit your Changes (`git commit -m 'Add some amazing-feature'`)
+4. Push to the Branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request to `develop` branch
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +141,17 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+We're not one. We're just Team 1:
+<br>
+Martina Boccuzzi
+<br>
+Francesco Cristini
+<br>
+Karim Hajuan
+<br>
+Jonathan Biasella
+<br>
+Elio Scaletta
 
 Project Link: [https://github.com/Baku305/PancakeSwap-react](https://github.com/Baku305/PancakeSwap-react)
 

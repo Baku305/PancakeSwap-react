@@ -5,7 +5,7 @@ import { menu } from "./data/data";
 import { Navbar } from "./components/navbar/navbar";
 import { Footer } from "./components/footer/Footer"
 import { MoonSection } from "./components/MoonSection/the-moon-section";
-
+import { LoginSection } from "./components/loginSection/loginSection";
 import { CardsIntro } from "./components/BuildTrustSection/CardsIntro";
 import WinMilionsInPrizes from "./components/winMilionsInPrizes/WinMilionsInPrizes";
 import React from "react";
@@ -20,8 +20,6 @@ import { TradeSection } from "./components/tradeSection/TradeSection";
 import { EarnSection } from "./components/earnSection/EarnSection";
 import { CakeSection } from "./components/cakeSection/CakeSection";
 import { VerticalMenu } from "./components/shared/vericalMenu/VerticaMenu";
-
-
 export const ThemeContext = React.createContext();
 
 function App() {
@@ -42,6 +40,7 @@ function App() {
               <EarnSection />
               <WinMilionsInPrizes/>
               <CakeSection />
+              <LoginSection />
             </div>
           }
         />
@@ -55,6 +54,7 @@ function App() {
           }
         />
       </Routes>
+      
       <Footer/>
     </ThemeContext.Provider>
   );
