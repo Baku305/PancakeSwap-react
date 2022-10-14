@@ -42,7 +42,7 @@
 
 .section {
   @include flexCenter;
-  height: 62.2rem;
+  height: fit-content;
   flex-direction: column;
   width: 100%;
 
@@ -57,7 +57,7 @@
       flex-direction: column;
       height: 23.2rem;
       width: 42.8rem;
-
+      margin-top: 50px;
       h2 {
         font-size: 4rem;
         color: $darkBlue;
@@ -209,8 +209,8 @@
     align-self: flex-end;
   }
   .section-content-images img {
-    width: 192px;
-    height: 192px;
+    width: 150px;
+    height: 150px;
   }
   .MiniCard {
     gap: 16px;
