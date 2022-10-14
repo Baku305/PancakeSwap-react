@@ -2,11 +2,23 @@ import { ColorCard } from './ColorCard';
 import { ThemeContext } from '../../App';
 import { useContext } from 'react';
 
+// import card1 from '../../assets/asset 18.png'; 
+// import card2 from '../../assets/asset 19.png'; 
+// import card3 from '../../assets/asset 20.png'; 
+// import card4 from '../../assets/asset 21.png'; 
+
+// import ball1 from '../../assets/asset 22.png'; 
+// import ball2 from '../../assets/asset 23.png'; 
+// import ball3 from '../../assets/asset 24.png'; 
+// import ball4 from '../../assets/asset 25.png'; 
+// import ball5 from '../../assets/asset 26.png'; 
+
 const WinMilionsInPrizes = () =>{
     const { theme, updateTheme } = useContext(ThemeContext);
 
     return(
     <div className={`win-milions-wrapper ${theme}-theme`} >
+
         <div className={`win-milions-container ${theme}-theme`}>
             <h2 className={`win-milions-container-title ${theme}-theme`}>
                 <span className={ `win-milions-container-win ${theme}-theme`}>Win </span>
@@ -42,6 +54,7 @@ const WinMilionsInPrizes = () =>{
                         />
             </div>
         </div>
+
     </div>
     )
 }
