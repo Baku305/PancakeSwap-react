@@ -4,6 +4,8 @@ import arrowChart from "../../assets/asset 16.png";
 import coinFolder from "../../assets/asset 17.png";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import { TopEarnTabs } from "../topEarnTabs/topEarnTabs";
+import { topFarmsData, topSyrupPoolsData } from "../../data/data";
 
 export const EarnSection = () => {
   const { theme, updateTheme } = useContext(ThemeContext);
@@ -32,6 +34,7 @@ export const EarnSection = () => {
           //background={"earnSection"}
           ltr={true}
         />
+        <TopEarnTabs data1={topFarmsData} data2={topSyrupPoolsData}/>
       </div>
     </>
   );

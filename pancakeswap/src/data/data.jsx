@@ -73,3 +73,61 @@ export const networkList = [
   { name: "Ethereum", logo: ethLogo, value : "eth" },
   { name: "Bnb Smart Chain", logo: bnbLogo, value : "bnb" },
 ];
+
+export const topFarmsData = [
+  {title: "Farms"},
+  {
+    name: "krs-busd lp",
+    perc: 316.690,
+    description : "apr"
+  },
+  {
+    name: "hoop-busd lp",
+    perc: 225.711,
+    description : "apr",
+  },
+  {
+    name: "co-busd lp",
+    perc: 220.154,
+    description: "apr"
+  },
+  {
+    name: "shell-busd lp",
+    perc: 152.406,
+    description: "apr"
+  },
+  {
+    name: "trivia-bnb lp",
+    perc: 132.663,
+    description: "apr"
+  },
+]
+
+export const topSyrupPoolsData = [
+  {title: "Syrup Pools"},
+  {
+    name: "stake CAKE",
+    perc: 61.890,
+    description: "apy"
+  },
+  {
+    name: "stake CAKE - earn KRS ",
+    perc: 58.707,
+    description: "apr"
+  },
+  {
+    name: "stake CAKE - earn ARV",
+    perc: 20.526,
+    description: "apr"
+  },
+  {
+    name: "stake CAKE - earn MONI",
+    perc: 20.103,
+    description: "apr"
+  },
+  {
+    name: "stake CAKE - earn SFUND",
+    perc: 20.003,
+    description: "apr"
+  },
+]

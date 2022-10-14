@@ -1,0 +1,79 @@
+.tab_wrapper_full{
+    @include flexCenter;
+    width: 100%;
+.tab_wrapper {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  padding-bottom: 64px;
+  overflow-y: hidden;
+  max-width: 920px;
+  margin-left: 16px;
+  .tab_title {
+    @include flexCenter;
+    margin-bottom: 24px;
+    .title_colored {
+      color: $violetBrand;
+      padding-left: 5px;
+    }
+    .change_icon {
+      padding-inline: 1px;
+      fill: $subTitleViolet;
+      margin-inline: 5px;
+    }
+  }
+  .tab_el_wrapper {
+    @include mobileTabIn;
+    width: 100%;
+    @include flex(row, space-between, center);
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 32px;
+    .tab_el_content {
+      @include flex(column, center, flex-start);
+      padding-right: 16px;
+      border-left: 1px solid #d7caec;
+      padding-left: 16px;
+      * {
+        color: black;
+      }
+      .tab_el_name {
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        font-size: 12px;
+        color: $violetBrand;
+      }
+      .tab_el_perc {
+        font-weight: 600;
+        line-height: 1.1;
+        color: $violetBrand1;
+        font-size: 16px;
+      }
+      .tab_el_decription {
+        color: $subTitleViolet;
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+    :first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    &.tab_out {
+      @include mobileTabOut;
+    }
+  }
+}}
+
+.dark-theme {
+  .tab_title {
+    h3 {
+      color: white;
+    }
+  }
+  .tab_el_perc {
+    color: white !important;
+  }
+}
