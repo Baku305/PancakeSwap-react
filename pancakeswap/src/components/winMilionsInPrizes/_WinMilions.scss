@@ -67,11 +67,19 @@ font-size: 16px;
     margin: 0 108px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 901px) and (max-width: 1100px){
     .color-cards-wrapper{
         display: flex;
         flex-direction: column;
         margin: 0 80px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .color-cards-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin: 0 30px;
     }
     .win-milions-container{
         margin: 16px 24px;
