@@ -3,6 +3,7 @@
     padding: 1px;
     display: flex;
     justify-content: center;
+    overflow: none;
     &.dark-theme{
         background: linear-gradient(#0a4373 0%, #091116 100%);
     }
@@ -21,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
     &.dark-theme{
         background: rgba(0, 0, 0, 0.4);
         border: 1px solid #302f30;
@@ -84,4 +86,43 @@ font-size: 16px;
     .win-milions-container-title{
         font-size: 32px;
     }
+}
+
+.floating-card1{
+    position: absolute;
+}
+
+.floating-card2{
+    position: absolute;
+}
+
+.floating-card3{
+    position: absolute;
+}
+.floating-card4{
+    position: absolute;
+}
+
+.floating-ball1{
+    position: absolute;
+}
+.floating-ball2{
+    position: absolute;
+}
+
+.floating-ball3{
+    position: absolute;
+}
+
+.floating-ball4{
+    position: absolute;
+}
+
+.floating-ball5{
+    position: absolute;
+}
+
+.floating-balls-container{
+    z-index: -4;
+    right: 200px;
 }

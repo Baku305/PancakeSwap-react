@@ -9,8 +9,8 @@ import bnbLogo from "../assets/bnbLogo.png";
 export const languageList = [
   { name: "English" },
   { name: "Italiano" },
-  { name: "Deutsch" },
-  { name: "Espanol" },
+  { name: "Siciliano" },
+  { name: "Veneto" },
   { name: "Romano" },
   { name: "Napoletano" },
   { name: "Milanse" },
