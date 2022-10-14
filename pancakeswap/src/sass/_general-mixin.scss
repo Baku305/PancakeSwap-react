@@ -146,6 +146,24 @@
   }
 }
 
+@mixin mobileTabIn{
+  animation: mobileTabIn 0.5s ease 0s;
+
+  @keyframes mobileTabIn {
+    0%{transform:translate(0px,400px);opacity:0}
+    100%{transform:translate(0px);opacity:100%}
+  }
+}
+
+@mixin mobileTabOut{
+  animation: mobileTabOut 0.5s ease 0s;
+
+  @keyframes mobileTabOut {
+    0%{transform:translate(0px);opacity:100%}
+    100%{transform:translate(0px,400px);opacity:0}
+  }
+}
+
 
 
 
